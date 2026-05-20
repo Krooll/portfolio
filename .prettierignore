@@ -1,0 +1,9 @@
+dist
+coverage
+.angular
+node_modules
+package-lock.json
+out-tsc
+tmp
+bazel-out
+__screenshots__
