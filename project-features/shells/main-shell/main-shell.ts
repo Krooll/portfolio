@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-main-shell',
-  imports: [
-    RouterOutlet
-  ],
+  imports: [RouterOutlet],
   templateUrl: './main-shell.html',
   styleUrl: './main-shell.scss',
 })

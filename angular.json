@@ -22,11 +22,14 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "project-features/shared/shared-assets/i18n",
+                "output": "i18n"
               }
             ],
-            "styles": [
-              "src/global-styles/styles.css"
-            ]
+            "styles": ["src/global-styles/styles.css"]
           },
           "configurations": {
             "production": {
