@@ -9,6 +9,7 @@ import {routes} from './app.routes';
 import {provideTranslateService, TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
 import {HttpClient, provideHttpClient} from '@angular/common/http';
 import {HttpLoaderFactory} from './translate-loader';
+import {provideAnimations} from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [

@@ -1,0 +1,10 @@
+<div class="header-wrapper d-flex align-items-center justify-content-end px-3">
+  <button type="button" class="burger-button" (click)="onBurgerButtonClick()">
+    <i class="bi bi-list list-icon"></i>
+  </button>
+</div>
+<div class="header-list-wrapper d-flex flex-column px-1 py-2" [@expandCollapse]="showHeaderListWrapper() ? 'expanded' : 'collapsed'">
+    hedaer list wrapper
+</div>
+
+

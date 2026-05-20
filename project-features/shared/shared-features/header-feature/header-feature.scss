@@ -1,0 +1,39 @@
+@use '../../../../src/global-styles/styles.scss' as global;
+@use 'sass:map';
+
+.header-wrapper {
+  height: 4rem;
+  width: 100%;
+  position: relative;
+}
+
+.burger-button {
+  height: 2.75rem;
+  width: 2.75rem;
+  background: none;
+  border: 1px solid map.get(global.$colors, 'light-gray100');
+  border-radius: 0.25rem;
+  color: map.get(global.$colors, 'light-gray100');
+}
+
+.burger-button:hover {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.08);
+}
+
+.burger-button:hover.list-icon {
+  transition: 0.2s ease-in-out;
+  transform: scale(1.08);
+}
+
+.header-list-wrapper {
+  width: 15rem;
+  position: absolute;
+  top: 4.75%;
+  right: 0.5%;
+  background: map.get(global.$colors, 'black100');
+  height: 20rem;
+  overflow-y: auto;
+  border: 1px solid map.get(global.$colors, 'light-gray100');
+  border-radius: 0.15rem;
+}
