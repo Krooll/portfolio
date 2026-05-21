@@ -29,7 +29,11 @@
                 "output": "i18n"
               }
             ],
-            "styles": ["src/global-styles/styles.css"]
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/bootstrap-icons/font/bootstrap-icons.css",
+              "src/global-styles/styles.scss"
+            ]
           },
           "configurations": {
             "production": {

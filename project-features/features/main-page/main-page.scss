@@ -1,0 +1,48 @@
+.main-page-wrapper {
+  height: 95%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-wrapper {
+  width: 30%;
+  height: 100%;
+  font-size: 0.9rem;
+  padding: 2rem;
+}
+
+.biggest-letter {
+  font-size: 5rem;
+  top: -19%;
+  left: -4%;
+}
+
+.text-wrapper p {
+  margin: 0;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.biggest-letter {
+  float: left;
+  font-size: 5rem;
+  line-height: 0.9;
+  font-weight: 700;
+  margin-right: 0.5rem;
+  margin-top: 0.4rem;
+}
+
+@media(width < 900px) {
+  .main-page-wrapper {
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  .text-wrapper {
+    height: 60%;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,5 +1,22 @@
 {
   "mainPage": {
-    "title": "Start page"
+    "title": "Home page"
+  },
+  "headerComponent": {
+    "headerMenuOptionList": {
+      "mainPageButton": "Home",
+      "experiencePageButton": "Experience",
+      "projectPageButton": "Projects",
+      "aboutMePageButton": "About me",
+      "contactPageButton": "Contact"
+    },
+    "headerLangButtonLabel": "Language",
+    "headerLangOptionList": {
+      "polish": "Polish",
+      "english": "English"
+    }
+  },
+  "footerComponent": {
+    "text": "All rights reserved."
   }
 }

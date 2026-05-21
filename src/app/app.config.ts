@@ -6,9 +6,10 @@ import {
 } from '@angular/core';
 import {provideRouter} from '@angular/router';
 import {routes} from './app.routes';
-import {provideTranslateService, TranslateLoader, TranslateModule, TranslateService} from '@ngx-translate/core';
+import {provideTranslateService, TranslateLoader, TranslateService} from '@ngx-translate/core';
 import {HttpClient, provideHttpClient} from '@angular/common/http';
 import {HttpLoaderFactory} from './translate-loader';
+import {LangChangeService} from '../../project-features/shared/services/lang-change.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -25,11 +26,12 @@ export const appConfig: ApplicationConfig = {
     }),
     provideAppInitializer(() => {
       const translate = inject(TranslateService);
+      const languageService = inject(LangChangeService);
 
+      const lang = localStorage.getItem('currentLang') ?? 'pl';
+      languageService.currentLanguage.set(lang);
       translate.addLangs(['pl', 'en']);
-      translate.setFallbackLang('pl');
-
-      return translate.use('pl');
+      return translate.use(lang);
     }),
   ],
 };

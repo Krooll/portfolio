@@ -1,2 +1,14 @@
-<p>main-page works!</p>
-<p>{{ 'mainPage.title' | translateFallback: 'Start page'}}</p>
+<div class="main-page-wrapper d-flex align-items-center">
+  <div style="min-height: 4rem">
+    <app-type-write-feature></app-type-write-feature>
+  </div>
+  <div class="text-wrapper d-flex align-items-end">
+    <p>
+    <span class="biggest-letter">
+      {{ 'example2' | translateFallback: 'L' }}
+    </span>
+      {{ 'example' | translateFallback: 'orem ipsum...' }}
+    </p>
+  </div>
+</div>
+

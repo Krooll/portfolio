@@ -1,9 +1,20 @@
-import { inject, Pipe, PipeTransform } from '@angular/core';
+import {ChangeDetectorRef, DestroyRef, inject, Pipe, PipeTransform} from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 
 @Pipe({ name: 'translateFallback', standalone: true, pure: false })
 export class TranslateFallbackPipe implements PipeTransform {
   private readonly translateService = inject(TranslateService);
+  private readonly cdr = inject(ChangeDetectorRef);
+  private readonly destroyRef = inject(DestroyRef);
+
+  constructor() {
+    this.translateService.onLangChange
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => {
+        this.cdr.markForCheck();
+      });
+  }
 
   transform(value: string | undefined, fallback: string): string {
     if (!value) {
@@ -17,7 +28,7 @@ export class TranslateFallbackPipe implements PipeTransform {
       : translatedValue;
   }
 
-  private isBlank(value: string): boolean {
-    return value === null || value === void 0 || value === '';
+  private isBlank(value: string | undefined | null): boolean {
+    return value === null || value === undefined || value === '';
   }
 }
