@@ -1,12 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
-import {TranslateService} from '@ngx-translate/core';
+import {TranslateModule} from '@ngx-translate/core';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App],
-      providers: [TranslateService]
+      imports: [
+        App,
+        TranslateModule.forRoot()
+      ]
     }).compileComponents();
   });
 
