@@ -1,5 +1,31 @@
 {
-  "mainPage": {
-    "title": "Strona początkowa"
+  "example": "orem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.",
+  "example2": "L",
+  "headerComponent": {
+    "headerMenuOptionList": {
+      "mainPageButton": "Strona główna",
+      "experiencePageButton": "Doświadczenie",
+      "projectPageButton": "Projekty",
+      "aboutMePageButton": "O mnie",
+      "contactPageButton": "Kontakt"
+    },
+    "headerLangButtonLabel": "Język",
+    "headerLangOptionList": {
+      "polish": "Polski",
+      "english": "Angielski"
+    }
+  },
+  "footerComponent": {
+    "text": "Wszelkie prawa zastrzeżone."
+  },
+  "typeWriteComponent": {
+    "exampleWords": {
+      "programing": "Programowanie...",
+      "programmer": "Programista...",
+      "angular": "Angular...",
+      "typeScript": "TypeScript...",
+      "frontend": "Frontend...",
+      "backend": "Backend..."
+    }
   }
 }

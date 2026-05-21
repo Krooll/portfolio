@@ -1,10 +1,54 @@
-<div class="header-wrapper d-flex align-items-center justify-content-end px-3">
-  <button type="button" class="burger-button" (click)="onBurgerButtonClick()">
-    <i class="bi bi-list list-icon"></i>
-  </button>
-</div>
-<div class="header-list-wrapper d-flex flex-column px-1 py-2" [@expandCollapse]="showHeaderListWrapper() ? 'expanded' : 'collapsed'">
-    hedaer list wrapper
-</div>
+<header class="header-wrapper d-flex align-items-center justify-content-end px-3">
+  <div #langDiv class="me-1" style="position: relative;">
+    <button type="button" class="lang-button-setup d-flex justify-content-center align-items-center p-2 me-4"
+            (click)="toggleLangSection()">
+      <img class="lang-icon me-2" alt="Country image"
+           [src]="langChangeService.currentLanguage() === 'pl'
+    ? 'poland.png'
+    : 'united-kingdom.png'"
+      />
+      <p>{{ 'headerComponent.headerLangButtonLabel' | translateFallback: 'Język' }}</p>
+    </button>
+    @if (isLangListOpen()) {
+      <div class="lang-list-wrapper d-flex flex-column p-2"
+           [@expandCollapse]="isLangListOpen() ? 'expanded' : 'collapsed'">
+        @for (item of langOptionList; track $index) {
+          <button type="button" class="d-flex align-items-center justify-content-start lang-button mt-1 mb-1"
+                  (click)="langChangeService.onChangeLang(item.id)">
+            <img class="lang-icon me-2" [alt]="item.alt"
+                 [src]="item.img"
+            />
+            <p style="margin: 0 0 0 0;">
+              {{ item.label | translateFallback: item.fallback }}
+            </p>
+          </button>
+        }
+      </div>
+    }
+  </div>
+  <div #optionDiv style="position: relative;">
+    <button type="button" class="burger-button"
+            [ngClass]="isHeaderListOpen() ? 'white-background' : 'black-background'"
+            (click)="toggleHeaderMenu()">
+      <i [ngClass]="isHeaderListOpen() ? 'black-color' : 'white-color'" class="bi bi-list"></i>
+    </button>
+    @if (isHeaderListOpen()) {
+      <div class="header-list-wrapper d-flex flex-column p-3"
+           [@expandCollapse]="isHeaderListOpen() ? 'expanded' : 'collapsed'">
+        @for (item of menuOptionList; track $index) {
+          <button type="button" class="d-flex menu-buttons mt-2 mb-2" (click)="routeToSelectedPage(item.route)">
+            <img class="lang-icon me-3" alt="Country image"
+                 [src]="item.icon"/>
+            <span>
+            {{ item.label | translateFallback: item.fallback }}
+          </span>
+          </button>
+        }
+      </div>
+    }
+  </div>
+</header>
+
+
 
 

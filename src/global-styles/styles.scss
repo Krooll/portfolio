@@ -34,7 +34,6 @@ $colors: (
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
   overflow: auto;
@@ -43,3 +42,22 @@ body {
   color: map.get($colors, 'light-gray100');
 }
 
+p {
+  margin: 0;
+}
+
+.white-background {
+  background: map.get($colors, 'light-gray100');
+}
+
+.black-background {
+  background: map.get($colors, 'black100');
+}
+
+.white-color {
+  color: map.get($colors, 'light-gray100');
+}
+
+.black-color {
+  color: map.get($colors, 'black100');
+}
