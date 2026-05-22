@@ -36,28 +36,66 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: auto;
+  overflow: hidden;
   font-family: 'Inter', sans-serif !important;
-  background: map.get($colors, 'black100');
-  color: map.get($colors, 'light-gray100');
+  background: var(--main-background);
+  color: var(--text-color);
 }
 
 p {
   margin: 0;
 }
 
-.white-background {
-  background: map.get($colors, 'light-gray100');
+.dark {
+  --main-background: #{map.get($colors, 'black100')};
+  --contrast-background: #{map.get($colors, 'light-gray100')};
+  --text-color: #{map.get($colors, 'light-gray100')};
+  --contrast-text-color: #{map.get($colors, 'black100')};
+  --border: #{map.get($colors, 'light-gray100')};
+  --contrast-border: #{map.get($colors, 'black100')};
 }
 
-.black-background {
-  background: map.get($colors, 'black100');
+.light {
+  --main-background: #{map.get($colors, 'light-gray100')};
+  --contrast-background: #{map.get($colors, 'black100')};
+  --text-color: #{map.get($colors, 'black100')};
+  --contrast-text-color: #{map.get($colors, 'light-gray100')};
+  --border: #{map.get($colors, 'black100')};
+  --contrast-border: #{map.get($colors, 'light-gray100')};
 }
 
-.white-color {
-  color: map.get($colors, 'light-gray100');
+.img-wrapper {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background: var(--contrast-background);
+  border: 2px solid var(--contrast-background);
 }
 
-.black-color {
-  color: map.get($colors, 'black100');
+.page-wrapper {
+  font-size: clamp(3rem, 11vw, 4rem);
+  font-weight: 600;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.body-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 1rem;
+  font-weight: 500
+}
+
+.shell-content {
+  flex: 1;
+  display: flex;
+  min-height: 0;
+}
+
+hr {
+  background: var(--contrast-background);
 }

@@ -4,12 +4,13 @@
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Strona główna",
-      "experiencePageButton": "Doświadczenie",
+      "experiencePageButton": "Kariera",
       "projectPageButton": "Projekty",
       "aboutMePageButton": "O mnie",
       "contactPageButton": "Kontakt"
     },
     "headerLangButtonLabel": "Język",
+    "headerThemeSwitcherLabel": "Motyw",
     "headerLangOptionList": {
       "polish": "Polski",
       "english": "Angielski"
@@ -27,5 +28,11 @@
       "frontend": "Frontend...",
       "backend": "Backend..."
     }
+  },
+  "contactPage": {
+    "contact": "Kontakt",
+    "aboutMe": "O mnie",
+    "projects": "Projekty",
+    "experience": "Kariera"
   }
 }

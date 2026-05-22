@@ -2,8 +2,9 @@ import {Component, ElementRef, HostListener, inject, signal, ViewChild} from '@a
 import {expandCollapseAnimation} from '../../shared-assets/animations/expand-collapse.animation';
 import {TranslateFallbackPipe} from '../../pipes/translate-pipe';
 import {Router} from '@angular/router';
-import {NgClass} from '@angular/common';
 import {LangChangeService} from '../../services/lang-change.service';
+import {ThemeSwitcher} from '../theme-switcher/theme-switcher';
+import {ThemeService, ThemeType} from '../../services/theme-swticher.service';
 
 export interface MenuOptionsInterface {
   label: string;
@@ -24,7 +25,7 @@ export interface MenuLangOptionsInterface {
   selector: 'app-header-feature',
   imports: [
     TranslateFallbackPipe,
-    NgClass
+    ThemeSwitcher
   ],
   templateUrl: './header-feature.html',
   styleUrl: './header-feature.scss',
@@ -32,10 +33,10 @@ export interface MenuLangOptionsInterface {
 })
 export class HeaderFeature {
   private readonly _router = inject(Router);
-  readonly langChangeService = inject(LangChangeService);
+  readonly _langChangeService = inject(LangChangeService);
+  readonly _themeService = inject(ThemeService);
 
   isHeaderListOpen = signal<boolean>(false);
-  isLangListOpen = signal<boolean>(false);
 
   @ViewChild('langDiv') langDiv!: ElementRef;
   @ViewChild('optionDiv') optionDiv!: ElementRef;
@@ -99,7 +100,7 @@ export class HeaderFeature {
       this.optionDiv?.nativeElement.contains(event.target);
 
     if (!clickedInsideLang) {
-      this.isLangListOpen.set(false);
+      this._langChangeService.isLangListOpen.set(false);
     }
 
     if (!clickedInsideMenu) {
@@ -113,6 +114,8 @@ export class HeaderFeature {
       return;
     }
 
+    this.isHeaderListOpen.set(false);
+
     this._router.navigate([route]);
   }
 
@@ -120,13 +123,15 @@ export class HeaderFeature {
     if (this.isHeaderListOpen()) {
       this.isHeaderListOpen.set(false);
     }
-    this.isLangListOpen.update((v) => !v);
+    this._langChangeService.isLangListOpen.update((v) => !v);
   }
 
   toggleHeaderMenu() {
-    if (this.isLangListOpen()) {
-      this.isLangListOpen.set(false);
+    if (this._langChangeService.isLangListOpen()) {
+      this._langChangeService.isLangListOpen.set(false);
     }
     this.isHeaderListOpen.update((v) => !v);
   }
+
+  protected readonly ThemeType = ThemeType;
 }
