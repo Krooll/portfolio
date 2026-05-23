@@ -1,0 +1,10 @@
+<div class="switcher-container d-flex flex-column">
+  <div class="ui-switcher-text-light">
+  </div>
+  <label class="switcher">
+    <input type="checkbox" [checked]="_themeSwitcherService.currentTheme() === ThemeType.Light"
+           (change)="onSwitcherCheck($event)"/>
+    <span class="slider"></span>
+  </label>
+</div>
+

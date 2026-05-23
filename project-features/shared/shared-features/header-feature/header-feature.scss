@@ -3,14 +3,19 @@
 
 .header-wrapper {
   height: 4rem;
+  color: var(--text-color);
 }
 
 .burger-button {
   height: 2.75rem;
   width: 2.75rem;
-  border: 1px solid map.get(global.$colors, 'light-gray100');
+  border: var(--border);
   border-radius: 0.25rem;
-  color: map.get(global.$colors, 'light-gray100');
+  background: var(--contrast-background);
+}
+
+.burger-icon {
+  color: var(--contrast-text-color);
 }
 
 .burger-button:hover {
@@ -21,6 +26,7 @@
 .burger-button:hover.list-icon {
   transition: 0.2s ease-in-out;
   transform: scale(1.08);
+  color: var(--contrast-text-color);
 }
 
 .header-list-wrapper {
@@ -28,18 +34,18 @@
   position: absolute;
   top: 110%;
   right: 0.5%;
-  background: map.get(global.$colors, 'light-gray100');
+  background: var(--contrast-background);
   height: auto;
   overflow-y: auto;
-  border: 1px solid map.get(global.$colors, 'light-gray100');
-  border-radius: 0.15rem;
+  border: var(--border);
+  border-radius: 0.25rem;
 }
 
 .menu-buttons {
   background: none;
-  color: map.get(global.$colors, 'black100');
+  color: var(--contrast-text-color);
   border: none;
-  border-bottom: 1px solid map.get(global.$colors, 'black100');
+  border-bottom: 1px solid var(--contrast-border);
   font-size: 1rem;
 }
 
@@ -48,17 +54,17 @@
   position: absolute;
   top: 110%;
   right: 15%;
-  background: map.get(global.$colors, 'light-gray100');
+  background: var(--contrast-background);
   height: auto;
   overflow-y: auto;
   border: none;
-  border-radius: 0.15rem;
+  border-radius: 0.25rem;
 }
 
 .lang-button {
   text-align: center;
-  background: map.get(global.$colors, 'light-gray100');
-  color: map.get(global.$colors, 'black100');
+  background: var(--background);
+  color: var(--contrast-text-color);
   height: 2.75rem;
   width: 8rem;
   border: none;
@@ -70,7 +76,7 @@
   width: 8rem;
   border: none;
   background: none;
-  color: map.get(global.$colors, 'light-gray100');
+  color: var(--text-color);
 }
 
 .lang-icon {
