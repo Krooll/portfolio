@@ -1,3 +1,53 @@
 :host {
   width: 100%;
 }
+
+.contact-body-side.side-a {
+  min-width: 15rem;
+  width: 50%;
+}
+
+.contact-body-side.side-b {
+  min-width: 15rem;
+  width: 50%;
+}
+
+.social-buttons {
+  height: 7rem;
+  width: 7rem;
+  border-radius: 50%;
+  background: var(--contrast-background);
+}
+
+.social-buttons:hover {
+  transform: scale(1.1);
+  transition: transform .2s;
+}
+
+.social-img {
+  height: 6rem;
+  width: 6rem;
+}
+
+.submit-button {
+  width: 30%;
+  border: none;
+  border-radius: 0.25rem;
+  color: var(--contrast-text-color);
+  background: var(--contrast-background);
+}
+
+.submit-button:hover {
+  transform: scale(1.1);
+  transition: transform .2s;
+}
+
+@media(width < 900px) {
+  .contact-body-side.side-a {
+    width: 100%;
+  }
+
+  .contact-body-side.side-b {
+    width: 100%;
+  }
+}

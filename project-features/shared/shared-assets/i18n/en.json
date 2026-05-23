@@ -1,16 +1,14 @@
 {
-  "mainPage": {
-    "title": "Home page"
-  },
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Home",
       "experiencePageButton": "Experience",
       "projectPageButton": "Projects",
-      "aboutMePageButton": "About me",
+      "aboutMePageButton": "About Me",
       "contactPageButton": "Contact"
     },
     "headerLangButtonLabel": "Language",
+    "headerThemeSwitcherLabel": "Theme",
     "headerLangOptionList": {
       "polish": "Polish",
       "english": "English"
@@ -18,5 +16,21 @@
   },
   "footerComponent": {
     "text": "All rights reserved."
+  },
+  "typeWriteComponent": {
+    "exampleWords": {
+      "programing": "Programming...",
+      "programmer": "Programmer...",
+      "angular": "Angular...",
+      "typeScript": "TypeScript...",
+      "frontend": "Frontend...",
+      "backend": "Backend..."
+    }
+  },
+  "contactPage": {
+    "contact": "Contact",
+    "aboutMe": "About Me",
+    "projects": "Projects",
+    "experience": "Experience"
   }
 }
