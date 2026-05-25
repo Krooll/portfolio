@@ -9,10 +9,9 @@
       }
       <app-theme-switcher></app-theme-switcher>
     </div>
-
   </div>
   <div #langDiv class="me-1" style="position: relative;">
-    <button type="button" class="lang-button-setup d-flex justify-content-center align-items-center p-2 me-4"
+    <button type="button" aria-label="Lang menu" class="lang-button-setup d-flex justify-content-center align-items-center p-2 me-4"
             (click)="toggleLangSection()">
       <img class="lang-icon me-2" alt="Country image"
            [src]="_langChangeService.currentLanguage() === 'pl'
@@ -25,7 +24,7 @@
       <div class="lang-list-wrapper d-flex flex-column p-2"
            [@expandCollapse]="_langChangeService.isLangListOpen() ? 'expanded' : 'collapsed'">
         @for (item of langOptionList; track $index) {
-          <button type="button" class="d-flex align-items-center justify-content-start lang-button mt-1 mb-1"
+          <button [aria-label]="item.alt" type="button" class="d-flex align-items-center justify-content-start lang-button mt-1 mb-1"
                   (click)="_langChangeService.onChangeLang(item.id)">
             <img class="lang-icon me-2" [alt]="item.alt"
                  [src]="item.img"
@@ -39,7 +38,7 @@
     }
   </div>
   <div #optionDiv style="position: relative;">
-    <button type="button" class="burger-button"
+    <button type="button" class="burger-button" aria-label="Toggle menu"
             (click)="toggleHeaderMenu()">
       <i class="bi bi-list burger-icon"></i>
     </button>

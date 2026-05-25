@@ -53,6 +53,8 @@ p {
   --contrast-text-color: #{map.get($colors, 'black100')};
   --border: #{map.get($colors, 'light-gray100')};
   --contrast-border: #{map.get($colors, 'black100')};
+  --snackbar-success-background: #{map.get($colors, 'green600')};
+  --snackbar-error-background: #{map.get($colors, 'red600')};
 }
 
 .light {
@@ -62,6 +64,7 @@ p {
   --contrast-text-color: #{map.get($colors, 'light-gray100')};
   --border: #{map.get($colors, 'black100')};
   --contrast-border: #{map.get($colors, 'light-gray100')};
+  --snackbar-error-background: #{map.get($colors, 'red600')};
 }
 
 .img-wrapper {
@@ -94,6 +97,22 @@ p {
   flex: 1;
   display: flex;
   min-height: 0;
+}
+
+.snackbar-success {
+  background: var(--snackbar-success-background);
+  color: var(--text-color);
+  white-space: pre-line;
+}
+
+.snackbar-error {
+  background: var(--snackbar-error-background);
+  color: var(--text-color);
+  white-space: pre-line;
+}
+
+.mat-mdc-snack-bar-container {
+  border-radius: 12px !important;
 }
 
 input {

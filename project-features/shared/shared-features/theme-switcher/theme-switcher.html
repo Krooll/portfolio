@@ -2,7 +2,9 @@
   <div class="ui-switcher-text-light">
   </div>
   <label class="switcher">
-    <input type="checkbox" [checked]="_themeSwitcherService.currentTheme() === ThemeType.Light"
+    <input type="checkbox"
+           [attr.aria-label]="_themeSwitcherService.currentTheme() === ThemeType.Light ? 'Switch to dark mode' : 'Switch to light mode'"
+           [checked]="_themeSwitcherService.currentTheme() === ThemeType.Light"
            (change)="onSwitcherCheck($event)"/>
     <span class="slider"></span>
   </label>

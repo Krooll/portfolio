@@ -1,6 +1,9 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, DestroyRef, inject, signal} from '@angular/core';
 import {TranslateFallbackPipe} from '../../shared/pipes/translate-pipe';
 import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClient} from '@angular/common/http';
+import {MatSnackBar} from '@angular/material/snack-bar';
+import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 
 export interface ContactButtonInterface {
   icon: string;
@@ -20,8 +23,14 @@ export interface ContactButtonInterface {
 })
 export class ContactPage {
   private readonly _formBuilder = inject(FormBuilder);
+  private readonly _http = inject(HttpClient);
+  private readonly _matSnackbarService = inject(MatSnackBar);
+  private readonly destroyRef = inject(DestroyRef);
 
   formGroup = signal<FormGroup | undefined>(undefined);
+
+  protected readonly mailServiceAccessKey: string = '450c9a8e-b411-4aab-8e50-5f8fe120086a';
+  protected readonly mailServiceUrl: string = 'https://api.web3forms.com/submit';
 
   constructor() {
     this.formGroup.set(
@@ -29,7 +38,7 @@ export class ContactPage {
         emailAddress: [''],
         message: ['']
       })
-    )
+    );
   }
 
   contactButtonsList: ContactButtonInterface[] = [
@@ -48,7 +57,35 @@ export class ContactPage {
   onSubmit() {
     const submitData = this.formGroup()?.value;
 
+    const mailBody = {
+      access_key: this.mailServiceAccessKey,
+      email: submitData.emailAddress,
+      message: submitData.message,
+    }
 
+    this._http.post(
+      this.mailServiceUrl,
+      mailBody
+    ).pipe(takeUntilDestroyed(this.destroyRef)).subscribe({
+      next: () => {
+        this._matSnackbarService.open('Wysłano wiadomość', '', {
+          duration: 3000,
+          panelClass: ['snackbar-success'],
+          horizontalPosition: 'end',
+          verticalPosition: 'top'
+        });
+
+        this.formGroup()?.reset();
+      },
+      error: () => {
+        this._matSnackbarService.open('Ups coś poszło nie tak...', '', {
+          duration: 3000,
+          panelClass: ['snackbar-error'],
+          horizontalPosition: 'end',
+          verticalPosition: 'top'
+        });
+      }
+    })
   }
 
   routeToSocialPage(url: string) {
