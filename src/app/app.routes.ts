@@ -6,9 +6,7 @@ import { AboutMePage } from '../../project-features/features/about-me-page/about
 import { ExperiencePage } from '../../project-features/features/experience-page/experience-page';
 import { ExperienceShell } from '../../project-features/shells/experience-shell/experience-shell';
 import { ContactShell } from '../../project-features/shells/contact-shell/contact-shell';
-import { ContactPage } from '../../project-features/features/contact-page/contact-page';
 import { ProjectsShell } from '../../project-features/shells/projects-shell/projects-shell';
-import { ProjectsPage } from '../../project-features/features/projects-page/projects-page';
 
 export const routes: Routes = [
   {
@@ -34,7 +32,9 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        component: AboutMePage,
+        loadComponent: () =>
+          import('../../project-features/features/about-me-page/about-me-page')
+            .then(m => m.AboutMePage),
       },
     ],
   },
@@ -45,7 +45,9 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        component: ExperiencePage,
+        loadComponent: () =>
+          import('../../project-features/features/experience-page/experience-page')
+            .then(m => m.ExperiencePage)
       },
     ],
   },
@@ -56,7 +58,9 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        component: ContactPage,
+        loadComponent: () =>
+        import('../../project-features/features/contact-page/contact-page')
+          .then(m => m.ContactPage)
       },
     ],
   },
@@ -67,7 +71,9 @@ export const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        component: ProjectsPage,
+        loadComponent: () =>
+          import('../../project-features/features/projects-page/projects-page')
+            .then(m => m.ProjectsPage)
       },
     ],
   },
