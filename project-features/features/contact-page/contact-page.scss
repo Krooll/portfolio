@@ -4,12 +4,12 @@
 
 .contact-body-side.side-a {
   min-width: 15rem;
-  width: 50%;
+  width: 49%;
 }
 
 .contact-body-side.side-b {
   min-width: 15rem;
-  width: 50%;
+  width: 49%;
 }
 
 .social-buttons {
@@ -35,6 +35,7 @@
   border: none;
   border-radius: 0.25rem;
   color: var(--contrast-text-color);
+  font-size: 1.2rem;
   background: var(--contrast-background);
 }
 
