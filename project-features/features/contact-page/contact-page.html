@@ -1,35 +1,48 @@
-<div class="page-wrapper h-100 px-4 py-3">
+<div class="page-wrapper h-100 px-3 py-2">
   <div class="d-flex align-items-center">
     <div class="img-wrapper d-flex align-items-center justify-content-center me-4">
       <img src="paper-plane.png" alt="paper-plane">
     </div>
-    <p>{{ 'contactPage.contact' | translateFallback: 'Kontakt' }}</p>
+    <p>{{ 'contact' | translateFallback: 'Kontakt' }}</p>
   </div>
   <hr>
   <div class="body-scroll d-flex align-items-center justify-content-between flex-wrap mt-4">
-    <ng-form class="contact-body-side side-a  d-flex flex-column align-items-center justify-content-center" [formGroup]="formGroup()!">
-      <h2>Skontaktujmy sie</h2>
+    <form class="contact-body-side side-a d-flex flex-column align-items-center justify-content-center" (ngSubmit)="onSubmit()" [formGroup]="formGroup()!">
+      <h2>{{ 'contactPage.formTitle' | translateFallback: 'Skontaktujmy się' }}</h2>
       <div class="d-flex flex-column mt-4 w-100">
-        @let mailAddress = 'mailAddress';
-        <label [for]="mailAddress">
-          Adres email
+        @let emailAddress = 'emailAddress';
+        <label [for]="emailAddress">
+          {{ 'contactPage.form.labels.email' | translateFallback: 'Adres email' }}
         </label>
-        <input [name]="mailAddress" type="text" [placeholder]="'Wpisz swoj adres email...'">
+        <input class="mt-1" [formControlName]="emailAddress" type="email" [placeholder]="'contactPage.form.placeholders.email' | translateFallback: 'Wpisz swój adres email'">
       </div>
-      <div class="d-flex flex-column mt-2 w-100">
+      <div class="d-flex flex-column mt-2">
         @let message = 'message';
-        <textarea [name]="message" [placeholder]="'Napisz wiadomość...'"></textarea>
+        <textarea [formControlName]="message" [placeholder]="'contactPage.form.placeholders.message' | translateFallback: 'Wpisz swój adres email'"></textarea>
       </div>
-      <button type="submit" class="mt-3 p-1 submit-button">
-        Wyslij
+      <button aria-label="Submit form" type="submit" class="mt-3 p-1 submit-button">
+        {{ 'contactPage.formButton' | translateFallback: 'Wyślij' }}
       </button>
-    </ng-form>
-    <div class="contact-body-side side-b d-flex align-items-center justify-content-center">
-      @for(item of contactButtonsList; track $index) {
-        <button type="button" class="social-buttons me-3 ms-3" (click)="routeToSocialPage(item.url)">
-          <img class="social-img" [src]="item.icon" [alt]="item.alt">
-        </button>
-      }
+    </form>
+    <div class="contact-body-side side-b d-flex flex-column align-items-center justify-content-center">
+      <div class="map-container d-flex justify-content-center w-100 mb-4">
+        <iframe
+          title="Google map"
+          class="iframe-wrapper"
+          style="border:0; border-radius: 0.5rem"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps?q=Bieruń%20Stary%2C%20Polska&output=embed">
+        </iframe>
+      </div>
+      <div class="d-flex">
+        @for(item of contactButtonsList; track $index) {
+          <button [aria-label]="item.alt" type="button" class="social-buttons d-flex align-items-center justify-content-center me-3 ms-3" (click)="routeToSocialPage(item.url)">
+            <img class="social-img" [src]="item.icon" [alt]="item.alt">
+          </button>
+        }
+      </div>
     </div>
   </div>
 </div>

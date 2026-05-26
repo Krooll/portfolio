@@ -1,6 +1,10 @@
 {
   "example": "orem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.",
   "example2": "L",
+  "contact": "Kontakt",
+  "aboutMe": "O mnie",
+  "projects": "Projekty",
+  "experience": "Kariera",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Strona główna",
@@ -30,9 +34,24 @@
     }
   },
   "contactPage": {
-    "contact": "Kontakt",
-    "aboutMe": "O mnie",
-    "projects": "Projekty",
-    "experience": "Kariera"
+    "formTitle": "Bądźmy w kontakcie!",
+    "mapTitle": "Znajdziesz mnie tutaj",
+    "formButton": "Wyślij",
+    "form": {
+      "labels": {
+        "email": "Twój adres email"
+      },
+      "placeholders": {
+        "email": "Wpisz swój adres email...",
+        "message": "Wpisz swoją wiadomość..."
+      },
+      "validators": {
+        "email": "Adres email jest wymagany..."
+      }
+    }
+  },
+  "snackbar": {
+    "success": "Hurra! \n Udało się — wiadomość została wysłana poprawnie.",
+    "error": "Ups, coś poszło nie tak! \n Nie udało się wysłać wiadomości. Spróbuj ponownie później."
   }
 }

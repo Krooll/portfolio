@@ -1,7 +1,5 @@
 .main-page-wrapper {
   height: 95%;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .text-wrapper {
@@ -30,8 +28,6 @@
   .main-page-wrapper {
     height: 80%;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
   }
 
   .text-wrapper {

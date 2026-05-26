@@ -30,7 +30,8 @@
 }
 
 .submit-button {
-  width: 30%;
+  width: 20%;
+  height: 2.2rem;
   border: none;
   border-radius: 0.25rem;
   color: var(--contrast-text-color);
@@ -42,6 +43,11 @@
   transition: transform .2s;
 }
 
+.iframe-wrapper {
+  height: 16rem;
+  width: 80%;
+}
+
 @media(width < 900px) {
   .contact-body-side.side-a {
     width: 100%;
@@ -49,5 +55,13 @@
 
   .contact-body-side.side-b {
     width: 100%;
+  }
+
+  .iframe-wrapper {
+    width: 100%;
+  }
+
+  .map-container {
+    margin-top: 1.75rem;
   }
 }

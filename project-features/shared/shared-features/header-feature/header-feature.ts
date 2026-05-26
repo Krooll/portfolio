@@ -1,5 +1,4 @@
 import {Component, ElementRef, HostListener, inject, signal, ViewChild} from '@angular/core';
-import {expandCollapseAnimation} from '../../shared-assets/animations/expand-collapse.animation';
 import {TranslateFallbackPipe} from '../../pipes/translate-pipe';
 import {Router} from '@angular/router';
 import {LangChangeService} from '../../services/lang-change.service';
@@ -29,7 +28,6 @@ export interface MenuLangOptionsInterface {
   ],
   templateUrl: './header-feature.html',
   styleUrl: './header-feature.scss',
-  animations: [expandCollapseAnimation]
 })
 export class HeaderFeature {
   private readonly _router = inject(Router);
@@ -58,19 +56,19 @@ export class HeaderFeature {
       label: 'headerComponent.headerMenuOptionList.projectPageButton',
       fallback: 'Projekty',
       route: '/projects',
-      icon: '/project.png'
+      icon: '/code.png'
     },
     {
       label: 'headerComponent.headerMenuOptionList.aboutMePageButton',
       fallback: 'O mnie',
       route: '/about-me',
-      icon: '/about-me.png'
+      icon: '/person.png'
     },
     {
       label: 'headerComponent.headerMenuOptionList.contactPageButton',
       fallback: 'Kontakt',
       route: '/contact',
-      icon: '/mailbox.png'
+      icon: '/mail.png'
     },
   ];
 
@@ -80,14 +78,14 @@ export class HeaderFeature {
       fallback: 'Polski',
       id: 'pl',
       img: 'poland.png',
-      alt: 'Poland flag'
+      alt: 'Change language to Polish'
     },
     {
       label: 'headerComponent.headerLangOptionList.english',
       fallback: 'Angielski',
       id: 'en',
       img: 'united-kingdom.png',
-      alt: 'United Kingdome flag'
+      alt: 'Change language to English'
     }
   ];
 

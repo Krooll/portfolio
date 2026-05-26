@@ -1,10 +1,16 @@
 {
+  "example": "orem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.",
+  "example2": "L",
+  "contact": "Contact",
+  "aboutMe": "About me",
+  "projects": "Projects",
+  "experience": "Career",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Home",
-      "experiencePageButton": "Experience",
+      "experiencePageButton": "Career",
       "projectPageButton": "Projects",
-      "aboutMePageButton": "About Me",
+      "aboutMePageButton": "About me",
       "contactPageButton": "Contact"
     },
     "headerLangButtonLabel": "Language",
@@ -28,9 +34,24 @@
     }
   },
   "contactPage": {
-    "contact": "Contact",
-    "aboutMe": "About Me",
-    "projects": "Projects",
-    "experience": "Experience"
+    "formTitle": "Stay in touch!",
+    "mapTitle": "Find me here",
+    "formButton": "Send",
+    "form": {
+      "labels": {
+        "email": "Your email address"
+      },
+      "placeholders": {
+        "email": "Enter your email address...",
+        "message": "Type your message..."
+      },
+      "validators": {
+        "email": "Email address is required..."
+      }
+    }
+  },
+  "snackbar": {
+    "success": "Hooray! \n Success — your message has been sent successfully.",
+    "error": "Oops, something went wrong! \n Failed to send the message. Please try again later."
   }
 }
