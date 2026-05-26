@@ -68,11 +68,16 @@ p {
 }
 
 .img-wrapper {
-  height: 7rem;
-  width: 7rem;
+  height: 6rem;
+  width: 6rem;
   border-radius: 50%;
   background: var(--contrast-background);
   border: 2px solid var(--contrast-background);
+}
+
+.img {
+  height: 5.5rem;
+  width: 5.5rem;
 }
 
 .page-wrapper {
@@ -121,7 +126,6 @@ input {
   border: 1px solid var(--contrast-background);
   border-radius: 8px;
   font-size: 1rem;
-  width: 100%;
   box-sizing: border-box;
 }
 
@@ -131,7 +135,8 @@ textarea {
   border-radius: 8px;
   font-size: 1rem;
   min-height: 10rem;
-  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
 }
 
 hr {
