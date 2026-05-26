@@ -1,6 +1,11 @@
 @use '../../../../src/global-styles/styles' as global;
 @use "sass:map";
 
+.switcher-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .switcher {
   --switcher-width: 3.125rem;
   --switcher-height: 1.56rem;

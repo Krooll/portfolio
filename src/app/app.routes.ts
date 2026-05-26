@@ -1,12 +1,6 @@
 import { Routes } from '@angular/router';
 import { MainShell } from '../../project-features/shells/main-shell/main-shell';
 import { MainPage } from '../../project-features/features/main-page/main-page';
-import { AboutMeShell } from '../../project-features/shells/about-me-shell/about-me-shell';
-import { AboutMePage } from '../../project-features/features/about-me-page/about-me-page';
-import { ExperiencePage } from '../../project-features/features/experience-page/experience-page';
-import { ExperienceShell } from '../../project-features/shells/experience-shell/experience-shell';
-import { ContactShell } from '../../project-features/shells/contact-shell/contact-shell';
-import { ProjectsShell } from '../../project-features/shells/projects-shell/projects-shell';
 
 export const routes: Routes = [
   {
@@ -27,7 +21,9 @@ export const routes: Routes = [
   },
   {
     path: 'about-me',
-    component: AboutMeShell,
+    loadComponent: () =>
+      import('../../project-features/shells/about-me-shell/about-me-shell')
+        .then(m => m.AboutMeShell),
     children: [
       {
         path: '',
@@ -40,7 +36,9 @@ export const routes: Routes = [
   },
   {
     path: 'experience',
-    component: ExperienceShell,
+    loadComponent: () =>
+      import('../../project-features/shells/experience-shell/experience-shell')
+        .then(m => m.ExperienceShell),
     children: [
       {
         path: '',
@@ -53,7 +51,9 @@ export const routes: Routes = [
   },
   {
     path: 'contact',
-    component: ContactShell,
+    loadComponent: () =>
+      import('../../project-features/shells/contact-shell/contact-shell')
+        .then(m => m.ContactShell),
     children: [
       {
         path: '',
@@ -66,7 +66,9 @@ export const routes: Routes = [
   },
   {
     path: 'projects',
-    component: ProjectsShell,
+    loadComponent: () =>
+      import('../../project-features/shells/projects-shell/projects-shell')
+        .then(m => m.ProjectsShell),
     children: [
       {
         path: '',

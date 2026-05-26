@@ -4,6 +4,11 @@
 .header-wrapper {
   height: 4rem;
   color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .burger-button {
@@ -30,18 +35,26 @@
 }
 
 .header-list-wrapper {
-  width: 15rem;
-  position: absolute;
-  top: 110%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
+  width: 18rem;
   right: 0.5%;
   background: var(--contrast-background);
-  height: auto;
-  overflow-y: auto;
   border: var(--border);
   border-radius: 0.25rem;
+  transform: translateY(-10px);
+}
+
+.header-list-wrapper.open {
+  transform: translateY(0);
+  max-height: 500px;
 }
 
 .menu-buttons {
+  width: 90%;
   background: none;
   color: var(--contrast-text-color);
   border: none;
@@ -51,14 +64,16 @@
 
 .lang-list-wrapper {
   width: 9rem;
-  position: absolute;
-  top: 110%;
-  right: 15%;
+  right: 40%;
   background: var(--contrast-background);
-  height: auto;
-  overflow-y: auto;
-  border: none;
   border-radius: 0.25rem;
+  transform-origin: top right;
+  transform: scaleY(0);
+}
+
+.lang-list-wrapper.open {
+  transform: scaleY(1);
+  max-height: 300px;
 }
 
 .lang-button {
@@ -69,6 +84,7 @@
   width: 8rem;
   border: none;
   border-radius: 0.15rem;
+  font-size: 1rem;
 }
 
 .lang-button-setup {
@@ -77,11 +93,32 @@
   border: none;
   background: none;
   color: var(--text-color);
+  font-size: 1rem;
 }
 
 .lang-icon {
   height: auto;
   width: 1.5rem;
+}
+
+.animated-dropdown {
+  position: absolute;
+  top: 110%;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  max-height: 0;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.animated-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 @media(width < 900px) {

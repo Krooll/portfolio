@@ -1,5 +1,4 @@
 import {Component, ElementRef, HostListener, inject, signal, ViewChild} from '@angular/core';
-import {expandCollapseAnimation} from '../../shared-assets/animations/expand-collapse.animation';
 import {TranslateFallbackPipe} from '../../pipes/translate-pipe';
 import {Router} from '@angular/router';
 import {LangChangeService} from '../../services/lang-change.service';
@@ -29,7 +28,6 @@ export interface MenuLangOptionsInterface {
   ],
   templateUrl: './header-feature.html',
   styleUrl: './header-feature.scss',
-  animations: [expandCollapseAnimation]
 })
 export class HeaderFeature {
   private readonly _router = inject(Router);

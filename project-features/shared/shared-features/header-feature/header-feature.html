@@ -1,4 +1,4 @@
-<header class="header-wrapper d-flex align-items-center justify-content-end px-3">
+<header class="header-wrapper">
   <div class="d-flex align-items-center me-4">
     @if (_themeService.currentTheme() === ThemeType.Dark) {
       <img class="lang-icon me-1" width="24"
@@ -10,7 +10,7 @@
     }
     <app-theme-switcher></app-theme-switcher>
   </div>
-  <div #langDiv class="me-1 position-relative">
+  <div #langDiv class="me-1" style="position: relative;">
     <button type="button" aria-label="Lang menu"
             class="lang-button-setup d-flex align-items-center p-2 me-2"
             (click)="toggleLangSection()">
@@ -22,43 +22,52 @@
       />
       <p>{{ 'headerComponent.headerLangButtonLabel' | translateFallback: 'Język' }}</p>
     </button>
-    @if (_langChangeService.isLangListOpen()) {
-      <div class="lang-list-wrapper d-flex flex-column p-2"
-           [@expandCollapse]="_langChangeService.isLangListOpen() ? 'expanded' : 'collapsed'">
-        @for (item of langOptionList; track $index) {
-          <button [aria-label]="item.alt" type="button"
-                  class="d-flex align-items-center lang-button mt-1 mb-1"
-                  (click)="_langChangeService.onChangeLang(item.id)">
-            <img class="lang-icon  me-2" [alt]="item.alt"
-                 [src]="item.img"
-            />
-            <p>
-              {{ item.label | translateFallback: item.fallback }}
-            </p>
-          </button>
-        }
-      </div>
-    }
+    <div
+      class="lang-list-wrapper animated-dropdown d-flex flex-column p-2"
+      [class.open]="_langChangeService.isLangListOpen()">
+      @for (item of langOptionList; track $index) {
+        <button
+          [aria-label]="item.alt"
+          type="button"
+          class="d-flex align-items-center lang-button mt-1 mb-1"
+          (click)="_langChangeService.onChangeLang(item.id)">
+          <img
+            class="lang-icon me-3"
+            [alt]="item.alt"
+            [src]="item.img" />
+          <p>
+            {{ item.label | translateFallback: item.fallback }}
+          </p>
+        </button>
+      }
+    </div>
   </div>
   <div #optionDiv style="position: relative;">
     <button type="button" class="burger-button" aria-label="Toggle menu"
             (click)="toggleHeaderMenu()">
-      <i class="bi bi-list burger-icon"></i>
+      <svg class="burger-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
     </button>
-    @if (isHeaderListOpen()) {
-      <div class="header-list-wrapper d-flex flex-column p-3"
-           [@expandCollapse]="isHeaderListOpen() ? 'expanded' : 'collapsed'">
-        @for (item of menuOptionList; track $index) {
-          <button type="button" class="d-flex menu-buttons mt-2 mb-2" (click)="routeToSelectedPage(item.route)">
-            <img class="lang-icon me-3" alt="Menu options"
-                 [src]="item.icon"/>
-            <span>
-              {{ item.label | translateFallback: item.fallback }}
-            </span>
-          </button>
-        }
-      </div>
-    }
+    <div
+      class="header-list-wrapper animated-dropdown"
+      [class.open]="isHeaderListOpen()">
+
+      @for (item of menuOptionList; track $index) {
+        <button
+          type="button"
+          class="d-flex align-items-center menu-buttons mt-2 mb-2"
+          (click)="routeToSelectedPage(item.route)">
+          <img
+            class="lang-icon me-3"
+            alt="Menu options"
+            [src]="item.icon" />
+          <span>
+        {{ item.label | translateFallback: item.fallback }}
+      </span>
+        </button>
+      }
+    </div>
   </div>
 </header>
 
