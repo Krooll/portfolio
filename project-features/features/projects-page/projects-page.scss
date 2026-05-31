@@ -1,3 +1,41 @@
 :host {
   width: 100%;
 }
+
+.item-wrapper {
+  background-color: var(--contrast-background);
+  color: var( --contrast-text-color);
+  border-radius: 0.5rem;
+}
+
+.card-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  white-space: pre-line;
+}
+
+p.label {
+  font-weight: bold;
+}
+
+p.label span {
+  font-weight: normal;
+}
+
+p.label a {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid var(--contrast-text-color);
+  border-radius: 0.5rem;
+  color: var(--contrast-card-text);
+}
+

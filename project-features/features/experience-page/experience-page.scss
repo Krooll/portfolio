@@ -1,3 +1,11 @@
 :host {
   width: 100%;
 }
+
+.round {
+  border: 2px solid;
+  height: 5rem;
+  width: 5rem;
+  background: var(--contrast-background);
+  border-radius: 50%;
+}

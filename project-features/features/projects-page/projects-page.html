@@ -3,67 +3,39 @@
     <div class="img-wrapper d-flex align-items-center justify-content-center me-4">
       <img class="img" src="folder.png" alt="work">
     </div>
-    <p>{{'projects' | translateFallback: 'Projekty'}}</p>
+    <p>{{ 'projects' | translateFallback: 'Projekty' }}</p>
   </div>
   <hr>
   <div class="body-scroll">
-    <div>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Curabitur pretium tincidunt lacus, nec facilisis massa tincidunt in.
-        Suspendisse potenti. Integer vel justo vitae libero bibendum faucibus.
-        Phasellus ac orci vel nisl hendrerit tincidunt non non urna.
-        Morbi vitae turpis at lacus laoreet consequat a non metus.
-        Aliquam erat volutpat. Donec a dui ut sapien gravida auctor.
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-        Nam luctus, sapien non fermentum varius, elit massa viverra magna, a feugiat eros orci at sapien.
-        Etiam ac purus nec lorem tincidunt interdum non a nisl.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        In hac habitasse platea dictumst. Integer non dolor nec nulla fermentum suscipit.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Curabitur pretium tincidunt lacus, nec facilisis massa tincidunt in.
-        Suspendisse potenti. Integer vel justo vitae libero bibendum faucibus.
-        Phasellus ac orci vel nisl hendrerit tincidunt non non urna.
-        Morbi vitae turpis at lacus laoreet consequat a non metus.
-        Aliquam erat volutpat. Donec a dui ut sapien gravida auctor.
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-        Nam luctus, sapien non fermentum varius, elit massa viverra magna, a feugiat eros orci at sapien.
-        Etiam ac purus nec lorem tincidunt interdum non a nisl.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        In hac habitasse platea dictumst. Integer non dolor nec nulla fermentum suscipit.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Curabitur pretium tincidunt lacus, nec facilisis massa tincidunt in.
-        Suspendisse potenti. Integer vel justo vitae libero bibendum faucibus.
-        Phasellus ac orci vel nisl hendrerit tincidunt non non urna.
-        Morbi vitae turpis at lacus laoreet consequat a non metus.
-        Aliquam erat volutpat. Donec a dui ut sapien gravida auctor.
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-        Nam luctus, sapien non fermentum varius, elit massa viverra magna, a feugiat eros orci at sapien.
-        Etiam ac purus nec lorem tincidunt interdum non a nisl.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        In hac habitasse platea dictumst. Integer non dolor nec nulla fermentum suscipit.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        Curabitur pretium tincidunt lacus, nec facilisis massa tincidunt in.
-        Suspendisse potenti. Integer vel justo vitae libero bibendum faucibus.
-        Phasellus ac orci vel nisl hendrerit tincidunt non non urna.
-        Morbi vitae turpis at lacus laoreet consequat a non metus.
-        Aliquam erat volutpat. Donec a dui ut sapien gravida auctor.
-        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-        Nam luctus, sapien non fermentum varius, elit massa viverra magna, a feugiat eros orci at sapien.
-        Etiam ac purus nec lorem tincidunt interdum non a nisl.
-        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        In hac habitasse platea dictumst. Integer non dolor nec nulla fermentum suscipit.</p>
-    </div>
+    @for (item of projectList; track $index) {
+      <div class="item-wrapper d-flex flex-column px-3 py-4 m-3">
+        <div class="d-flex align-items-center">
+          <img class="me-2 card-icon" alt="list icon" [src]="item.projectIcon">
+          <p class="label">{{ 'projectList.variables.projectName' | translateFallback: 'Nazwa projektu:' }}
+            <span class="ms-1">{{ item.projectName | translateFallback: item.projectNameFallback }}</span>
+          </p>
+        </div>
+        <div class="d-flex align-items-center">
+          <img class="me-2 card-icon" alt="list icon" [src]="item.companyIcon">
+          <p class="label">{{ 'projectList.variables.companyName' | translateFallback: 'Firma / klient:' }}
+            <span class="ms-1">{{ item.companyName | translateFallback: item.companyFallback }}</span>
+          </p>
+        </div>
+        <div class="d-flex">
+          <img class="me-2 mt-1 card-icon" alt="list icon" [src]="item.descriptionIcon">
+          <p class="label">{{ 'projectList.variables.description' | translateFallback: 'Opis wykonanych prac:' }}
+            <span class="ms-1">{{ item.description | translateFallback: item.descriptionFallback }}</span>
+          </p>
+        </div>
+        @if(item.url) {
+          <div class="d-flex align-items-center">
+            <img class="me-2 card-icon" alt="list icon" [src]="item.urlIcon">
+            <p class="label">{{ 'projectList.variables.url' | translateFallback: 'Strona www:' }}
+              <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="ms-1">{{ item.url }}</a>
+            </p>
+          </div>
+        }
+      </div>
+    }
   </div>
 </div>

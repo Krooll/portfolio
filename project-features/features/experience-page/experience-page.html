@@ -3,65 +3,22 @@
     <div class="img-wrapper d-flex align-items-center justify-content-center me-4">
       <img class="img" src="job-seeker.png" alt="experience">
     </div>
-    <p>{{'experience' | translateFallback: 'Kariera'}}</p>
+    <p>{{ 'experience' | translateFallback: 'Kariera' }}</p>
   </div>
   <hr>
-  <div class="body-scroll">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Curabitur pretium tincidunt lacus, nec facilisis massa tincidunt in.
-      Suspendisse potenti. Integer vel justo vitae libero bibendum faucibus.
-      Phasellus ac orci vel nisl hendrerit tincidunt non non urna.
-      Morbi vitae turpis at lacus laoreet consequat a non metus.
-      Aliquam erat volutpat. Donec a dui ut sapien gravida auctor.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-      Nam luctus, sapien non fermentum varius, elit massa viverra magna, a feugiat eros orci at sapien.
-      Etiam ac purus nec lorem tincidunt interdum non a nisl.
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-      In hac habitasse platea dictumst. Integer non dolor nec nulla fermentum suscipit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Curabitur pretium tincidunt lacus, nec facilisis massa tincidunt in.
-      Suspendisse potenti. Integer vel justo vitae libero bibendum faucibus.
-      Phasellus ac orci vel nisl hendrerit tincidunt non non urna.
-      Morbi vitae turpis at lacus laoreet consequat a non metus.
-      Aliquam erat volutpat. Donec a dui ut sapien gravida auctor.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-      Nam luctus, sapien non fermentum varius, elit massa viverra magna, a feugiat eros orci at sapien.
-      Etiam ac purus nec lorem tincidunt interdum non a nisl.
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-      In hac habitasse platea dictumst. Integer non dolor nec nulla fermentum suscipit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Curabitur pretium tincidunt lacus, nec facilisis massa tincidunt in.
-      Suspendisse potenti. Integer vel justo vitae libero bibendum faucibus.
-      Phasellus ac orci vel nisl hendrerit tincidunt non non urna.
-      Morbi vitae turpis at lacus laoreet consequat a non metus.
-      Aliquam erat volutpat. Donec a dui ut sapien gravida auctor.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-      Nam luctus, sapien non fermentum varius, elit massa viverra magna, a feugiat eros orci at sapien.
-      Etiam ac purus nec lorem tincidunt interdum non a nisl.
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-      In hac habitasse platea dictumst. Integer non dolor nec nulla fermentum suscipit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      Curabitur pretium tincidunt lacus, nec facilisis massa tincidunt in.
-      Suspendisse potenti. Integer vel justo vitae libero bibendum faucibus.
-      Phasellus ac orci vel nisl hendrerit tincidunt non non urna.
-      Morbi vitae turpis at lacus laoreet consequat a non metus.
-      Aliquam erat volutpat. Donec a dui ut sapien gravida auctor.
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
-      Nam luctus, sapien non fermentum varius, elit massa viverra magna, a feugiat eros orci at sapien.
-      Etiam ac purus nec lorem tincidunt interdum non a nisl.
-      Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-      In hac habitasse platea dictumst. Integer non dolor nec nulla fermentum suscipit.</p>
+  <div class="body-scroll d-flex flex-column">
+    @for (item of careerList; track $index) {
+      <div class="d-flex align-items-center m-2">
+        <div class="img-wrapper">
+          <img src="/job.png" class="" alt="job-icon">
+        </div>
+        <div class="d-flex flex-column ms-3">
+          <p>{{ item.companyName | translateFallback: item.companyNameFallback }}</p>
+          <p>{{ item.jobPosition | translateFallback: item.jobPositionFallback }}</p>
+          <p>{{ item.description | translateFallback: item.description }}</p>
+        </div>
+      </div>
+      <hr style="width: 90%">
+    }
   </div>
 </div>

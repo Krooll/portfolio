@@ -3,6 +3,7 @@
 $colors: (
   'black100': #000000,
   'light-gray100': #e5e5e5,
+  'medium-gray100': #b7b7b7,
   'gray900': #333333,
   'gray800': #4d4d4d,
   'gray700': #666666,
@@ -64,6 +65,7 @@ p {
   --contrast-text-color: #{map.get($colors, 'light-gray100')};
   --border: #{map.get($colors, 'black100')};
   --contrast-border: #{map.get($colors, 'light-gray100')};
+  --snackbar-success-background: #{map.get($colors, 'green600')};
   --snackbar-error-background: #{map.get($colors, 'red600')};
 }
 
@@ -106,20 +108,28 @@ p {
   min-height: 0;
 }
 
-.snackbar-success {
-  background: var(--snackbar-success-background);
-  color: var(--text-color);
-  white-space: pre-line;
+.mat-mdc-snack-bar-container.snackbar-success .mdc-snackbar__surface {
+  border-radius: 0.5rem;
+  background-color: var(--snackbar-success-background);
 }
 
-.snackbar-error {
-  background: var(--snackbar-error-background);
-  color: var(--text-color);
-  white-space: pre-line;
+.mat-mdc-snack-bar-container.snackbar-success .mdc-snackbar__label {
+  color: map.get($colors, 'light-gray100');
 }
 
-.mat-mdc-snack-bar-container {
-  border-radius: 12px !important;
+.mat-mdc-snack-bar-container.snackbar-error .mdc-snackbar__surface {
+  border-radius: 0.5rem;
+  background-color: var(--snackbar-error-background);
+}
+
+.mat-mdc-snack-bar-container.snackbar-error .mdc-snackbar__label {
+  color: map.get($colors, 'light-gray100');
+}
+
+.form-error {
+  padding: 0.35rem 0 0.35rem 0.25rem;
+  font-size: 0.8rem;
+  color: map.get($colors, 'red600');
 }
 
 input {
@@ -147,6 +157,11 @@ hr {
 
 button {
   cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .d-flex {
@@ -240,6 +255,23 @@ button {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
+
+.m-1 {
+  margin: 0.25rem;
+}
+
+.m-2 {
+  margin: 0.5rem;
+}
+
+.m-3 {
+  margin: 1rem;
+}
+
+.m-4 {
+  margin: 1.5rem;
+}
+
 
 .me-1 {
   margin-right: 0.25rem;
