@@ -46,6 +46,7 @@
   border: var(--border);
   border-radius: 0.25rem;
   transform: translateY(-10px);
+  z-index: 1000;
 }
 
 .header-list-wrapper.open {
