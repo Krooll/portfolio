@@ -1,11 +1,11 @@
 <header class="header-wrapper">
   <div class="d-flex align-items-center me-4">
     @if (_themeService.currentTheme() === ThemeType.Dark) {
-      <img class="lang-icon me-1" width="24"
+      <img loading="lazy" class="lang-icon me-1" width="24"
            height="24" alt="Switcher icons" src="moon.png">
     }
     @if (_themeService.currentTheme() === ThemeType.Light) {
-      <img class="lang-icon me-1" width="24"
+      <img loading="lazy" class="lang-icon me-1" width="24"
            height="24" alt="Switcher icons" src="sun.png">
     }
     <app-theme-switcher></app-theme-switcher>
@@ -14,7 +14,7 @@
     <button type="button" aria-label="Lang menu"
             class="lang-button-setup d-flex align-items-center p-2 me-2"
             (click)="toggleLangSection()">
-      <img width="24"
+      <img loading="lazy" width="24"
            height="24" class="lang-icon me-2" alt="Country image"
            [src]="_langChangeService.currentLanguage() === 'pl'
     ? 'poland.png'
@@ -32,6 +32,7 @@
           class="d-flex align-items-center lang-button mt-1 mb-1"
           (click)="_langChangeService.onChangeLang(item.id)">
           <img
+            loading="lazy"
             class="lang-icon me-3"
             [alt]="item.alt"
             [src]="item.img" />
@@ -59,6 +60,7 @@
           class="d-flex align-items-center menu-buttons mt-2 mb-2"
           (click)="routeToSelectedPage(item.route)">
           <img
+            loading="lazy"
             class="lang-icon me-3"
             alt="Menu options"
             [src]="item.icon" />

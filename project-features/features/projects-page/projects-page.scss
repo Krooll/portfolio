@@ -2,10 +2,12 @@
   width: 100%;
 }
 
-.item-wrapper {
-  background-color: var(--contrast-background);
-  color: var( --contrast-text-color);
-  border-radius: 0.5rem;
+.card-wrapper {
+  height: 2.5rem;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  border-radius: 50%;
+  background: var(--contrast-background);
 }
 
 .card-icon {
@@ -31,11 +33,18 @@ p.label a {
   font-weight: normal;
 }
 
+.hr-project {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  width: 95%;
+}
+
 a {
   text-decoration: none;
   padding: 0.5rem;
-  border: 1px solid var(--contrast-text-color);
+  border: 1px solid var(--contrast-background);
   border-radius: 0.5rem;
   color: var(--contrast-card-text);
 }
+
 
