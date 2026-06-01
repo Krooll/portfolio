@@ -41,20 +41,6 @@ export class ExperiencePage {
 
   downloadResume() {
     const currentLang = localStorage.getItem('currentLang');
-
-    const file =
-      currentLang === 'pl'
-        ? '/assets/resume/CV_Pawel_Krol_pl.pdf'
-        : '/assets/resume/CV_Pawel_Krol_eng.pdf';
-
-    const fileName =
-      currentLang === 'pl'
-        ? 'CV_Pawel_Krol_pl.pdf'
-        : 'CV_Pawel_Krol_eng.pdf';
-
-    const link = document.createElement('a');
-    link.href = file;
-    link.download = fileName;
-    link.click();
+    currentLang === 'pl' ? window.open('/resume/CV_Pawe%C5%82%20Kr%C3%B3l_pl.pdf') : window.open('/resume/CV_Pawe%C5%82%20Kr%C3%B3l_eng.pdf');
   }
 }
