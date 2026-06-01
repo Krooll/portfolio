@@ -1,5 +1,5 @@
 import {TranslateLoader, TranslationObject} from '@ngx-translate/core';
-import {HttpClient, HttpContext} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 import {catchError, Observable, of} from 'rxjs';
 
 const ASSETS_PATH = '/i18n/';

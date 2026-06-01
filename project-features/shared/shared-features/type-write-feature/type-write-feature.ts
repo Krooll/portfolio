@@ -1,4 +1,4 @@
-import {Component, inject, signal} from '@angular/core';
+import {Component, inject, OnDestroy, OnInit, signal} from '@angular/core';
 import {TranslateFallbackPipe} from '../../pipes/translate-pipe';
 import {TranslateService} from '@ngx-translate/core';
 
@@ -15,7 +15,7 @@ export interface TypeWordsInterface {
   templateUrl: './type-write-feature.html',
   styleUrl: './type-write-feature.scss',
 })
-export class TypeWriteFeature {
+export class TypeWriteFeature implements OnInit, OnDestroy {
   private readonly _translatePipe = inject(TranslateFallbackPipe);
   private readonly _translate = inject(TranslateService);
 
@@ -62,7 +62,6 @@ export class TypeWriteFeature {
   }
 
   startTyping() {
-    console.log('Starting typing');
     this.intervalId = setInterval(() => this.tick(), this.typingSpeed());
   }
 
