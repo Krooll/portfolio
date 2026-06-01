@@ -29,6 +29,30 @@ export class TypeWriteFeature implements OnInit, OnDestroy {
       fallback: 'TypeScript...',
     },
     {
+      label: 'typeWriteComponent.exampleWords.javaScript',
+      fallback: 'JavaScript...',
+    },
+    {
+      label: 'typeWriteComponent.exampleWords.rxjs',
+      fallback: 'Rxjs...',
+    },
+    {
+      label: 'typeWriteComponent.exampleWords.html',
+      fallback: 'HTML...',
+    },
+    {
+      label: 'typeWriteComponent.exampleWords.css',
+      fallback: 'CSS...',
+    },
+    {
+      label: 'typeWriteComponent.exampleWords.bootstrap',
+      fallback: 'Bootstrap...',
+    },
+    {
+      label: 'typeWriteComponent.exampleWords.nx',
+      fallback: 'NX...',
+    },
+    {
       label: 'typeWriteComponent.exampleWords.frontend',
       fallback: 'Frontend...',
     },

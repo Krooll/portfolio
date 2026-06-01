@@ -5,6 +5,7 @@
   "aboutMe": "O mnie",
   "projects": "Projekty",
   "experience": "Kariera",
+  "technology": "Technologie",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Strona główna",
@@ -26,10 +27,14 @@
   },
   "typeWriteComponent": {
     "exampleWords": {
-      "programing": "Programowanie...",
-      "programmer": "Programista...",
       "angular": "Angular...",
       "typeScript": "TypeScript...",
+      "javaScript": "JavaScript...",
+      "rxjs": "RxJS...",
+      "html": "HTML...",
+      "css": "CSS...",
+      "bootstrap": "Bootstrap",
+      "nx": "NX",
       "frontend": "Frontend...",
       "backend": "Backend..."
     }
@@ -66,30 +71,30 @@
     },
     "muddyCodeWorkspace": {
       "projectName": "Monorepo NX",
-      "companyName": "Muddy code",
-      "description": "Praca w monorepo Nx w ramach rozbudowanego systemu ERP typu multi-application. Projekt obejmował rozwój oraz utrzymanie wielu modułów biznesowych oraz współdzielonych komponentów i serwisów.\n\nZakres prac w modułach biznesowych:\n\n• Moduł handlowy:\nSłowniki kontrahentów, zlecenia klientów, cenniki oraz świadczenia.\n\n• PMS:\nLogika technologiczno-produkcyjna, wersje zwolnień, kartoteka zleceń, kalkulacje (cechy, relacje cech, rejestr wycen), rozbudowane słowniki (narzędzia, typy narzędzi, operacje, stanowiska, stawki gniazd, kwalifikacje, modyfikatory).\n\n• Symulacje:\nWersje symulacji oraz kartoteka symulacji.\n\n• WMS:\nGrupy indeksów. \n\n• LOGS: \nModuł logów systemowych (monitorowanie i prezentacja logów aplikacyjnych).\n\n• MES:\nSystem kontroli i monitorowania produkcji – obsługa procesów produkcyjnych, rejestracja pracy pracowników, kontrola realizacji zleceń produkcyjnych, ewidencja zużycia materiałów oraz bieżące śledzenie statusów operacji produkcyjnych.\n\nSerwisy i architektura systemu\n\n• QBE Service: \nBudowa i obsługa zapytań typu Query By Example (QBE).\n\n• Attachment Service:  \nUpload i pobieranie załączników z obsługą progresu przesyłania danych (XMLHttpRequest z eventami progress), integracja z backendem oraz strumieniowe pobieranie po stronie frontu.\n\n• User Settings – zarządzanie ustawieniami użytkownika przechowywanymi w localStorage:\n- konfiguracje tabel i widoków\n- ustawienia językowe\n- kontrola dostępu\n\n • Mechanizmy autoryzacji i sesji\n- logowanie oraz mechanizm ponownego logowania (session recovery)\n- obsługa wygasania tokena oraz retry requestów po jego odświeżeniu\n- anulowanie requestów przy zmianie użytkownika\n- interceptory HTTP odpowiedzialne za obsługę tokena i autoryzacji\n- mechanizm idle timeout oparty o aktywność użytkownika (tracking zdarzeń myszy)\n\nZarządzanie aplikacjami i dostępem\n\n• ActiveApp Service: \nKontrola dostępnych aplikacji i funkcjonalności per użytkownik (system uprawnień).\n\n• Komponenty i warstwa UI\nKomponenty współdzielone: \n- loader\n- attachment component\n- system obsługi błędów oparty o snackbar service\n- rozbudowa komponentu drzewa (tree view, dynamiczne dodawanie i usuwanie node’ów, podgląd szczegółów po effect hover, generowanie i prezentacja ścieżek procesów (np. produkcyjnych))\n- rozwój i wsparcie komponentów:\n- system modalny\n- numeric keyboard component\n\nPrzez ponad 1,5 roku pracy nad projektem odpowiadałem za rozwój systemu ERP – po stronie warstwy frontendowej, architektury serwisów oraz współdzielonych komponentów. Prace obejmowały rozbudowę istniejących modułów, implementację nowych funkcjonalności oraz stabilizację i rozwój systemu w środowisku enterprise."
+      "companyName": "Muddy Code",
+      "description": "Praca w monorepo Nx w ramach rozbudowanego systemu ERP typu multi-application. Projekt obejmował rozwój oraz utrzymanie wielu modułów biznesowych oraz współdzielonych komponentów i serwisów.\n\nZakres prac w modułach biznesowych:\n\n• Moduł handlowy:\nSłowniki kontrahentów, zlecenia klientów, cenniki oraz świadczenia.\n\n• PMS:\nLogika technologiczno-produkcyjna, wersje zwolnień, kartoteka zleceń, kalkulacje (cechy, relacje cech, rejestr wycen), rozbudowane słowniki (narzędzia, typy narzędzi, operacje, stanowiska, stawki gniazd, kwalifikacje, modyfikatory).\n\n• Symulacje:\nWersje symulacji oraz kartoteka symulacji.\n\n• WMS:\nGrupy indeksów.\n\n• LOGS:\nModuł logów systemowych (monitorowanie i prezentacja logów aplikacyjnych).\n\n• MES:\nSystem kontroli i monitorowania produkcji – obsługa procesów produkcyjnych, rejestracja pracy pracowników, kontrola realizacji zleceń produkcyjnych, ewidencja zużycia materiałów oraz bieżące śledzenie statusów operacji produkcyjnych.\n\nSerwisy i architektura systemu\n\n• QBE Service:\nBudowa i obsługa zapytań typu Query By Example (QBE).\n\n• Attachment Service:\nUpload i pobieranie załączników z obsługą progresu przesyłania danych (XMLHttpRequest z eventami progress), integracja z backendem oraz strumieniowe pobieranie po stronie frontu.\n\n• User Settings – zarządzanie ustawieniami użytkownika przechowywanymi w localStorage:\n- konfiguracje tabel i widoków\n- ustawienia językowe\n- kontrola dostępu\n\n• Mechanizmy autoryzacji i sesji\n- logowanie oraz mechanizm ponownego logowania (session recovery)\n- obsługa wygasania tokena oraz retry requestów po jego odświeżeniu\n- anulowanie requestów przy zmianie użytkownika\n- interceptory HTTP odpowiedzialne za obsługę tokena i autoryzacji\n- mechanizm idle timeout oparty o aktywność użytkownika (tracking zdarzeń myszy)\n\nZarządzanie aplikacjami i dostępem\n\n• ActiveApp Service:\nKontrola dostępnych aplikacji i funkcjonalności per użytkownik (system uprawnień).\n\n• Komponenty i warstwa UI\nKomponenty współdzielone:\n- loader\n- attachment component\n- system obsługi błędów oparty o snackbar service\n- rozbudowa komponentu drzewa (tree view, dynamiczne dodawanie i usuwanie node’ów, podgląd szczegółów po hover, generowanie i prezentacja ścieżek procesów)\n- rozwój i wsparcie komponentów:\n- system modalny\n- numeric keyboard component\n\nPrzez ponad 1,5 roku pracy nad projektem odpowiadałem za rozwój systemu ERP – po stronie warstwy frontendowej, architektury serwisów oraz współdzielonych komponentów. Prace obejmowały rozbudowę istniejących modułów, implementację nowych funkcjonalności oraz stabilizację i rozwój systemu w środowisku enterprise."
     },
     "muddyCodeSite": {
-      "projectName": "Strona www Muddy code",
-      "companyName": "Muddy code",
+      "projectName": "Strona www Muddy Code",
+      "companyName": "Muddy Code",
       "description": "Strona „Muddy Code” została zbudowana z wykorzystaniem platformy Wix. Jest to prosta strona internetowa zawierająca informacje o firmie, oferowanych usługach oraz sekcję kontaktową umożliwiającą bezpośrednią komunikację z klientem."
     },
     "familiaMedSite": {
       "projectName": "Strona www Familiamed",
       "companyName": "Familiamed",
-      "description": "Rozwój i utrzymanie projektu, prace nad SEO (optymalizacja pozycjonowania), analiza i naprawa istniejących błędów oraz refaktoryzacja starszych elementów systemu. Rozbudowa strony głównej oraz podstron (w tym Familamed Clinique – plastyka powiek), a także usprawnianie wydajności i stabilności działania serwisu. Kontynuacja i rozwój projektu po poprzednich zespołach, z naciskiem na poprawę jakości kodu i doświadczenia użytkownika."
+      "description": "Rozwój i utrzymanie projektu, prace nad SEO (optymalizacja pozycjonowania), analiza i naprawa istniejących błędów oraz refaktoryzacja starszych elementów systemu. Rozbudowa strony głównej oraz podstron (w tym Familiamed Clinique – plastyka powiek), a także usprawnianie wydajności i stabilności działania serwisu. Kontynuacja i rozwój projektu po poprzednich zespołach, z naciskiem na poprawę jakości kodu i doświadczenia użytkownika."
     },
     "quickAtest": {
-      "projectName": "Quick atest",
-      "companyName": "Muddy code",
+      "projectName": "Quick Atest",
+      "companyName": "Muddy Code",
       "description": "Aplikacja typu single-page „Quick Atest” została zaprojektowana, aby usprawnić proces tworzenia i łączenia dokumentów wymaganych do realizacji zleceń. Umożliwia ona filtrowanie treści, generowanie danych do pliku Excel oraz pobieranie wybranych dokumentów w formie jednego, połączonego pliku PDF."
     }
   },
   "careerList": {
     "muddyCode": {
-      "companyName": "Muddy code Sp. zoo",
-      "jobPosition": "Programista Frontend",
-      "description": "Od stycznia 2024 roku pracuję jako Programista Frontendowy. Odpowiadam za rozwój i utrzymanie warstwy frontendowej aplikacji webowych, dbając o funkcjonalność, wydajność oraz jakość interfejsu użytkownika. Rozpoczynałem od realizacji mniejszych projektów, stopniowo przejmując odpowiedzialność za coraz bardziej rozbudowane i złożone rozwiązania. Współpracuję z zespołami backendowymi, projektantami UX/UI oraz uczestniczę w procesie wdrażania nowych funkcjonalności."
+      "companyName": "Muddy Code sp. z o.o.",
+      "jobPosition": "Programista frontendowy",
+      "description": "Od stycznia 2024 roku pracuję jako programista frontendowy. Odpowiadam za rozwój i utrzymanie warstwy frontendowej aplikacji webowych, dbając o funkcjonalność, wydajność oraz jakość interfejsu użytkownika. Rozpoczynałem od realizacji mniejszych projektów, stopniowo przejmując odpowiedzialność za coraz bardziej rozbudowane i złożone rozwiązania. Współpracuję z zespołami backendowymi, projektantami UX/UI oraz uczestniczę w procesie wdrażania nowych funkcjonalności."
     },
     "montService": {
       "companyName": "Mont Service",

@@ -1,7 +1,7 @@
 <div class="page-wrapper h-100 p-2">
   <div class="d-flex align-items-center">
     <div class="img-wrapper d-flex align-items-center justify-content-center me-4">
-      <img class="img" src="job-seeker.png" alt="experience">
+      <img loading="lazy" class="img" src="job-seeker.png" alt="experience">
     </div>
     <p>{{ 'experience' | translateFallback: 'Kariera' }}</p>
   </div>
@@ -10,7 +10,7 @@
     @for (item of careerList; track $index) {
       <div class="d-flex align-items-start justify-content-between mt-1 mb-1">
         <div class="img-wrapper-experience d-flex align-items-center justify-content-center">
-          <img src="/job.png" class="experience-img" alt="job-icon">
+          <img loading="lazy" src="/job.png" class="experience-img" alt="job-icon">
         </div>
         <div class="d-flex flex-column ms-3 p-1">
           <p>{{ item.companyName | translateFallback: item.companyNameFallback }}</p>
@@ -22,7 +22,7 @@
     }
     <div class="d-flex align-items-center justify-content-center mt-4">
       <button type="button" class="resume-img-wrapper d-flex align-items-center justify-content-center" aria-label="resume-download" (click)="downloadResume()">
-        <img src="/resume.png" alt="resume-icon">
+        <img loading="lazy" src="/resume.png" alt="resume-icon">
       </button>
     </div>
   </div>

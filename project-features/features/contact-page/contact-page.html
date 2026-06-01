@@ -1,7 +1,7 @@
 <div class="page-wrapper h-100 p-2">
   <div class="d-flex align-items-center">
     <div class="img-wrapper d-flex align-items-center justify-content-center me-4">
-      <img class="img" src="paper-plane.png" alt="paper-plane">
+      <img loading="lazy" class="img" src="paper-plane.png" alt="paper-plane">
     </div>
     <p>{{ 'contact' | translateFallback: 'Kontakt' }}</p>
   </div>
@@ -58,7 +58,7 @@
           <button [aria-label]="item.alt" type="button"
                   class="social-buttons d-flex align-items-center justify-content-center me-3 ms-3"
                   (click)="routeToSocialPage(item.url)">
-            <img class="social-img" [src]="item.icon" [alt]="item.alt">
+            <img loading="lazy" class="social-img" [src]="item.icon" [alt]="item.alt">
           </button>
         }
       </div>

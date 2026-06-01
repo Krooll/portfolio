@@ -1,1 +1,25 @@
-<p>technology-page works!</p>
+<div class="page-wrapper h-100 p-2">
+  <div class="d-flex align-items-center">
+    <div class="img-wrapper d-flex align-items-center justify-content-center me-4">
+      <img loading="lazy" class="img" src="tech.png" alt="technology">
+    </div>
+    <p>{{ 'technology' | translateFallback: 'Technologie' }}</p>
+  </div>
+  <hr>
+  <div class="body-scroll d-flex  flex-column">
+    <div class="d-flex align-items-center justify-content-center flex-wrap">
+      @for(item of technologyItems; track $index) {
+        <div class="tech-wrapper d-flex align-items-center justify-content-center m-2">
+          <img loading="lazy" class="tech-img" [src]="item.icon" alt="tech-icon">
+        </div>
+      }
+    </div>
+    <div class="mt-4 d-flex align-items-center justify-content-center flex-wrap">
+      @for(item of aiItems; track $index) {
+        <div class="tech-wrapper d-flex align-items-center justify-content-center m-2">
+          <img loading="lazy" class="tech-img" [src]="item.icon" alt="tech-icon">
+        </div>
+      }
+    </div>
+  </div>
+</div>
