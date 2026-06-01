@@ -9,3 +9,29 @@
   background: var(--contrast-background);
   border-radius: 50%;
 }
+
+.experience-img {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.resume-img-wrapper {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
+  background: var(--contrast-background);
+  border: none;
+  transition: transform 0.5s ease-in-out;
+}
+
+.resume-img-wrapper:hover {
+  transform: rotate(360deg);
+}
+
+.img-wrapper-experience {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  background: var(--contrast-background);
+  border: 2px solid var(--contrast-background);
+}

@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {TranslateFallbackPipe} from "../../shared/pipes/translate-pipe";
-import {of} from 'rxjs';
 
 export interface CareerItem {
   companyName: string;
@@ -13,9 +12,9 @@ export interface CareerItem {
 
 @Component({
   selector: 'app-experience-page',
-    imports: [
-        TranslateFallbackPipe
-    ],
+  imports: [
+    TranslateFallbackPipe
+  ],
   templateUrl: './experience-page.html',
   styleUrl: './experience-page.scss',
 })
@@ -39,5 +38,23 @@ export class ExperiencePage {
       descriptionFallback: 'opis'
     }
   ];
-  protected readonly of = of;
+
+  downloadResume() {
+    const currentLang = localStorage.getItem('currentLang');
+
+    const file =
+      currentLang === 'pl'
+        ? '/assets/resume/CV_Pawel_Krol_pl.pdf'
+        : '/assets/resume/CV_Pawel_Krol_eng.pdf';
+
+    const fileName =
+      currentLang === 'pl'
+        ? 'CV_Pawel_Krol_pl.pdf'
+        : 'CV_Pawel_Krol_eng.pdf';
+
+    const link = document.createElement('a');
+    link.href = file;
+    link.download = fileName;
+    link.click();
+  }
 }
