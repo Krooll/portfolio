@@ -79,6 +79,21 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'technology',
+    loadComponent: () =>
+      import('../../project-features/shells/technology-shell/technology-shell')
+        .then(m => m.TechnologyShell),
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('../../project-features/features/technology-page/technology-page')
+            .then(m => m.TechnologyPage)
+      },
+    ],
+  },
 
   {
     path: '**',

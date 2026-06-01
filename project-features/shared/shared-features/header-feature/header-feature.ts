@@ -59,6 +59,12 @@ export class HeaderFeature {
       icon: '/code.png'
     },
     {
+      label: 'headerComponent.headerMenuOptionList.technologyPageButton',
+      fallback: 'Technologie',
+      route: '/technology',
+      icon: '/mail.png'
+    },
+    {
       label: 'headerComponent.headerMenuOptionList.aboutMePageButton',
       fallback: 'O mnie',
       route: '/about-me',

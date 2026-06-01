@@ -27,7 +27,7 @@
                 "glob": "**/*",
                 "input": "project-features/shared/shared-assets/i18n",
                 "output": "i18n"
-              }
+              },
             ],
             "styles": [
               "src/global-styles/styles.scss"
