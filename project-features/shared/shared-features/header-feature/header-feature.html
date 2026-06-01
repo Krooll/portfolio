@@ -2,11 +2,11 @@
   <div class="d-flex align-items-center me-4">
     @if (_themeService.currentTheme() === ThemeType.Dark) {
       <img loading="lazy" class="lang-icon me-1" width="24"
-           height="24" alt="Switcher icons" src="moon.png">
+           height="24" alt="Switcher icons" src="/icons/moon.png">
     }
     @if (_themeService.currentTheme() === ThemeType.Light) {
       <img loading="lazy" class="lang-icon me-1" width="24"
-           height="24" alt="Switcher icons" src="sun.png">
+           height="24" alt="Switcher icons" src="/icons/sun.png">
     }
     <app-theme-switcher></app-theme-switcher>
   </div>
@@ -17,8 +17,8 @@
       <img loading="lazy" width="24"
            height="24" class="lang-icon me-2" alt="Country image"
            [src]="_langChangeService.currentLanguage() === 'pl'
-    ? 'poland.png'
-    : 'united-kingdom.png'"
+    ? '/icons/poland.png'
+    : '/icons/united-kingdom.png'"
       />
       <p>{{ 'headerComponent.headerLangButtonLabel' | translateFallback: 'Język' }}</p>
     </button>
