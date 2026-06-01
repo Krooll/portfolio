@@ -21,61 +21,58 @@ export class TechnologyPage {
 
   technologyItems: TechnologyItem[] = [
     {
-      icon: '/angular.png',
+      icon: '/icons/angular.png',
     },
     {
-      icon: '/ts.png',
-    },
-    // {
-    //   icon: '/rxjs.png',
-    // },
-    {
-      icon: '/js.png',
+      icon: '/icons/ts.png',
     },
     {
-      icon: '/nx.svg',
+      icon: '/icons/js.png',
     },
     {
-      icon: '/boostrap.png',
+      icon: '/icons/nx.svg',
     },
     {
-      icon: '/html.png',
+      icon: '/icons/boostrap.png',
     },
     {
-      icon: '/css.png',
+      icon: '/icons/html.png',
     },
     {
-      icon: '/jest.svg',
+      icon: '/icons/css.png',
     },
     {
-      icon: '/cypress.svg',
+      icon: '/icons/jest.svg',
     },
     {
-      icon: '/npm.png',
+      icon: '/icons/cypress.svg',
     },
     {
-      icon: '/keycloak.png',
+      icon: '/icons/npm.png',
     },
     {
-      icon: '/docker.png',
+      icon: '/icons/keycloak.png',
     },
     {
-      icon: '/figma.png',
+      icon: '/icons/docker.png',
     },
     {
-      icon: '/jira.png',
+      icon: '/icons/figma.png',
+    },
+    {
+      icon: '/icons/jira.png',
     },
   ];
 
   aiItems: AiItem[] = [
     {
-      icon: '/codex.png',
+      icon: '/icons/codex.png',
     },
     {
-      icon: '/perplexity.png',
+      icon: '/icons/perplexity.png',
     },
     {
-      icon: '/gemini.png',
+      icon: '/icons/gemini.png',
     }
   ];
 }

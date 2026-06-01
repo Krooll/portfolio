@@ -44,37 +44,37 @@ export class HeaderFeature {
       label: 'headerComponent.headerMenuOptionList.mainPageButton',
       fallback: 'Strona główna',
       route: '/main-page',
-      icon: '/home.png'
+      icon: '/icons/home.png'
     },
     {
       label: 'headerComponent.headerMenuOptionList.experiencePageButton',
       fallback: 'Doświadczenie',
       route: '/experience',
-      icon: '/brief-case.png'
+      icon: '/icons/brief-case.png'
     },
     {
       label: 'headerComponent.headerMenuOptionList.projectPageButton',
       fallback: 'Projekty',
       route: '/projects',
-      icon: '/code.png'
+      icon: '/icons/code.png'
     },
     {
       label: 'headerComponent.headerMenuOptionList.technologyPageButton',
       fallback: 'Technologie',
       route: '/technology',
-      icon: '/mail.png'
+      icon: '/icons/mail.png'
     },
     {
       label: 'headerComponent.headerMenuOptionList.aboutMePageButton',
       fallback: 'O mnie',
       route: '/about-me',
-      icon: '/person.png'
+      icon: '/icons/person.png'
     },
     {
       label: 'headerComponent.headerMenuOptionList.contactPageButton',
       fallback: 'Kontakt',
       route: '/contact',
-      icon: '/mail.png'
+      icon: '/icons/mail.png'
     },
   ];
 
@@ -83,14 +83,14 @@ export class HeaderFeature {
       label: 'headerComponent.headerLangOptionList.polish',
       fallback: 'Polski',
       id: 'pl',
-      img: 'poland.png',
+      img: '/icons/poland.png',
       alt: 'Change language to Polish'
     },
     {
       label: 'headerComponent.headerLangOptionList.english',
       fallback: 'Angielski',
       id: 'en',
-      img: 'united-kingdom.png',
+      img: '/icons/united-kingdom.png',
       alt: 'Change language to English'
     }
   ];

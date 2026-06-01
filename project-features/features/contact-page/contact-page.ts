@@ -46,12 +46,12 @@ export class ContactPage {
 
   contactButtonsList: ContactButtonInterface[] = [
     {
-      icon: 'linkedin-big.png',
+      icon: '/icons/linkedin-big.png',
       alt: 'Linkedin',
       url: 'https://www.linkedin.com/in/pawe%C5%82-kr%C3%B3l-b73960290/'
     },
     {
-      icon: 'github-big.png',
+      icon: '/icons/github-big.png',
       alt: 'Github',
       url: 'https://github.com/Krooll'
     },
