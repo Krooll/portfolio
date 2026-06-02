@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ExperiencePage } from './experience-page';
 
-describe('ExperiencePage', () => {
-  let component: ExperiencePage;
-  let fixture: ComponentFixture<ExperiencePage>;
+import { WorkInProgressFeature } from './work-in-progress-feature';
+
+describe('WorkInProgressFeature', () => {
+  let component: WorkInProgressFeature;
+  let fixture: ComponentFixture<WorkInProgressFeature>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ExperiencePage],
+      imports: [WorkInProgressFeature],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ExperiencePage);
+    fixture = TestBed.createComponent(WorkInProgressFeature);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

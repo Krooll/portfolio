@@ -5,7 +5,8 @@
   "aboutMe": "About me",
   "projects": "Projects",
   "experience": "Career",
-  "technology": "Technologies",
+  "technology": "Tech stack",
+  "education": "Education",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Home",
@@ -13,7 +14,7 @@
       "projectPageButton": "Projects",
       "aboutMePageButton": "About me",
       "contactPageButton": "Contact",
-      "technologyPageButton": "Technologies"
+      "technologyPageButton": "Tech stack"
     },
     "headerLangButtonLabel": "Language",
     "headerThemeSwitcherLabel": "Theme",
@@ -101,5 +102,8 @@
       "jobPosition": "Electrician",
       "description": "I was responsible for diagnosing, repairing, and maintaining cash registers, payment terminals, and electronic devices used at points of sale. I serviced both hardware and electronic components, ensuring the proper functioning of sales systems. I performed installations, configurations, and troubleshooting, ensuring continuity of client operations."
     }
+  },
+  "workInProgressComponent": {
+    "title": "This section is currently under development. Check back soon!"
   }
 }

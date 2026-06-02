@@ -1,16 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ExperiencePage } from './experience-page';
 
-describe('ExperiencePage', () => {
-  let component: ExperiencePage;
-  let fixture: ComponentFixture<ExperiencePage>;
+import { EducationShell } from './education-shell';
+
+describe('EducationShell', () => {
+  let component: EducationShell;
+  let fixture: ComponentFixture<EducationShell>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ExperiencePage],
+      imports: [EducationShell],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(ExperiencePage);
+    fixture = TestBed.createComponent(EducationShell);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

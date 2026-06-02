@@ -65,6 +65,12 @@ export class HeaderFeature {
       icon: '/icons/mail.png'
     },
     {
+      label: 'headerComponent.headerMenuOptionList.educationPageButton',
+      fallback: 'Wykształcenie',
+      route: '/education',
+      icon: '/icons/education-small.png'
+    },
+    {
       label: 'headerComponent.headerMenuOptionList.aboutMePageButton',
       fallback: 'O mnie',
       route: '/about-me',
