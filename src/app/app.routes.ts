@@ -94,6 +94,21 @@ export const routes: Routes = [
       },
     ],
   },
+  {
+    path: 'education',
+    loadComponent: () =>
+      import('../../project-features/shells/education-shell/education-shell')
+        .then(m => m.EducationShell),
+    children: [
+      {
+        path: '',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('../../project-features/features/education-page/education-page')
+            .then(m => m.EducationPage)
+      },
+    ],
+  },
 
   {
     path: '**',

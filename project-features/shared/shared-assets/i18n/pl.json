@@ -5,7 +5,8 @@
   "aboutMe": "O mnie",
   "projects": "Projekty",
   "experience": "Kariera",
-  "technology": "Technologie",
+  "technology": "Tech stack",
+  "education": "Wykstałcenie",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Strona główna",
@@ -13,7 +14,8 @@
       "projectPageButton": "Projekty",
       "aboutMePageButton": "O mnie",
       "contactPageButton": "Kontakt",
-      "technologyPageButton": "Technologie"
+      "technologyPageButton": "Tech stack",
+      "educationPageButton": "Wykształcenie"
     },
     "headerLangButtonLabel": "Język",
     "headerThemeSwitcherLabel": "Motyw",
@@ -101,5 +103,8 @@
       "jobPosition": "Elektryk",
       "description": "Odpowiadałem za diagnostykę, naprawę oraz konserwację kas fiskalnych, terminali płatniczych i urządzeń elektronicznych wykorzystywanych w punktach sprzedaży. Realizowałem serwis zarówno sprzętu, jak i podzespołów elektronicznych, dbając o sprawne funkcjonowanie systemów sprzedażowych. Przeprowadzałem instalacje, konfiguracje oraz usuwanie usterek, zapewniając ciągłość pracy klientów."
     }
+  },
+  "workInProgressComponent": {
+    "title": "Ta sekcja jest właśnie rozbudowywana. Zajrzyj ponownie wkrótce!"
   }
 }

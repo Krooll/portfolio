@@ -1,6 +1,6 @@
 <div class="page-wrapper h-100 p-2">
   <div class="d-flex align-items-center">
-    <div class="img-wrapper d-flex align-items-center justify-content-center me-4">
+    <div class="img-wrapper d-flex align-items-center justify-content-center me-2">
       <img loading="lazy" class="img" src="/icons/folder.png" alt="work">
     </div>
     <p>{{ 'projects' | translateFallback: 'Projekty' }}</p>
@@ -34,7 +34,7 @@
           </p>
         </div>
         @if(item.url) {
-          <div class="d-flex align-items-center">
+          <div class="d-flex align-items-center flex-wrap">
             <div class="card-wrapper d-flex align-items-center justify-content-center me-2">
               <img loading="lazy" class="card-icon" alt="list icon" [src]="item.urlIcon">
             </div>
