@@ -6,7 +6,7 @@
   "projects": "Projekty",
   "experience": "Kariera",
   "technology": "Tech stack",
-  "education": "Wykstałcenie",
+  "education": "Wykształcenie",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Strona główna",
@@ -69,7 +69,8 @@
       "projectName": "Nazwa projektu:",
       "companyName": "Firma / klient:",
       "description": "Opis wykonanych prac:",
-      "url": "Strona www:"
+      "url": "Strona www:",
+      "screenshots": "Zrzuty ekranu:"
     },
     "muddyCodeWorkspace": {
       "projectName": "Monorepo NX",

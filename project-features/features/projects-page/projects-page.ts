@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {TranslateFallbackPipe} from "../../shared/pipes/translate-pipe";
 
 export interface ProjectsObject {
@@ -14,6 +14,8 @@ export interface ProjectsObject {
   img?: string[];
   imgAlt?: string;
   imgIcon?: string;
+  imgText?: string;
+  imgFallback?: string;
   url?: string;
   urlIcon?: string;
 }
@@ -27,6 +29,7 @@ export interface ProjectsObject {
   styleUrl: './projects-page.scss',
 })
 export class ProjectsPage {
+  showScreenshotsSection = signal<boolean>(true);
 
   projectList: ProjectsObject[] = [
     {
@@ -39,9 +42,23 @@ export class ProjectsPage {
       description: 'projectList.muddyCodeWorkspace.description',
       descriptionIcon: '/icons/text.png',
       descriptionFallback: 'Praca w monorepo Nx w ramach rozbudowanego systemu ERP typu multi-application (WMS / CS / PMS / MWS / MES). Projekt obejmował rozwój oraz utrzymanie wielu modułów biznesowych oraz współdzielonych komponentów i serwisów.\\n\\nZakres prac w modułach biznesowych\\n\\nModuł handlowy:\\nSłowniki kontrahentów, zlecenia klientów, cenniki oraz świadczenia.\\n\\nPMS:\\nLogika technologiczno-produkcyjna, wersje zwolnień, kartoteka zleceń, kalkulacje (cechy, relacje cech, rejestr wycen), rozbudowane słowniki (narzędzia, typy narzędzi, operacje, stanowiska, stawki gniazd, kwalifikacje, modyfikatory).\\n\\nSymulacje:\\nWersje symulacji oraz kartoteka symulacji.\\n\\nWMS:\\nGrupy indeksów oraz moduł logów systemowych (monitorowanie i prezentacja logów aplikacyjnych).\\n\\nMES:\\nSystem kontroli i monitorowania produkcji – obsługa procesów produkcyjnych, rejestracja pracy pracowników, kontrola realizacji zleceń produkcyjnych, ewidencja zużycia materiałów oraz bieżące śledzenie statusów operacji produkcyjnych.\\n\\nSerwisy i architektura systemu\\n\\nQBE Service – budowa i obsługa zapytań typu Query By Example (QBE).\\n\\nAttachment Service – upload i pobieranie załączników z obsługą progresu przesyłania danych (XMLHttpRequest z eventami progress), integracja z backendem oraz strumieniowe pobieranie po stronie frontu.\\n\\nUser Settings – zarządzanie ustawieniami użytkownika przechowywanymi w localStorage:\\n\\nkonfiguracje tabel i widoków\\nustawienia językowe\\nkontrola dostępu\\nMechanizmy autoryzacji i sesji\\nlogowanie oraz mechanizm ponownego logowania (session recovery)\\nobsługa wygasania tokena oraz retry requestów po jego odświeżeniu\\nanulowanie requestów przy zmianie użytkownika\\ninterceptory HTTP odpowiedzialne za obsługę tokena i autoryzacji\\nmechanizm idle timeout oparty o aktywność użytkownika (tracking zdarzeń myszy i klawiatury)\\nZarządzanie aplikacjami i dostępem\\n\\nActiveApp Service – kontrola dostępnych aplikacji i funkcjonalności per użytkownik (system uprawnień / entitlement).\\n\\nKomponenty i warstwa UI\\nkomponenty współdzielone: loader, attachment component\\nsystem obsługi błędów oparty o snackbar service\\nrozbudowany komponent drzewa (tree view):\\ndynamiczne dodawanie i usuwanie node’ów\\npodgląd szczegółów po hoverze\\ngenerowanie i prezentacja ścieżek procesów (np. produkcyjnych)\\nrozwój i wsparcie komponentów:\\nsystem modalny\\nnumeric keyboard component\\nPodsumowanie\\n\\nPrzez ponad 1,5 roku pracy nad projektem odpowiadałem za rozwój kluczowych obszarów systemu ERP – zarówno po stronie logiki biznesowej, jak i warstwy frontendowej, architektury serwisów oraz współdzielonych komponentów. Prace obejmowały rozbudowę istniejących modułów, implementację nowych funkcjonalności oraz stabilizację i rozwój systemu w środowisku enterprise.\n',
-      img: ['', ''],
+      img: [
+        '/screenshots/login-section.png',
+        '/screenshots/user-section.png',
+        '/screenshots/article-group.png',
+        '/screenshots/cs.png',
+        '/screenshots/feature-relation.png',
+        '/screenshots/orders.png',
+        '/screenshots/versions.png',
+        '/screenshots/simulation.png',
+        '/screenshots/technology.png',
+        '/screenshots/technology2.png',
+        '/screenshots/technology3.png',
+        '/screenshots/technology4.png',
+        '/screenshots/logs.png'
+      ],
       imgAlt: 'muddycode',
-      imgIcon: '/image2.png'
+      imgIcon: '/icons/images.png',
     },
     {
       projectName: 'projectList.muddyCodeSite.projectName',
@@ -53,7 +70,6 @@ export class ProjectsPage {
       description: 'projectList.muddyCodeSite.description',
       descriptionFallback: 'Strona „Muddy Code” została zbudowana z wykorzystaniem platformy Wix. Jest to prosta strona internetowa zawierająca informacje o firmie, oferowanych usługach oraz sekcję kontaktową umożliwiającą bezpośrednią komunikację z klientem.',
       descriptionIcon: '/icons/text.png',
-      img: ['', ''],
       imgAlt: 'muddycode',
       imgIcon: '/image2.png',
       url: 'https://www.muddycode.pl/',
@@ -69,7 +85,6 @@ export class ProjectsPage {
       description: 'projectList.familiaMedSite.description',
       descriptionFallback: 'Rozwój i utrzymanie projektu, prace nad SEO (optymalizacja pozycjonowania), analiza i naprawa istniejących błędów oraz refaktoryzacja starszych elementów systemu. Rozbudowa strony głównej oraz podstron (w tym Familamed Clinique – plastyka powiek), a także usprawnianie wydajności i stabilności działania serwisu. Kontynuacja i rozwój projektu po poprzednich zespołach, z naciskiem na poprawę jakości kodu i doświadczenia użytkownika.',
       descriptionIcon: '/icons/text.png',
-      img: ['', ''],
       imgAlt: 'familiamed',
       imgIcon: '/icons/image2.png',
       url: 'https://familiamed.pl/',
@@ -85,9 +100,19 @@ export class ProjectsPage {
       description: 'projectList.quickAtest.description',
       descriptionFallback: 'Aplikacja typu single-page „Quick Atest” została zaprojektowana, aby usprawnić proces tworzenia i łączenia dokumentów wymaganych do realizacji zleceń. Umożliwia ona filtrowanie treści, generowanie danych do pliku Excel oraz pobieranie wybranych dokumentów w formie jednego, połączonego pliku PDF.',
       descriptionIcon: '/icons/text.png',
-      img: ['', ''],
+      img: ['/screenshots/atest2.png', '/screenshots/atest.png'],
+      imgText: 'projectList.variables.screenshots',
+      imgFallback: 'Zrzuty ekranu',
       imgAlt: 'quick-atest',
-      imgIcon: '/icons/image2.png',
+      imgIcon: '/icons/images.png',
     },
   ];
+
+  toggleScreenshotsSection() {
+    this.showScreenshotsSection.update((v) => !v);
+  }
+
+  openImage(img: string) {
+    window.open(img, '_blank');
+  }
 }

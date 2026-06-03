@@ -33,7 +33,7 @@
             <span class="ms-1">{{ item.description | translateFallback: item.descriptionFallback }}</span>
           </p>
         </div>
-        @if(item.url) {
+        @if (item.url) {
           <div class="d-flex align-items-center flex-wrap">
             <div class="card-wrapper d-flex align-items-center justify-content-center me-2">
               <img loading="lazy" class="card-icon" alt="list icon" [src]="item.urlIcon">
@@ -41,6 +41,19 @@
             <p class="label">{{ 'projectList.variables.url' | translateFallback: 'Strona www:' }}
               <a [href]="item.url" target="_blank" rel="noopener noreferrer" class="ms-1">{{ item.url }}</a>
             </p>
+          </div>
+        }
+        @if (item.img && item.img.length > 0) {
+          <div class="d-flex flex-wrap">
+            <div class="card-wrapper d-flex align-items-center justify-content-center me-2">
+              <img loading="lazy" class="card-icon" alt="list icon" [src]="item.imgIcon">
+            </div>
+            <p class="label">{{ 'projectList.variables.screenshots' | translateFallback: 'Zrzuty ekranu:' }}</p>
+            <div class="d-flex align-items-center justify-content-center flex-wrap">
+              @for (img of item.img; track $index) {
+                <img (click)="openImage(img)" class="mini-screenshots" [src]="img" [alt]="item.imgAlt" loading="lazy">
+              }
+            </div>
           </div>
         }
       </div>
