@@ -29,8 +29,7 @@ export interface ProjectsObject {
   styleUrl: './projects-page.scss',
 })
 export class ProjectsPage {
-
-  selectedImage = signal<string | undefined>(undefined);
+  showScreenshotsSection = signal<boolean>(true);
 
   projectList: ProjectsObject[] = [
     {
@@ -108,6 +107,10 @@ export class ProjectsPage {
       imgIcon: '/icons/images.png',
     },
   ];
+
+  toggleScreenshotsSection() {
+    this.showScreenshotsSection.update((v) => !v);
+  }
 
   openImage(img: string) {
     window.open(img, '_blank');
