@@ -98,6 +98,13 @@ export class HeaderFeature {
       id: 'en',
       img: '/icons/united-kingdom.png',
       alt: 'Change language to English'
+    },
+    {
+      label: 'headerComponent.headerLangOptionList.germans',
+      fallback: 'Niemiecki',
+      id: 'de',
+      img: '/icons/germany.png',
+      alt: 'Change language to German'
     }
   ];
 
@@ -141,6 +148,24 @@ export class HeaderFeature {
       this._langChangeService.isLangListOpen.set(false);
     }
     this.isHeaderListOpen.update((v) => !v);
+  }
+
+  setCurrentFlag(): string {
+    const currentLang =  this._langChangeService.currentLanguage();
+
+    switch (currentLang) {
+      case 'pl':
+        return '/icons/poland.png';
+
+      case 'en':
+        return '/icons/united-kingdom.png';
+
+      case 'de':
+        return '/icons/germany.png';
+
+      default:
+        return '/icons/poland.png';
+    }
   }
 
   protected readonly ThemeType = ThemeType;

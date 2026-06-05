@@ -40,10 +40,24 @@ export class ExperiencePage {
   ];
 
   downloadResume() {
+    window.open(this.setResumeLang());
+  }
+
+  setResumeLang(): string {
     const currentLang = localStorage.getItem('currentLang');
 
-    window.open(currentLang === 'pl'
-      ? '/resume/CV_Pawel_Krol_pl.pdf'
-      : '/resume/CV_Pawel_Krol_eng.pdf');
+    switch (currentLang) {
+      case 'pl':
+        return '/resume/CV_Pawel_Krol_pl.pdf';
+
+      case 'en':
+        return '/resume/CV_Pawel_Krol_eng.pdf';
+
+      case 'de':
+        return '/resume/CV_Pawel_Krol_eng.pdf';
+
+      default:
+        return '/resume/CV_Pawel_Krol_pl.pdf';
+    }
   }
 }

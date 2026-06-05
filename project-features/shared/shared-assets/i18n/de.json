@@ -1,0 +1,111 @@
+{
+  "example": "orem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.",
+  "example2": "L",
+  "contact": "Kontakt",
+  "aboutMe": "Über mich",
+  "projects": "Projekte",
+  "experience": "Karriere",
+  "technology": "Tech-Stack",
+  "education": "Bildung",
+  "headerComponent": {
+    "headerMenuOptionList": {
+      "mainPageButton": "Startseite",
+      "experiencePageButton": "Karriere",
+      "projectPageButton": "Projekte",
+      "aboutMePageButton": "Über mich",
+      "contactPageButton": "Kontakt",
+      "technologyPageButton": "Tech-Stack",
+      "educationPageButton": "Bildung"
+    },
+    "headerLangButtonLabel": "Sprache",
+    "headerThemeSwitcherLabel": "Design",
+    "headerLangOptionList": {
+      "polish": "Polnisch",
+      "english": "Englisch"
+    }
+  },
+  "footerComponent": {
+    "text": "Alle Rechte vorbehalten."
+  },
+  "typeWriteComponent": {
+    "exampleWords": {
+      "angular": "Angular...",
+      "typeScript": "TypeScript...",
+      "javaScript": "JavaScript...",
+      "rxjs": "RxJS...",
+      "html": "HTML...",
+      "css": "CSS...",
+      "bootstrap": "Bootstrap...",
+      "nx": "NX...",
+      "frontend": "Frontend...",
+      "backend": "Backend..."
+    }
+  },
+  "contactPage": {
+    "formTitle": "Lass uns in Kontakt bleiben!",
+    "mapTitle": "Hier findest du mich",
+    "formButton": "Senden",
+    "form": {
+      "labels": {
+        "email": "Deine E-Mail-Adresse"
+      },
+      "placeholders": {
+        "email": "Gib deine E-Mail-Adresse ein...",
+        "message": "Schreibe deine Nachricht..."
+      },
+      "validators": {
+        "email": "E-Mail-Adresse ist erforderlich...",
+        "emailAddress": "E-Mail-Adresse ist ungültig...",
+        "message": "Nachricht ist erforderlich und muss mindestens 5 Zeichen enthalten..."
+      }
+    }
+  },
+  "snackbar": {
+    "success": "Hurra! \n Es hat geklappt — die Nachricht wurde erfolgreich gesendet, danke für deine Kontaktaufnahme!",
+    "error": "Ups, etwas ist schiefgelaufen! \n Die Nachricht konnte nicht gesendet werden. Bitte versuche es später erneut."
+  },
+  "projectList": {
+    "variables": {
+      "projectName": "Projektname:",
+      "companyName": "Firma / Kunde:",
+      "description": "Beschreibung der durchgeführten Arbeiten:",
+      "url": "Webseite:",
+      "screenshots": "Screenshots:"
+    },
+    "muddyCodeWorkspace": {
+      "projectName": "NX-Monorepo",
+      "companyName": "Muddy Code",
+      "description": "Arbeit in einem Nx-Monorepo im Rahmen eines umfangreichen ERP-Multi-Application-Systems. Das Projekt umfasste die Entwicklung und Wartung mehrerer Geschäfts- und Shared-Module sowie gemeinsamer Komponenten und Services.\n\nUmfang der Arbeiten in den Geschäftsmodulen:\n\n• Handelsmodul:\nStammdaten von Geschäftspartnern, Kundenaufträge, Preislisten und Leistungen.\n\n• PMS:\nTechnologisch-produktive Logik, Freigabeversionen, Auftragsstammdaten, Kalkulationen (Merkmale, Merkmalbeziehungen, Kalkulationsregister), umfangreiche Stammdaten (Werkzeuge, Werkzeugtypen, Operationen, Arbeitsplätze, Arbeitsplatzsätze, Qualifikationen, Modifikatoren).\n\n• Simulationen:\nSimulationsversionen und Simulationsregister.\n\n• WMS:\nIndizesgruppen.\n\n• LOGS:\nSystemprotokollmodul (Überwachung und Anzeige von Anwendungslogs).\n\n• MES:\nProduktionsüberwachungs- und Steuerungssystem – Verwaltung von Produktionsprozessen, Erfassung von Mitarbeiterarbeit, Kontrolle von Produktionsaufträgen, Materialverbrauch sowie laufende Statusverfolgung von Produktionsoperationen.\n\nServices und Systemarchitektur\n\n• QBE Service:\nErstellung und Verarbeitung von Query-By-Example (QBE)-Abfragen.\n\n• Attachment Service:\nUpload und Download von Anhängen mit Upload-Fortschritt (XMLHttpRequest mit Progress-Events), Backend-Integration sowie Streaming auf der Frontend-Seite.\n\n• User Settings – Verwaltung von Benutzereinstellungen im Local Storage:\n- Tabellen- und View-Konfigurationen\n- Spracheinstellungen\n- Zugriffskontrolle\n\n• Authentifizierungs- und Sitzungsmechanismen\n- Login und Session-Recovery-Mechanismus\n- Umgang mit Token-Ablauf und Retry von Requests nach Refresh\n- Abbruch von Requests bei Benutzerwechsel\n- HTTP-Interceptor für Token- und Authentifizierungslogik\n- Idle-Timeout-Mechanismus basierend auf Benutzeraktivität (Maus-Tracking)\n\nApplikations- und Zugriffsverwaltung\n\n• ActiveApp Service:\nSteuerung verfügbarer Anwendungen und Funktionen pro Benutzer (Berechtigungssystem).\n\n• Komponenten- und UI-Schicht\nWiederverwendbare Komponenten:\n- Loader\n- Attachment-Komponente\n- Fehlerbehandlungssystem basierend auf Snackbar-Service\n- Erweiterung der Tree-Komponente (Tree View, dynamisches Hinzufügen/Entfernen von Nodes, Detailansicht bei Hover, Prozesspfad-Generierung und Anzeige)\n- Entwicklung und Support von Komponenten:\n- Modal-System\n- Numeric Keyboard Component\n\nÜber 1,5 Jahre Arbeit am Projekt war ich für die Entwicklung des ERP-Systems verantwortlich – im Frontend, in der Service-Architektur sowie bei Shared Components. Die Arbeit umfasste Erweiterung bestehender Module, Implementierung neuer Funktionen sowie Stabilisierung und Weiterentwicklung des Systems in einer Enterprise-Umgebung."
+    },
+    "muddyCodeSite": {
+      "projectName": "Muddy Code Webseite",
+      "companyName": "Muddy Code",
+      "description": "Die „Muddy Code“-Webseite wurde mit der Wix-Plattform erstellt. Es handelt sich um eine einfache Website mit Informationen über das Unternehmen, angebotene Dienstleistungen sowie einen Kontaktbereich zur direkten Kommunikation mit Kunden."
+    },
+    "familiaMedSite": {
+      "projectName": "Familiamed Webseite",
+      "companyName": "Familiamed",
+      "description": "Weiterentwicklung und Wartung des Projekts, SEO-Arbeiten (Suchmaschinenoptimierung), Analyse und Behebung bestehender Fehler sowie Refaktorisierung älterer Systemteile. Ausbau der Startseite und Unterseiten (inkl. Familiamed Clinique – Augenlidkorrektur) sowie Verbesserung der Performance und Stabilität der Website. Fortführung und Weiterentwicklung des Projekts nach vorherigen Teams mit Fokus auf Codequalität und Benutzererfahrung."
+    },
+    "quickAtest": {
+      "projectName": "Quick Atest",
+      "companyName": "Muddy Code",
+      "description": "Die Single-Page-Anwendung „Quick Atest“ wurde entwickelt, um den Prozess der Erstellung und Zusammenführung von Dokumenten für Aufträge zu optimieren. Sie ermöglicht das Filtern von Inhalten, das Generieren von Excel-Daten sowie das Herunterladen ausgewählter Dokumente als eine kombinierte PDF-Datei."
+    }
+  },
+  "careerList": {
+    "muddyCode": {
+      "companyName": "Muddy Code sp. z o.o.",
+      "jobPosition": "Frontend-Entwickler",
+      "description": "Seit Januar 2024 arbeite ich als Frontend-Entwickler. Ich bin verantwortlich für die Entwicklung und Wartung der Frontend-Schicht von Webanwendungen und achte auf Funktionalität, Performance und UI-Qualität. Ich begann mit kleineren Projekten und übernahm schrittweise komplexere und umfangreichere Lösungen. Ich arbeite mit Backend-Teams, UX/UI-Designern zusammen und beteilige mich an der Implementierung neuer Funktionen."
+    },
+    "montService": {
+      "companyName": "Mont Service",
+      "jobPosition": "Elektriker",
+      "description": "Ich war verantwortlich für Diagnose, Reparatur und Wartung von Kassensystemen, Zahlungsterminals und elektronischen Geräten im Einzelhandel. Ich führte Servicearbeiten an Hardware und elektronischen Komponenten durch und stellte die Funktionsfähigkeit der Verkaufssysteme sicher. Ich übernahm Installation, Konfiguration und Fehlerbehebung und gewährleistete so den kontinuierlichen Betrieb der Kunden."
+    }
+  },
+  "workInProgressComponent": {
+    "title": "Dieser Bereich wird gerade erweitert. Schau bald wieder vorbei!"
+  }
+}

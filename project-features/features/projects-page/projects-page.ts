@@ -2,6 +2,7 @@ import {Component, signal} from '@angular/core';
 import {TranslateFallbackPipe} from "../../shared/pipes/translate-pipe";
 
 export interface ProjectsObject {
+  id: number;
   projectName: string;
   projectNameFallback: string;
   projectIcon: string;
@@ -29,10 +30,11 @@ export interface ProjectsObject {
   styleUrl: './projects-page.scss',
 })
 export class ProjectsPage {
-  showScreenshotsSection = signal<boolean>(true);
+  showScreenshotsSectionId = signal<number | undefined>(undefined);
 
   projectList: ProjectsObject[] = [
     {
+      id: 1,
       projectName: 'projectList.muddyCodeWorkspace.projectName',
       projectNameFallback: 'Strona www Muddy code',
       projectIcon: '/icons/code2.png',
@@ -61,6 +63,7 @@ export class ProjectsPage {
       imgIcon: '/icons/images.png',
     },
     {
+      id: 2,
       projectName: 'projectList.muddyCodeSite.projectName',
       projectNameFallback: 'Strona www Muddy code',
       projectIcon: '/icons/code2.png',
@@ -76,6 +79,7 @@ export class ProjectsPage {
       urlIcon: '/icons/url.png'
     },
     {
+      id: 3,
       projectName: 'projectList.familiaMedSite.projectName',
       projectNameFallback: 'Strona www Familiamed',
       projectIcon: '/icons/code2.png',
@@ -91,6 +95,7 @@ export class ProjectsPage {
       urlIcon: '/icons/url.png'
     },
     {
+      id: 4,
       projectName: 'projectList.quickAtest.projectName',
       projectNameFallback: 'Quick atest',
       projectIcon: '/icons/code2.png',
@@ -108,8 +113,9 @@ export class ProjectsPage {
     },
   ];
 
-  toggleScreenshotsSection() {
-    this.showScreenshotsSection.update((v) => !v);
+  toggleScreenShotSection(id: number) {
+    this.showScreenshotsSectionId.set(
+      this.showScreenshotsSectionId() === id ? undefined : id);
   }
 
   openImage(img: string) {

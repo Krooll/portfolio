@@ -16,9 +16,7 @@
             (click)="toggleLangSection()">
       <img loading="lazy" width="24"
            height="24" class="lang-icon me-2" alt="Country image"
-           [src]="_langChangeService.currentLanguage() === 'pl'
-    ? '/icons/poland.png'
-    : '/icons/united-kingdom.png'"
+           [src]="setCurrentFlag()"
       />
       <p>{{ 'headerComponent.headerLangButtonLabel' | translateFallback: 'Język' }}</p>
     </button>
