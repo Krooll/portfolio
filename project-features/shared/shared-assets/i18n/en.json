@@ -24,6 +24,10 @@
       "english": "English"
     }
   },
+  "mainPage": {
+    "biggerLetter": "T",
+    "text": "I create modern web applications that combine performance, aesthetics, and intuitive user experience. I focus on high-quality code, attention to detail, and solutions that address real user and business needs. Feel free to explore my professional experience, projects, and the technologies I work with on a daily basis."
+  },
   "footerComponent": {
     "text": "All rights reserved."
   },

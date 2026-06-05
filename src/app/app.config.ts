@@ -31,7 +31,9 @@ export const appConfig: ApplicationConfig = {
       const lang = localStorage.getItem('currentLang') ?? 'pl';
       languageService.currentLanguage.set(lang);
       translate.addLangs(['pl', 'en', 'de']);
-      return translate.use(lang);
+      translate.use(lang);
+
+      return ;
     }),
   ],
 };
