@@ -14,7 +14,8 @@
       "projectPageButton": "Projects",
       "aboutMePageButton": "About me",
       "contactPageButton": "Contact",
-      "technologyPageButton": "Tech stack"
+      "technologyPageButton": "Tech stack",
+      "educationPageButton": "Education"
     },
     "headerLangButtonLabel": "Language",
     "headerThemeSwitcherLabel": "Theme",
@@ -55,55 +56,57 @@
       "validators": {
         "email": "Email address is required...",
         "emailAddress": "Email address is invalid...",
-        "message": "Message is required and must contain at least 5 characters..."
+        "message": "Message is required and must be at least 5 characters long..."
       }
     }
   },
   "snackbar": {
-    "success": "Hooray! \n Success — the message has been sent successfully, thank you for your contact!",
+    "success": "Hooray! \n It worked — the message was sent successfully, thank you for your contact!",
     "error": "Oops, something went wrong! \n The message could not be sent. Please try again later."
   },
   "projectList": {
+    "noImg": "Click the button next to it to see screenshots.",
     "variables": {
       "projectName": "Project name:",
       "companyName": "Company / client:",
       "description": "Description of work performed:",
-      "url": "Website:"
+      "url": "Website:",
+      "screenshots": "Screenshots:"
     },
     "muddyCodeWorkspace": {
       "projectName": "NX Monorepo",
       "companyName": "Muddy Code",
-      "description": "Work in an Nx monorepo within a large-scale ERP multi-application system. The project involved development and maintenance of multiple business modules as well as shared components and services.\n\nScope of work in business modules:\n\n• Sales module:\nCustomer dictionaries, client orders, price lists, and services.\n\n• PMS:\nTechnological and production logic, release versions, order records, calculations (features, feature relations, quotation registry), extended dictionaries (tools, tool types, operations, workstations, station rates, qualifications, modifiers).\n\n• Simulations:\nSimulation versions and simulation records.\n\n• WMS:\nIndex groups.\n\n• LOGS:\nSystem logs module (application log monitoring and presentation).\n\n• MES:\nProduction monitoring and control system – handling production processes, employee work registration, production order tracking, material consumption records, and ongoing tracking of operation statuses.\n\nSystem services and architecture\n\n• QBE Service:\nBuilding and handling Query By Example (QBE) queries.\n\n• Attachment Service:\nUpload and download of attachments with progress tracking (XMLHttpRequest with progress events), backend integration, and stream-based downloading on the frontend.\n\n• User Settings – managing user settings stored in localStorage:\n- table and view configurations\n- language settings\n- access control\n\n• Authentication and session mechanisms\n- login and session recovery\n- token expiration handling and retrying requests after refresh\n- request cancellation on user change\n- HTTP interceptors for token and authentication handling\n- idle timeout mechanism based on user activity (mouse event tracking)\n\nApplication and access management\n\n• ActiveApp Service:\nControl of available applications and features per user (permission system).\n\n• UI components and layer\nShared components:\n- loader\n- attachment component\n- error handling system based on snackbar service\n- extended tree component (tree view, dynamic node add/remove, hover-based details preview, generation and presentation of process paths)\n- development and support of components:\n- modal system\n- numeric keyboard component\n\nFor over 1.5 years in the project, I was responsible for developing the ERP system – on the frontend layer, service architecture, and shared components. The work included extending existing modules, implementing new features, and stabilizing and evolving the system in an enterprise environment."
+      "description": "Work in an Nx monorepo within a complex ERP multi-application system. The project involved development and maintenance of multiple business modules and shared components and services.\n\nScope of work in business modules:\n\n• Sales module:\nContractor dictionaries, customer orders, price lists, and services.\n\n• PMS:\nTechnological and production logic, release versions, order registry, calculations (features, feature relations, pricing register), extensive dictionaries (tools, tool types, operations, workstations, workstation rates, qualifications, modifiers).\n\n• Simulations:\nSimulation versions and simulation registry.\n\n• WMS:\nIndex groups.\n\n• LOGS:\nSystem logs module (monitoring and displaying application logs).\n\n• MES:\nProduction monitoring and control system – handling production processes, employee work tracking, production order control, material consumption tracking, and real-time operation status monitoring.\n\nServices and system architecture\n\n• QBE Service:\nBuilding and handling Query By Example (QBE) queries.\n\n• Attachment Service:\nFile upload and download with upload progress support (XMLHttpRequest with progress events), backend integration, and streaming on the frontend side.\n\n• User Settings – user settings stored in localStorage:\n- table and view configurations\n- language settings\n- access control\n\n• Authentication and session mechanisms\n- login and session recovery mechanism\n- token expiration handling and request retry after refresh\n- request cancellation on user switch\n- HTTP interceptors handling token and authentication\n- idle timeout mechanism based on user activity (mouse tracking)\n\nApplication and access management\n\n• ActiveApp Service:\nControl of available applications and features per user (permission system).\n\n• Components and UI layer\nShared components:\n- loader\n- attachment component\n- error handling system based on snackbar service\n- extended tree component (tree view, dynamic node add/remove, hover details, process path generation and visualization)\n- component development and support:\n- modal system\n- numeric keyboard component\n\nFor over 1.5 years of work on the project, I was responsible for developing the ERP system – frontend layer, service architecture, and shared components. The work included expanding existing modules, implementing new features, and stabilizing and evolving the system in an enterprise environment."
     },
     "muddyCodeSite": {
-      "projectName": "Muddy Code Website",
+      "projectName": "Muddy Code website",
       "companyName": "Muddy Code",
-      "description": "The “Muddy Code” website was built using the Wix platform. It is a simple website containing information about the company, its services, and a contact section enabling direct communication with clients."
+      "description": "The “Muddy Code” website was built using the Wix platform. It is a simple website containing information about the company, offered services, and a contact section enabling direct communication with clients."
     },
     "familiaMedSite": {
-      "projectName": "Familiamed Website",
+      "projectName": "Familiamed website",
       "companyName": "Familiamed",
-      "description": "Development and maintenance of the project, SEO work (search engine optimization), analysis and fixing of existing bugs, and refactoring of legacy system elements. Expansion of the homepage and subpages (including Familiamed Clinique – eyelid surgery), as well as improving performance and stability of the service. Continued development after previous teams, with a focus on improving code quality and user experience."
+      "description": "Development and maintenance of the project, SEO work (search engine optimization), analysis and fixing of existing bugs, and refactoring of older system parts. Expansion of the homepage and subpages (including Familiamed Clinique – eyelid surgery), as well as improving performance and stability of the website. Continued development of the project after previous teams, with focus on code quality and user experience."
     },
     "quickAtest": {
       "projectName": "Quick Atest",
       "companyName": "Muddy Code",
-      "description": "The single-page application “Quick Atest” was designed to streamline the process of creating and combining documents required for order execution. It allows content filtering, generating data for Excel files, and downloading selected documents as a single merged PDF file."
+      "description": "The single-page application “Quick Atest” was designed to streamline the process of creating and merging documents required for orders. It allows content filtering, Excel data generation, and downloading selected documents as a single combined PDF file."
     }
   },
   "careerList": {
     "muddyCode": {
       "companyName": "Muddy Code sp. z o.o.",
       "jobPosition": "Frontend Developer",
-      "description": "Since January 2024, I have been working as a Frontend Developer. I am responsible for developing and maintaining the frontend layer of web applications, ensuring functionality, performance, and user interface quality. I started with smaller projects and gradually took responsibility for more complex and extensive solutions. I collaborate with backend teams, UX/UI designers, and participate in the implementation of new features."
+      "description": "Since January 2024, I have been working as a Frontend Developer. I am responsible for developing and maintaining the frontend layer of web applications, ensuring functionality, performance, and UI quality. I started with smaller projects and gradually took on more complex and extensive solutions. I collaborate with backend teams, UX/UI designers, and participate in implementing new features."
     },
     "montService": {
       "companyName": "Mont Service",
       "jobPosition": "Electrician",
-      "description": "I was responsible for diagnosing, repairing, and maintaining cash registers, payment terminals, and electronic devices used at points of sale. I serviced both hardware and electronic components, ensuring the proper functioning of sales systems. I performed installations, configurations, and troubleshooting, ensuring continuity of client operations."
+      "description": "I was responsible for diagnosing, repairing, and maintaining cash registers, payment terminals, and electronic devices used in retail points. I performed service work on both hardware and electronic components, ensuring proper operation of sales systems. I handled installation, configuration, and troubleshooting, ensuring continuous customer operations."
     }
   },
   "workInProgressComponent": {
-    "title": "This section is currently under development. Check back soon!"
+    "title": "This section is currently being expanded. Please check back soon!"
   }
 }
