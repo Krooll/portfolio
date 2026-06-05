@@ -24,6 +24,10 @@
       "english": "Englisch"
     }
   },
+  "mainPage": {
+    "biggerLetter": "T",
+    "text": "Ich entwickle moderne Webanwendungen, die Leistung, Ästhetik und eine intuitive Benutzererfahrung vereinen. Dabei lege ich großen Wert auf hochwertigen Code, Liebe zum Detail und Lösungen, die den tatsächlichen Anforderungen von Nutzern und Unternehmen entsprechen. Ich lade Sie ein, sich über meine Berufserfahrung, Projekte und die Technologien zu informieren, mit denen ich täglich arbeite."
+  },
   "footerComponent": {
     "text": "Alle Rechte vorbehalten."
   },
