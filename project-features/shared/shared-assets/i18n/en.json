@@ -1,16 +1,14 @@
 {
-  "example": "orem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.",
-  "example2": "L",
   "contact": "Contact",
   "aboutMe": "About me",
   "projects": "Projects",
-  "experience": "Career",
+  "experience": "Experience",
   "technology": "Tech stack",
   "education": "Education",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Home",
-      "experiencePageButton": "Career",
+      "experiencePageButton": "Experience",
       "projectPageButton": "Projects",
       "aboutMePageButton": "About me",
       "contactPageButton": "Contact",
@@ -21,12 +19,14 @@
     "headerThemeSwitcherLabel": "Theme",
     "headerLangOptionList": {
       "polish": "Polish",
-      "english": "English"
+      "english": "English",
+      "german": "German",
+      "italy": "Italian"
     }
   },
   "mainPage": {
-    "biggerLetter": "T",
-    "text": "I create modern web applications that combine performance, aesthetics, and intuitive user experience. I focus on high-quality code, attention to detail, and solutions that address real user and business needs. Feel free to explore my professional experience, projects, and the technologies I work with on a daily basis."
+    "biggerLetter": "I",
+    "text": "create modern web applications that combine performance, aesthetics, and intuitive usability. I focus on high-quality code, attention to detail, and solutions that address real user and business needs. \n Feel free to explore my professional experience, projects, and the technologies I work with on a daily basis."
   },
   "footerComponent": {
     "text": "All rights reserved."
@@ -47,7 +47,7 @@
   },
   "contactPage": {
     "formTitle": "Let's get in touch!",
-    "mapTitle": "You can find me here",
+    "mapTitle": "Find me here",
     "formButton": "Send",
     "form": {
       "labels": {
@@ -59,61 +59,61 @@
       },
       "validators": {
         "email": "Email address is required...",
-        "emailAddress": "Email address is invalid...",
-        "message": "Message is required and must be at least 5 characters long..."
+        "emailAddress": "Invalid email address...",
+        "message": "Message is required and should contain at least 5 characters..."
       }
     }
   },
   "snackbar": {
-    "success": "Hooray! \n It worked — the message was sent successfully, thank you for your contact!",
-    "error": "Oops, something went wrong! \n The message could not be sent. Please try again later."
+    "success": "Hooray! \n Message sent successfully — thank you for getting in touch!",
+    "error": "Oops, something went wrong! \n Failed to send the message. Please try again later."
   },
   "projectList": {
-    "noImg": "Click the button next to it to see screenshots.",
+    "noImg": "Click the button next to view screenshots.",
     "variables": {
       "projectName": "Project name:",
       "companyName": "Company / client:",
-      "description": "Description of work performed:",
+      "description": "Description of work:",
       "url": "Website:",
       "screenshots": "Screenshots:"
     },
     "muddyCodeWorkspace": {
-      "projectName": "NX Monorepo",
+      "projectName": "Nx Monorepo",
       "companyName": "Muddy Code",
-      "description": "Work in an Nx monorepo within a complex ERP multi-application system. The project involved development and maintenance of multiple business modules and shared components and services.\n\nScope of work in business modules:\n\n• Sales module:\nContractor dictionaries, customer orders, price lists, and services.\n\n• PMS:\nTechnological and production logic, release versions, order registry, calculations (features, feature relations, pricing register), extensive dictionaries (tools, tool types, operations, workstations, workstation rates, qualifications, modifiers).\n\n• Simulations:\nSimulation versions and simulation registry.\n\n• WMS:\nIndex groups.\n\n• LOGS:\nSystem logs module (monitoring and displaying application logs).\n\n• MES:\nProduction monitoring and control system – handling production processes, employee work tracking, production order control, material consumption tracking, and real-time operation status monitoring.\n\nServices and system architecture\n\n• QBE Service:\nBuilding and handling Query By Example (QBE) queries.\n\n• Attachment Service:\nFile upload and download with upload progress support (XMLHttpRequest with progress events), backend integration, and streaming on the frontend side.\n\n• User Settings – user settings stored in localStorage:\n- table and view configurations\n- language settings\n- access control\n\n• Authentication and session mechanisms\n- login and session recovery mechanism\n- token expiration handling and request retry after refresh\n- request cancellation on user switch\n- HTTP interceptors handling token and authentication\n- idle timeout mechanism based on user activity (mouse tracking)\n\nApplication and access management\n\n• ActiveApp Service:\nControl of available applications and features per user (permission system).\n\n• Components and UI layer\nShared components:\n- loader\n- attachment component\n- error handling system based on snackbar service\n- extended tree component (tree view, dynamic node add/remove, hover details, process path generation and visualization)\n- component development and support:\n- modal system\n- numeric keyboard component\n\nFor over 1.5 years of work on the project, I was responsible for developing the ERP system – frontend layer, service architecture, and shared components. The work included expanding existing modules, implementing new features, and stabilizing and evolving the system in an enterprise environment."
+      "description": "Work in an Nx monorepo within a large-scale ERP multi-application system. The project involved development and maintenance of multiple business modules as well as shared components and services.\n\nScope of work in business modules:\n\n• Sales module:\nContractor dictionaries, customer orders, price lists, and services.\n\n• PMS:\nTechnological and production logic, release versions, job records, calculations (features, feature relations, quotation register), extensive dictionaries (tools, tool types, operations, workstations, workstation rates, qualifications, modifiers).\n\n• Simulations:\nSimulation versions and simulation records.\n\n• WMS:\nIndex groups.\n\n• LOGS:\nSystem logs module (monitoring and displaying application logs).\n\n• MES:\nProduction monitoring and control system – production process handling, employee work logging, production order tracking, material consumption records, and real-time operation status tracking.\n\nServices and system architecture\n\n• QBE Service:\nBuilding and handling Query By Example (QBE) queries.\n\n• Attachment Service:\nFile upload and download with progress tracking (XMLHttpRequest with progress events), backend integration, and streaming downloads on the frontend side.\n\n• User Settings – managing user settings stored in localStorage:\n- table and view configurations\n- language settings\n- access control\n\n• Authentication and session mechanisms\n- login and session recovery mechanism\n- token expiration handling and request retry after refresh\n- request cancellation on user change\n- HTTP interceptors responsible for token and authentication handling\n- idle timeout mechanism based on user activity (mouse event tracking)\n\nApplication and access management\n\n• ActiveApp Service:\nControl of available applications and features per user (permission system).\n\n• Components and UI layer\nShared components:\n- loader\n- attachment component\n- error handling system based on snackbar service\n- extended tree component (tree view, dynamic node add/remove, hover detail preview, process path generation and visualization)\n- development and support of components:\n- modal system\n- numeric keyboard component\n\nFor over 1.5 years of work on the project, I was responsible for the development of an ERP system – on the frontend layer, system architecture, and shared components. The work included expanding existing modules, implementing new features, and stabilizing and evolving the system in an enterprise environment."
     },
     "muddyCodeSite": {
-      "projectName": "Muddy Code website",
+      "projectName": "Muddy Code Website",
       "companyName": "Muddy Code",
-      "description": "The “Muddy Code” website was built using the Wix platform. It is a simple website containing information about the company, offered services, and a contact section enabling direct communication with clients."
+      "description": "The “Muddy Code” website was built using the Wix platform. It is a simple website containing information about the company, its services, and a contact section enabling direct communication with clients."
     },
     "familiaMedSite": {
-      "projectName": "Familiamed website",
+      "projectName": "Familiamed Website",
       "companyName": "Familiamed",
-      "description": "Development and maintenance of the project, SEO work (search engine optimization), analysis and fixing of existing bugs, and refactoring of older system parts. Expansion of the homepage and subpages (including Familiamed Clinique – eyelid surgery), as well as improving performance and stability of the website. Continued development of the project after previous teams, with focus on code quality and user experience."
+      "description": "Development and maintenance of the project, SEO work (search engine optimization), analysis and fixing of existing bugs, and refactoring of legacy parts of the system. Expansion of the homepage and subpages (including Familiamed Clinique – eyelid surgery), as well as improving performance and stability of the website. Continued development of the project after previous teams, with a focus on improving code quality and user experience."
     },
     "quickAtest": {
       "projectName": "Quick Atest",
       "companyName": "Muddy Code",
-      "description": "The single-page application “Quick Atest” was designed to streamline the process of creating and merging documents required for orders. It allows content filtering, Excel data generation, and downloading selected documents as a single combined PDF file."
+      "description": "The single-page application “Quick Atest” was designed to streamline the process of creating and merging documents required for order execution. It enables content filtering, generating data into Excel files, and downloading selected documents as a single merged PDF file."
     }
   },
   "careerList": {
     "muddyCode": {
       "companyName": "Muddy Code sp. z o.o.",
       "jobPosition": "Frontend Developer",
-      "description": "Since January 2024, I have been working as a Frontend Developer. I am responsible for developing and maintaining the frontend layer of web applications, ensuring functionality, performance, and UI quality. I started with smaller projects and gradually took on more complex and extensive solutions. I collaborate with backend teams, UX/UI designers, and participate in implementing new features."
+      "description": "Since January 2024, I have been working as a frontend developer, responsible for building and maintaining web application interfaces. I focus on improving usability, performance, and visual consistency of products. Over time, I moved from simpler tasks to working on more complex components and system modules. I actively collaborate with backend and UX/UI teams, participating in designing and implementing new features."
     },
     "montService": {
       "companyName": "Mont Service",
       "jobPosition": "Electrician",
-      "description": "I was responsible for diagnosing, repairing, and maintaining cash registers, payment terminals, and electronic devices used in retail points. I performed service work on both hardware and electronic components, ensuring proper operation of sales systems. I handled installation, configuration, and troubleshooting, ensuring continuous customer operations."
+      "description": "I was responsible for diagnosing, repairing, and maintaining devices used in sales systems, such as cash registers and payment terminals. I performed installation, configuration, and troubleshooting of hardware and electronic components. I ensured the reliability of devices and quick restoration of their functionality, guaranteeing uninterrupted operation of point-of-sale systems."
     }
   },
   "workInProgressComponent": {
-    "title": "This section is currently being expanded. Please check back soon!"
+    "title": "This section is currently being developed. Please check back soon!"
   },
   "aboutMePage": {
-    "text": "I am a Frontend Developer with 3 years of experience in building modern and functional web applications. I combine programming skills with a strong sense of aesthetics and attention to detail, allowing me to create solutions that are not only efficient but also user-friendly. I quickly learn new technologies and enjoy taking on new challenges. Programming and information technology in general are my passion, which is why I continuously develop my skills and stay interested in game development as well as emerging technology trends. Outside of work, I actively practice sports, especially boxing, which teaches me consistency, discipline, and perseverance in achieving goals."
+    "text": "I am a Frontend Developer with 3 years of experience in creating modern and functional web applications. I combine programming skills with a sense of aesthetics and attention to detail, which allows me to build solutions that are both efficient and user-friendly. I quickly learn new technologies and enjoy taking on new challenges. Programming and IT in a broad sense are my passion, which is why I continuously develop my skills and am also interested in game development and new technology trends. Outside of work, I actively practice sports, which teaches me consistency, discipline, and perseverance in achieving goals."
   }
 }

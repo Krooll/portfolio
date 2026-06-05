@@ -13,14 +13,14 @@
           <img loading="lazy" src="/icons/job.png" class="experience-img" alt="job-icon">
         </div>
         <div class="d-flex flex-column ms-3 p-1">
-          <p>{{ item.companyName | translateFallback: item.companyNameFallback }}</p>
-          <p>{{ item.jobPosition | translateFallback: item.jobPositionFallback }}</p>
-          <p>{{ item.description | translateFallback: item.description }}</p>
+          <p class="bold">{{ item.companyName | translateFallback: item.companyNameFallback }}</p>
+          <p class="bold">{{ item.jobPosition | translateFallback: item.jobPositionFallback }}</p>
+          <p class="mt-1">{{ item.description | translateFallback: item.description }}</p>
         </div>
       </div>
       <hr style="width: 90%">
     }
-    <div class="d-flex align-items-center justify-content-center mt-4">
+    <div class="d-flex align-items-center justify-content-center mt-3">
       <button type="button" class="resume-img-wrapper d-flex align-items-center justify-content-center" aria-label="resume-download" (click)="downloadResume()">
         <img loading="lazy" src="/icons/resume.png" alt="resume-icon">
       </button>

@@ -1,6 +1,4 @@
 {
-  "example": "orem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.",
-  "example2": "L",
   "contact": "Kontakt",
   "aboutMe": "O mnie",
   "projects": "Projekty",
@@ -21,12 +19,14 @@
     "headerThemeSwitcherLabel": "Motyw",
     "headerLangOptionList": {
       "polish": "Polski",
-      "english": "Angielski"
+      "english": "Angielski",
+      "german": "Niemiecki",
+      "italy": "Włoski"
     }
   },
   "mainPage": {
     "biggerLetter": "T",
-    "text": "worzę nowoczesne aplikacje internetowe, które łączą wydajność, estetykę i intuicyjną obsługę. Stawiam na wysoką jakość kodu, dbałość o szczegóły oraz rozwiązania odpowiadające realnym potrzebom użytkowników i biznesu. Zapraszam do zapoznania się z moim doświadczeniem zawodowym, projektami oraz technologiami, z którymi pracuję na co dzień."
+    "text": "worzę nowoczesne aplikacje internetowe, które łączą wydajność, estetykę i intuicyjną obsługę. Stawiam na wysoką jakość kodu, dbałość o szczegóły oraz rozwiązania odpowiadające realnym potrzebom użytkowników i biznesu. \n Zapraszam do zapoznania się z moim doświadczeniem zawodowym, projektami oraz technologiami, z którymi pracuję na co dzień."
   },
   "footerComponent": {
     "text": "Wszelkie prawa zastrzeżone."
@@ -102,18 +102,18 @@
     "muddyCode": {
       "companyName": "Muddy Code sp. z o.o.",
       "jobPosition": "Programista frontendowy",
-      "description": "Od stycznia 2024 roku pracuję jako programista frontendowy. Odpowiadam za rozwój i utrzymanie warstwy frontendowej aplikacji webowych, dbając o funkcjonalność, wydajność oraz jakość interfejsu użytkownika. Rozpoczynałem od realizacji mniejszych projektów, stopniowo przejmując odpowiedzialność za coraz bardziej rozbudowane i złożone rozwiązania. Współpracuję z zespołami backendowymi, projektantami UX/UI oraz uczestniczę w procesie wdrażania nowych funkcjonalności."
+      "description": "Od stycznia 2024 roku rozwijam się jako programista frontendowy, odpowiadając za tworzenie oraz utrzymanie interfejsów aplikacji webowych. Skupiam się na poprawie użyteczności, szybkości działania oraz spójności wizualnej produktów. W miarę zdobywania doświadczenia przechodziłem do pracy nad bardziej rozbudowanymi komponentami i modułami systemu. Aktywnie współpracuję z zespołami backendu oraz UX/UI, uczestnicząc w projektowaniu i wdrażaniu nowych funkcjonalności."
     },
     "montService": {
       "companyName": "Mont Service",
       "jobPosition": "Elektryk",
-      "description": "Odpowiadałem za diagnostykę, naprawę oraz konserwację kas fiskalnych, terminali płatniczych i urządzeń elektronicznych wykorzystywanych w punktach sprzedaży. Realizowałem serwis zarówno sprzętu, jak i podzespołów elektronicznych, dbając o sprawne funkcjonowanie systemów sprzedażowych. Przeprowadzałem instalacje, konfiguracje oraz usuwanie usterek, zapewniając ciągłość pracy klientów."
+      "description": "Opowiadałem za diagnostykę, naprawę oraz obsługę techniczną urządzeń wykorzystywanych w systemach sprzedażowych, takich jak kasy fiskalne i terminale płatnicze. Wykonywałem instalacje, konfiguracje oraz usuwanie usterek sprzętowych i elektronicznych. Dbałem o niezawodność działania urządzeń oraz szybkie przywracanie ich sprawności, zapewniając ciągłość pracy punktów sprzedaży."
     }
   },
   "workInProgressComponent": {
     "title": "Ta sekcja jest właśnie rozbudowywana. Zajrzyj ponownie wkrótce!"
   },
   "aboutMePage": {
-    "text": "Jestem Frontend Developerem z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników. Szybko przyswajam nowe technologie i chętnie podejmuję się nowych wyzwań. Programowanie i szeroko pojęta informatyka są moją pasją, dlatego stale rozwijam swoje kompetencje, interesuję się również tematyką gamedevu oraz nowymi trendami technologicznymi. Poza pracą aktywnie uprawiam sport, w szczególności boks, który uczy mnie systematyczności, dyscypliny i konsekwencji w dążeniu do celu."
+    "text": "Jestem Frontend Developerem z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników. Szybko przyswajam nowe technologie i chętnie podejmuję się nowych wyzwań. Programowanie i szeroko pojęta informatyka są moją pasją, dlatego stale rozwijam swoje kompetencje, interesuję się również tematyką gamedevu oraz nowymi trendami technologicznymi. Poza pracą aktywnie uprawiam sport, który uczy mnie systematyczności, dyscypliny i konsekwencji w dążeniu do celu."
   }
 }

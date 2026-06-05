@@ -100,11 +100,18 @@ export class HeaderFeature {
       alt: 'Change language to English'
     },
     {
-      label: 'headerComponent.headerLangOptionList.germans',
+      label: 'headerComponent.headerLangOptionList.german',
       fallback: 'Niemiecki',
       id: 'de',
       img: '/icons/germany.png',
       alt: 'Change language to German'
+    },
+    {
+      label: 'headerComponent.headerLangOptionList.italy',
+      fallback: 'Włoski',
+      id: 'it',
+      img: '/icons/italy.png',
+      alt: 'Change language to Italian'
     }
   ];
 
@@ -162,6 +169,9 @@ export class HeaderFeature {
 
       case 'de':
         return '/icons/germany.png';
+
+      case 'it':
+        return '/icons/italy.png';
 
       default:
         return '/icons/poland.png';
