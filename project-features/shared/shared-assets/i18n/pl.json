@@ -6,7 +6,7 @@
   "projects": "Projekty",
   "experience": "Kariera",
   "technology": "Tech stack",
-  "education": "Wykształcenie",
+  "education": "Edukacja",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Strona główna",
@@ -15,7 +15,7 @@
       "aboutMePageButton": "O mnie",
       "contactPageButton": "Kontakt",
       "technologyPageButton": "Tech stack",
-      "educationPageButton": "Wykształcenie"
+      "educationPageButton": "Edukacja"
     },
     "headerLangButtonLabel": "Język",
     "headerThemeSwitcherLabel": "Motyw",
@@ -65,6 +65,7 @@
     "error": "Ups, coś poszło nie tak! \n Nie udało się wysłać wiadomości. Spróbuj ponownie później."
   },
   "projectList": {
+    "noImg": "Kliknij przycisk obok, aby zobaczyć zrzuty ekranu.",
     "variables": {
       "projectName": "Nazwa projektu:",
       "companyName": "Firma / klient:",

@@ -45,15 +45,19 @@
         }
         @if (item.img && item.img.length > 0) {
           <div class="d-flex flex-wrap">
-            <div class="card-wrapper d-flex align-items-center justify-content-center me-2">
-              <img loading="lazy" class="card-icon" alt="list icon" [src]="item.imgIcon">
-            </div>
+            <button type="button" (click)="toggleScreenShotSection(item.id)" class="card-wrapper screen-shots-button d-flex align-items-center justify-content-center me-2">
+              <img loading="lazy" class="card-icon" alt="list icon" [src]="this.showScreenshotsSectionId() ? '/icons/arrow-up.png' : '/icons/arrow-down.png'">
+            </button>
             <p class="label">{{ 'projectList.variables.screenshots' | translateFallback: 'Zrzuty ekranu:' }}</p>
-            <div class="d-flex align-items-center justify-content-center flex-wrap">
-              @for (img of item.img; track $index) {
-                <img (click)="openImage(img)" class="mini-screenshots" [src]="img" [alt]="item.imgAlt" loading="lazy">
-              }
-            </div>
+            @if (this.showScreenshotsSectionId() === item.id) {
+              <div class="d-flex align-items-center justify-content-center flex-wrap">
+                @for (img of item.img; track $index) {
+                  <img (click)="openImage(img)" class="mini-screenshots" [src]="img" [alt]="item.imgAlt" loading="lazy">
+                }
+              </div>
+            }@else {
+              <p class="ms-2">{{ 'projectList.noImg' | translateFallback: 'Kliknij przycisk obok, aby zobaczyć zrzuty ekranu.'}}</p>
+            }
           </div>
         }
       </div>
