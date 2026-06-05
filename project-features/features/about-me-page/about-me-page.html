@@ -6,13 +6,12 @@
     <p>{{ 'aboutMe' | translateFallback: 'O mnie' }}</p>
   </div>
   <hr>
-  <div class="body-scroll">
-    <div class="d-flex align-items-center justify-content-center">
-      <app-work-in-progress-feature></app-work-in-progress-feature>
+  <div class="body-scroll d-flex align-items-center justify-content-between flex-wrap">
+    <div class="text-wrapper">
+      <p>{{ 'aboutMePage.text' | translateFallback: 'Jestem Frontend Developerem z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników. Szybko przyswajam nowe technologie i chętnie podejmuję się nowych wyzwań. Programowanie i szeroko pojęta informatyka są moją pasją, dlatego stale rozwijam swoje kompetencje, interesuję się również tematyką gamedevu oraz nowymi trendami technologicznymi. Poza pracą aktywnie uprawiam sport, w szczególności boks, który uczy mnie systematyczności, dyscypliny i konsekwencji w dążeniu do celu.' }}</p>
     </div>
-<!--    <div class="d-flex align-items-center justify-content-end">-->
-<!--      <img class="photo-wrapper" src="/icons/photo.jpg" alt="photo">-->
-<!--    </div>-->
-<!--    <hr class="hr-about">-->
+    <div class="image-wrapper">
+      <img class="image" src="/icons/photo.jpg" alt="photo" loading="lazy">
+    </div>
   </div>
 </div>
