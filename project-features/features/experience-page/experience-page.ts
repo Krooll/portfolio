@@ -27,7 +27,7 @@ export class ExperiencePage {
       jobPosition: 'careerList.muddyCode.jobPosition',
       jobPositionFallback: 'Programista Frontend',
       description: 'careerList.muddyCode.description',
-      descriptionFallback: 'opis'
+      descriptionFallback: 'Od stycznia 2024 roku rozwijam się jako programista frontendowy, odpowiadając za tworzenie oraz utrzymanie interfejsów aplikacji webowych. Skupiam się na poprawie użyteczności, szybkości działania oraz spójności wizualnej produktów. W miarę zdobywania doświadczenia przechodziłem do pracy nad bardziej rozbudowanymi komponentami i modułami systemu. Aktywnie współpracuję z zespołami backendu oraz UX/UI, uczestnicząc w projektowaniu i wdrażaniu nowych funkcjonalności.'
     },
     {
       companyName: 'careerList.montService.companyName',
@@ -35,7 +35,7 @@ export class ExperiencePage {
       jobPosition: 'careerList.montService.jobPosition',
       jobPositionFallback: 'Programista Frontend',
       description: 'careerList.montService.description',
-      descriptionFallback: 'opis'
+      descriptionFallback: 'Opowiadałem za diagnostykę, naprawę oraz obsługę techniczną urządzeń wykorzystywanych w systemach sprzedażowych, takich jak kasy fiskalne i terminale płatnicze. Wykonywałem instalacje, konfiguracje oraz usuwanie usterek sprzętowych i elektronicznych. Dbałem o niezawodność działania urządzeń oraz szybkie przywracanie ich sprawności, zapewniając ciągłość pracy punktów sprzedaży.'
     }
   ];
 

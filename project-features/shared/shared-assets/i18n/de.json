@@ -1,16 +1,14 @@
 {
-  "example": "orem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo.",
-  "example2": "L",
   "contact": "Kontakt",
   "aboutMe": "Über mich",
   "projects": "Projekte",
-  "experience": "Karriere",
+  "experience": "Berufserfahrung",
   "technology": "Tech-Stack",
   "education": "Bildung",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Startseite",
-      "experiencePageButton": "Karriere",
+      "experiencePageButton": "Berufserfahrung",
       "projectPageButton": "Projekte",
       "aboutMePageButton": "Über mich",
       "contactPageButton": "Kontakt",
@@ -21,12 +19,14 @@
     "headerThemeSwitcherLabel": "Design",
     "headerLangOptionList": {
       "polish": "Polnisch",
-      "english": "Englisch"
+      "english": "Englisch",
+      "german": "Deutsch",
+      "italy": "Italienisch"
     }
   },
   "mainPage": {
-    "biggerLetter": "T",
-    "text": "Ich entwickle moderne Webanwendungen, die Leistung, Ästhetik und eine intuitive Benutzererfahrung vereinen. Dabei lege ich großen Wert auf hochwertigen Code, Liebe zum Detail und Lösungen, die den tatsächlichen Anforderungen von Nutzern und Unternehmen entsprechen. Ich lade Sie ein, sich über meine Berufserfahrung, Projekte und die Technologien zu informieren, mit denen ich täglich arbeite."
+    "biggerLetter": "I",
+    "text": "entwickle moderne Webanwendungen, die Leistung, Ästhetik und intuitive Bedienbarkeit vereinen. Ich lege großen Wert auf hochwertigen Code, Detailgenauigkeit und Lösungen, die echte Bedürfnisse von Nutzern und Unternehmen erfüllen. \n Schauen Sie sich gerne meine Berufserfahrung, Projekte und die Technologien an, mit denen ich täglich arbeite."
   },
   "footerComponent": {
     "text": "Alle Rechte vorbehalten."
@@ -46,7 +46,7 @@
     }
   },
   "contactPage": {
-    "formTitle": "Lass uns in Kontakt bleiben!",
+    "formTitle": "Lass uns in Kontakt treten!",
     "mapTitle": "Hier findest du mich",
     "formButton": "Senden",
     "form": {
@@ -59,61 +59,61 @@
       },
       "validators": {
         "email": "E-Mail-Adresse ist erforderlich...",
-        "emailAddress": "E-Mail-Adresse ist ungültig...",
-        "message": "Nachricht ist erforderlich und muss mindestens 5 Zeichen enthalten..."
+        "emailAddress": "Ungültige E-Mail-Adresse...",
+        "message": "Nachricht ist erforderlich und sollte mindestens 5 Zeichen enthalten..."
       }
     }
   },
   "snackbar": {
-    "success": "Hurra! \n Die Nachricht wurde erfolgreich gesendet, danke für deine Kontaktaufnahme!",
-    "error": "Ups, etwas ist schiefgelaufen! \n Die Nachricht konnte nicht gesendet werden. Bitte versuche es später erneut."
+    "success": "Hurra! \n Nachricht erfolgreich gesendet — danke für deine Kontaktaufnahme!",
+    "error": "Ups, etwas ist schiefgelaufen! \n Nachricht konnte nicht gesendet werden. Bitte versuche es später erneut."
   },
   "projectList": {
-    "noImg": "Klicke auf die Schaltfläche daneben, um die Screenshots anzuzeigen.",
+    "noImg": "Klicke auf den Button daneben, um Screenshots anzuzeigen.",
     "variables": {
       "projectName": "Projektname:",
-      "companyName": "Firma / Kunde:",
-      "description": "Beschreibung der durchgeführten Arbeiten:",
-      "url": "Webseite:",
+      "companyName": "Unternehmen / Kunde:",
+      "description": "Beschreibung der Arbeit:",
+      "url": "Website:",
       "screenshots": "Screenshots:"
     },
     "muddyCodeWorkspace": {
-      "projectName": "NX-Monorepo",
+      "projectName": "Nx-Monorepo",
       "companyName": "Muddy Code",
-      "description": "Arbeit in einem Nx-Monorepo innerhalb eines komplexen ERP-Multi-Application-Systems. Das Projekt umfasste Entwicklung und Wartung mehrerer Geschäfts- und Shared-Module sowie gemeinsamer Komponenten und Services.\n\nUmfang der Arbeiten in den Geschäftsmodulen:\n\n• Handelsmodul:\nStammdaten von Geschäftspartnern, Kundenaufträge, Preislisten und Dienstleistungen.\n\n• PMS:\nTechnologische und produktionsbezogene Logik, Freigabeversionen, Auftragsregister, Kalkulationen (Merkmale, Merkmalbeziehungen, Kalkulationsregister), umfangreiche Stammdaten (Werkzeuge, Werkzeugtypen, Operationen, Arbeitsplätze, Arbeitsplatzsätze, Qualifikationen, Modifikatoren).\n\n• Simulationen:\nSimulationsversionen und Simulationsregister.\n\n• WMS:\nIndexgruppen.\n\n• LOGS:\nSystemprotokollmodul (Überwachung und Anzeige von Anwendungslogs).\n\n• MES:\nProduktionsüberwachungs- und Steuerungssystem – Verwaltung von Produktionsprozessen, Erfassung von Mitarbeiterarbeit, Kontrolle von Produktionsaufträgen, Materialverbrauch sowie laufende Statusverfolgung von Produktionsoperationen.\n\nServices und Systemarchitektur\n\n• QBE Service:\nErstellung und Verarbeitung von Query-By-Example-(QBE)-Abfragen.\n\n• Attachment Service:\nUpload und Download von Anhängen mit Upload-Fortschritt (XMLHttpRequest mit Progress-Events), Backend-Integration sowie Streaming auf der Frontend-Seite.\n\n• User Settings – Verwaltung von Benutzereinstellungen im Local Storage:\n- Tabellen- und View-Konfigurationen\n- Spracheinstellungen\n- Zugriffskontrolle\n\n• Authentifizierungs- und Sitzungsmechanismen\n- Login und Session-Recovery-Mechanismus\n- Umgang mit Token-Ablauf und Retry von Requests nach Refresh\n- Abbruch von Requests bei Benutzerwechsel\n- HTTP-Interceptor für Token- und Authentifizierungslogik\n- Idle-Timeout-Mechanismus basierend auf Benutzeraktivität (Maus-Tracking)\n\nApplikations- und Zugriffsverwaltung\n\n• ActiveApp Service:\nSteuerung verfügbarer Anwendungen und Funktionen pro Benutzer (Berechtigungssystem).\n\n• Komponenten- und UI-Schicht\nWiederverwendbare Komponenten:\n- Loader\n- Attachment-Komponente\n- Fehlerbehandlungssystem basierend auf Snackbar-Service\n- Erweiterte Tree-Komponente (Tree View, dynamisches Hinzufügen/Entfernen von Nodes, Detailansicht bei Hover, Prozesspfad-Generierung und Darstellung)\n- Entwicklung und Support von Komponenten:\n- Modal-System\n- Numerische Tastatur-Komponente\n\nÜber 1,5 Jahre Arbeit am Projekt war ich für die Entwicklung des ERP-Systems verantwortlich – Frontend-Schicht, Service-Architektur sowie Shared Components. Die Arbeit umfasste Erweiterung bestehender Module, Implementierung neuer Funktionen sowie Stabilisierung und Weiterentwicklung des Systems in einer Enterprise-Umgebung."
+      "description": "Arbeit in einem Nx-Monorepo innerhalb eines umfangreichen ERP-Multi-Application-Systems. Das Projekt umfasste die Entwicklung und Wartung mehrerer Geschäfts-Module sowie gemeinsamer Komponenten und Services.\n\nUmfang der Arbeit in den Geschäftsmodulen:\n\n• Vertriebsmodul:\nKundenstammdaten, Kundenaufträge, Preislisten und Leistungen.\n\n• PMS:\nTechnologische und produktionsbezogene Logik, Versionsverwaltung von Freigaben, Auftragskarten, Kalkulationen (Merkmale, Merkmalbeziehungen, Kalkulationsregister), umfangreiche Stammdaten (Werkzeuge, Werkzeugtypen, Operationen, Arbeitsplätze, Arbeitsplatzsätze, Qualifikationen, Modifikatoren).\n\n• Simulationen:\nSimulationsversionen und Simulationskarten.\n\n• WMS:\nIndexgruppen.\n\n• LOGS:\nSystem-Log-Modul (Überwachung und Anzeige von Anwendungslogs).\n\n• MES:\nProduktionssteuerungs- und Überwachungssystem – Bearbeitung von Produktionsprozessen, Erfassung der Mitarbeiterarbeit, Kontrolle der Produktionsaufträge, Erfassung des Materialverbrauchs sowie laufende Statusverfolgung von Produktionsoperationen.\n\nServices und Systemarchitektur\n\n• QBE Service:\nErstellung und Verarbeitung von Query-By-Example-Abfragen (QBE).\n\n• Attachment Service:\nUpload und Download von Anhängen mit Fortschrittsanzeige (XMLHttpRequest mit Progress-Events), Backend-Integration und Streaming-Downloads im Frontend.\n\n• User Settings – Verwaltung von Benutzereinstellungen im localStorage:\n- Tabellen- und View-Konfigurationen\n- Spracheinstellungen\n- Zugriffskontrolle\n\n• Authentifizierungs- und Sitzungsmechanismen\n- Login und Session-Wiederherstellung\n- Token-Ablaufbehandlung und Retry nach Refresh\n- Abbruch von Requests bei Benutzerwechsel\n- HTTP-Interceptor für Token- und Authentifizierungslogik\n- Idle-Timeout basierend auf Benutzeraktivität (Maus-Tracking)\n\nVerwaltung von Anwendungen und Zugriffen\n\n• ActiveApp Service:\nSteuerung der verfügbaren Anwendungen und Funktionen pro Benutzer (Berechtigungssystem).\n\n• Komponenten und UI-Schicht\nGemeinsame Komponenten:\n- Loader\n- Attachment-Komponente\n- Fehlerbehandlungssystem basierend auf Snackbar-Service\n- Erweiterte Tree-Komponente (Tree View, dynamisches Hinzufügen/Entfernen von Nodes, Hover-Details, Prozesspfad-Generierung und Visualisierung)\n- Entwicklung und Unterstützung von Komponenten:\n- Modal-System\n- Numerische Tastatur-Komponente\n\nÜber 1,5 Jahre Arbeit am Projekt war ich verantwortlich für die Entwicklung eines ERP-Systems – auf Frontend-Ebene, Systemarchitektur und gemeinsame Komponenten. Die Arbeit umfasste die Erweiterung bestehender Module, Implementierung neuer Funktionen sowie Stabilisierung und Weiterentwicklung des Systems im Enterprise-Umfeld."
     },
     "muddyCodeSite": {
       "projectName": "Muddy Code Website",
       "companyName": "Muddy Code",
-      "description": "Die „Muddy Code“-Website wurde mit der Wix-Plattform erstellt. Es handelt sich um eine einfache Website mit Informationen über das Unternehmen, angebotene Dienstleistungen und einen Kontaktbereich zur direkten Kommunikation mit Kunden."
+      "description": "Die Website „Muddy Code“ wurde mit der Wix-Plattform erstellt. Es handelt sich um eine einfache Website mit Informationen über das Unternehmen, angebotene Dienstleistungen und einen Kontaktbereich zur direkten Kommunikation mit Kunden."
     },
     "familiaMedSite": {
       "projectName": "Familiamed Website",
       "companyName": "Familiamed",
-      "description": "Weiterentwicklung und Wartung des Projekts, SEO-Arbeiten (Suchmaschinenoptimierung), Analyse und Behebung bestehender Fehler sowie Refaktorisierung älterer Systemteile. Ausbau der Startseite und Unterseiten (inkl. Familiamed Clinique – Augenlidchirurgie) sowie Verbesserung der Performance und Stabilität der Website. Fortführung und Weiterentwicklung des Projekts nach vorherigen Teams mit Fokus auf Codequalität und Benutzererfahrung."
+      "description": "Entwicklung und Wartung des Projekts, SEO-Arbeiten (Suchmaschinenoptimierung), Analyse und Behebung bestehender Fehler sowie Refactoring älterer Systemteile. Erweiterung der Startseite und Unterseiten (inkl. Familiamed Clinique – Augenlidchirurgie) sowie Verbesserung der Performance und Stabilität der Website. Weiterentwicklung des Projekts nach früheren Teams mit Fokus auf Codequalität und Benutzererfahrung."
     },
     "quickAtest": {
       "projectName": "Quick Atest",
       "companyName": "Muddy Code",
-      "description": "Die Single-Page-Anwendung „Quick Atest“ wurde entwickelt, um den Prozess der Erstellung und Zusammenführung von Dokumenten für Aufträge zu optimieren. Sie ermöglicht das Filtern von Inhalten, die Generierung von Excel-Daten sowie das Herunterladen ausgewählter Dokumente als eine kombinierte PDF-Datei."
+      "description": "Die Single-Page-Anwendung „Quick Atest“ wurde entwickelt, um den Prozess der Erstellung und Zusammenführung von Dokumenten für Aufträge zu optimieren. Sie ermöglicht das Filtern von Inhalten, das Generieren von Excel-Dateien sowie das Herunterladen ausgewählter Dokumente als eine zusammengeführte PDF-Datei."
     }
   },
   "careerList": {
     "muddyCode": {
       "companyName": "Muddy Code sp. z o.o.",
       "jobPosition": "Frontend-Entwickler",
-      "description": "Seit Januar 2024 arbeite ich als Frontend-Entwickler. Ich bin verantwortlich für die Entwicklung und Wartung der Frontend-Schicht von Webanwendungen und achte auf Funktionalität, Performance und UI-Qualität. Ich begann mit kleineren Projekten und übernahm schrittweise komplexere und umfangreichere Lösungen. Ich arbeite mit Backend-Teams, UX/UI-Designern zusammen und bin an der Implementierung neuer Funktionen beteiligt."
+      "description": "Seit Januar 2024 arbeite ich als Frontend-Entwickler und bin für die Entwicklung und Wartung von Webanwendungsoberflächen verantwortlich. Ich konzentriere mich auf Benutzerfreundlichkeit, Performance und visuelle Konsistenz der Produkte. Mit der Zeit übernahm ich zunehmend komplexere Komponenten und Systemmodule. Ich arbeite eng mit Backend- sowie UX/UI-Teams zusammen und beteilige mich an der Entwicklung und Umsetzung neuer Funktionen."
     },
     "montService": {
       "companyName": "Mont Service",
       "jobPosition": "Elektriker",
-      "description": "Ich war verantwortlich für die Diagnose, Reparatur und Wartung von Kassensystemen, Zahlungsterminals und elektronischen Geräten im Einzelhandel. Ich führte Servicearbeiten an Hardware und elektronischen Komponenten durch und stellte die Funktionsfähigkeit der Verkaufssysteme sicher. Ich übernahm Installation, Konfiguration und Fehlerbehebung und gewährleistete so den kontinuierlichen Betrieb der Kunden."
+      "description": "Ich war verantwortlich für die Diagnose, Reparatur und Wartung von Geräten in Kassensystemen wie Registrierkassen und Zahlungsterminals. Ich führte Installationen, Konfigurationen und Fehlerbehebungen an Hardware- und Elektronikkomponenten durch. Ich sorgte für die Zuverlässigkeit der Geräte und eine schnelle Wiederherstellung ihrer Funktion, um den unterbrechungsfreien Betrieb der Kassensysteme sicherzustellen."
     }
   },
   "workInProgressComponent": {
-    "title": "Dieser Bereich wird derzeit erweitert. Bitte schaue bald wieder vorbei!"
+    "title": "Dieser Bereich wird derzeit erweitert. Bitte schauen Sie bald wieder vorbei!"
   },
   "aboutMePage": {
-    "text": "Ich bin Frontend-Entwickler mit 3 Jahren Erfahrung in der Entwicklung moderner und funktionaler Webanwendungen. Ich verbinde Programmierkenntnisse mit einem Gespür für Ästhetik und Liebe zum Detail, wodurch ich Lösungen entwickle, die nicht nur leistungsfähig, sondern auch benutzerfreundlich sind. Neue Technologien eigne ich mir schnell an und stelle mich gerne neuen Herausforderungen. Programmierung und Informatik im Allgemeinen sind meine Leidenschaft, weshalb ich meine Fähigkeiten kontinuierlich weiterentwickle. Darüber hinaus interessiere ich mich für die Spieleentwicklung sowie für neue technologische Trends. Außerhalb der Arbeit treibe ich aktiv Sport, insbesondere Boxen, das mich Disziplin, Beständigkeit und Zielstrebigkeit lehrt."
+    "text": "Ich bin Frontend-Entwickler mit 3 Jahren Erfahrung in der Entwicklung moderner und funktionaler Webanwendungen. Ich verbinde Programmierkenntnisse mit Sinn für Ästhetik und Detailgenauigkeit, wodurch ich Lösungen entwickle, die sowohl effizient als auch benutzerfreundlich sind. Ich lerne schnell neue Technologien und nehme gerne neue Herausforderungen an. Programmierung und IT im Allgemeinen sind meine Leidenschaft, weshalb ich meine Fähigkeiten kontinuierlich erweitere und mich auch für Game Development sowie neue Technologietrends interessiere. Außerhalb der Arbeit treibe ich regelmäßig Sport, was mir Disziplin, Konsequenz und Ausdauer bei der Zielerreichung vermittelt."
   }
 }

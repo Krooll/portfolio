@@ -1,0 +1,119 @@
+{
+  "contact": "Contatto",
+  "aboutMe": "Chi sono",
+  "projects": "Progetti",
+  "experience": "Esperienza",
+  "technology": "Tech stack",
+  "education": "Formazione",
+  "headerComponent": {
+    "headerMenuOptionList": {
+      "mainPageButton": "Home",
+      "experiencePageButton": "Esperienza",
+      "projectPageButton": "Progetti",
+      "aboutMePageButton": "Chi sono",
+      "contactPageButton": "Contatto",
+      "technologyPageButton": "Tech stack",
+      "educationPageButton": "Formazione"
+    },
+    "headerLangButtonLabel": "Lingua",
+    "headerThemeSwitcherLabel": "Tema",
+    "headerLangOptionList": {
+      "polish": "Polacco",
+      "english": "Inglese",
+      "german": "Tedesco",
+      "italy": "Italiano"
+    }
+  },
+  "mainPage": {
+    "biggerLetter": "C",
+    "text": "sviluppo applicazioni web moderne che combinano prestazioni, estetica e usabilità intuitiva. Mi concentro su codice di alta qualità, attenzione ai dettagli e soluzioni che rispondono alle reali esigenze degli utenti e del business. \n Sentiti libero di esplorare la mia esperienza professionale, i progetti e le tecnologie con cui lavoro ogni giorno."
+  },
+  "footerComponent": {
+    "text": "Tutti i diritti riservati."
+  },
+  "typeWriteComponent": {
+    "exampleWords": {
+      "angular": "Angular...",
+      "typeScript": "TypeScript...",
+      "javaScript": "JavaScript...",
+      "rxjs": "RxJS...",
+      "html": "HTML...",
+      "css": "CSS...",
+      "bootstrap": "Bootstrap...",
+      "nx": "NX...",
+      "frontend": "Frontend...",
+      "backend": "Backend..."
+    }
+  },
+  "contactPage": {
+    "formTitle": "Mettiamoci in contatto!",
+    "mapTitle": "Mi trovi qui",
+    "formButton": "Invia",
+    "form": {
+      "labels": {
+        "email": "Il tuo indirizzo email"
+      },
+      "placeholders": {
+        "email": "Inserisci il tuo indirizzo email...",
+        "message": "Scrivi il tuo messaggio..."
+      },
+      "validators": {
+        "email": "L'indirizzo email è obbligatorio...",
+        "emailAddress": "Indirizzo email non valido...",
+        "message": "Il messaggio è obbligatorio e deve contenere almeno 5 caratteri..."
+      }
+    }
+  },
+  "snackbar": {
+    "success": "Evviva! \n Messaggio inviato con successo — grazie per avermi contattato!",
+    "error": "Ops, qualcosa è andato storto! \n Impossibile inviare il messaggio. Riprova più tardi."
+  },
+  "projectList": {
+    "noImg": "Clicca il pulsante accanto per vedere gli screenshot.",
+    "variables": {
+      "projectName": "Nome del progetto:",
+      "companyName": "Azienda / cliente:",
+      "description": "Descrizione del lavoro:",
+      "url": "Sito web:",
+      "screenshots": "Screenshot:"
+    },
+    "muddyCodeWorkspace": {
+      "projectName": "Monorepo Nx",
+      "companyName": "Muddy Code",
+      "description": "Lavoro in un monorepo Nx all'interno di un ampio sistema ERP multi-applicazione. Il progetto comprendeva lo sviluppo e la manutenzione di diversi moduli di business e componenti e servizi condivisi.\n\nAmbito dei moduli di business:\n\n• Modulo vendite:\nAnagrafiche clienti, ordini clienti, listini prezzi e servizi.\n\n• PMS:\nLogica tecnologica e produttiva, versioni di rilascio, schede di commessa, calcoli (caratteristiche, relazioni tra caratteristiche, registro preventivi), ampi dizionari (strumenti, tipi di strumenti, operazioni, postazioni, tariffe postazioni, qualifiche, modificatori).\n\n• Simulazioni:\nVersioni e schede di simulazione.\n\n• WMS:\nGruppi di indici.\n\n• LOGS:\nModulo di log di sistema (monitoraggio e visualizzazione dei log applicativi).\n\n• MES:\nSistema di controllo e monitoraggio della produzione – gestione dei processi produttivi, registrazione del lavoro dei dipendenti, controllo degli ordini di produzione, registrazione del consumo di materiali e tracciamento in tempo reale degli stati delle operazioni.\n\nServizi e architettura di sistema\n\n• QBE Service:\nCostruzione e gestione di query Query By Example (QBE).\n\n• Attachment Service:\nUpload e download di allegati con tracciamento del progresso (XMLHttpRequest con eventi progress), integrazione backend e download in streaming lato frontend.\n\n• User Settings – gestione delle impostazioni utente salvate in localStorage:\n- configurazione tabelle e viste\n- impostazioni lingua\n- controllo accessi\n\n• Meccanismi di autenticazione e sessione\n- login e recupero sessione\n- gestione scadenza token e retry dopo refresh\n- cancellazione richieste al cambio utente\n- interceptor HTTP per gestione token e autenticazione\n- timeout di inattività basato sull'attività utente (tracking mouse)\n\nGestione applicazioni e accessi\n\n• ActiveApp Service:\nControllo delle applicazioni e funzionalità disponibili per utente (sistema permessi).\n\n• Componenti e livello UI\nComponenti condivisi:\n- loader\n- componente allegati\n- sistema di gestione errori basato su snackbar service\n- componente tree avanzato (tree view, aggiunta/rimozione dinamica nodi, dettagli al passaggio mouse, generazione percorsi processi)\n- sviluppo e supporto di componenti:\n- sistema modale\n- tastiera numerica\n\nPer oltre 1,5 anni di lavoro sul progetto mi sono occupato dello sviluppo di un sistema ERP – lato frontend, architettura di sistema e componenti condivisi. Il lavoro comprendeva l'estensione dei moduli esistenti, l'implementazione di nuove funzionalità e la stabilizzazione ed evoluzione del sistema in ambito enterprise."
+    },
+    "muddyCodeSite": {
+      "projectName": "Sito web Muddy Code",
+      "companyName": "Muddy Code",
+      "description": "Il sito “Muddy Code” è stato realizzato con la piattaforma Wix. È un sito semplice che contiene informazioni sull'azienda, i servizi offerti e una sezione contatti per comunicare direttamente con i clienti."
+    },
+    "familiaMedSite": {
+      "projectName": "Sito web Familiamed",
+      "companyName": "Familiamed",
+      "description": "Sviluppo e manutenzione del progetto, attività SEO (ottimizzazione per i motori di ricerca), analisi e correzione di bug esistenti e refactoring di parti legacy del sistema. Estensione della homepage e delle sottopagine (inclusa Familiamed Clinique – chirurgia palpebrale), miglioramento delle prestazioni e della stabilità del sito. Continuazione dello sviluppo del progetto dopo team precedenti, con focus sulla qualità del codice e sull'esperienza utente."
+    },
+    "quickAtest": {
+      "projectName": "Quick Atest",
+      "companyName": "Muddy Code",
+      "description": "L'applicazione single-page “Quick Atest” è stata progettata per semplificare il processo di creazione e unione dei documenti necessari per l'esecuzione degli ordini. Consente il filtraggio dei contenuti, la generazione di file Excel e il download di documenti selezionati come un unico file PDF unificato."
+    }
+  },
+  "careerList": {
+    "muddyCode": {
+      "companyName": "Muddy Code sp. z o.o.",
+      "jobPosition": "Frontend Developer",
+      "description": "Da gennaio 2024 lavoro come frontend developer, occupandomi dello sviluppo e della manutenzione delle interfacce delle applicazioni web. Mi concentro sul miglioramento dell'usabilità, delle prestazioni e della coerenza visiva dei prodotti. Con il tempo sono passato da attività più semplici a componenti e moduli di sistema più complessi. Collaboro attivamente con team backend e UX/UI, partecipando alla progettazione e implementazione di nuove funzionalità."
+    },
+    "montService": {
+      "companyName": "Mont Service",
+      "jobPosition": "Elettricista",
+      "description": "Mi occupavo della diagnosi, riparazione e manutenzione di dispositivi utilizzati nei sistemi di vendita, come registratori di cassa e terminali di pagamento. Eseguivo installazioni, configurazioni e risoluzione di problemi hardware ed elettronici. Garantivo l'affidabilità dei dispositivi e il rapido ripristino del loro funzionamento, assicurando la continuità operativa dei sistemi POS."
+    }
+  },
+  "workInProgressComponent": {
+    "title": "Questa sezione è attualmente in fase di sviluppo. Torna a trovarci presto!"
+  },
+  "aboutMePage": {
+    "text": "Sono un Frontend Developer con 3 anni di esperienza nello sviluppo di applicazioni web moderne e funzionali. Unisco competenze di programmazione con senso estetico e attenzione ai dettagli, creando soluzioni efficienti e intuitive. Imparo rapidamente nuove tecnologie e mi piace affrontare nuove sfide. La programmazione e l'IT in generale sono la mia passione, per questo continuo a sviluppare le mie competenze e mi interesso anche allo sviluppo di videogiochi e alle nuove tendenze tecnologiche. Fuori dal lavoro pratico sport, che mi insegna costanza, disciplina e perseveranza nel raggiungimento degli obiettivi."
+  }
+}
