@@ -47,6 +47,12 @@ export class HeaderFeature {
       icon: '/icons/home.png'
     },
     {
+      label: 'headerComponent.headerMenuOptionList.aboutMePageButton',
+      fallback: 'O mnie',
+      route: '/about-me',
+      icon: '/icons/person.png'
+    },
+    {
       label: 'headerComponent.headerMenuOptionList.experiencePageButton',
       fallback: 'Doświadczenie',
       route: '/experience',
@@ -66,15 +72,9 @@ export class HeaderFeature {
     },
     {
       label: 'headerComponent.headerMenuOptionList.educationPageButton',
-      fallback: 'Wykształcenie',
+      fallback: 'Edukacja',
       route: '/education',
       icon: '/icons/education-small.png'
-    },
-    {
-      label: 'headerComponent.headerMenuOptionList.aboutMePageButton',
-      fallback: 'O mnie',
-      route: '/about-me',
-      icon: '/icons/person.png'
     },
     {
       label: 'headerComponent.headerMenuOptionList.contactPageButton',

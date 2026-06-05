@@ -108,5 +108,8 @@
   },
   "workInProgressComponent": {
     "title": "Ta sekcja jest właśnie rozbudowywana. Zajrzyj ponownie wkrótce!"
+  },
+  "aboutMePage": {
+    "text": "Jestem Frontend Developerem z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników. Szybko przyswajam nowe technologie i chętnie podejmuję się nowych wyzwań. Programowanie i szeroko pojęta informatyka są moją pasją, dlatego stale rozwijam swoje kompetencje, interesuję się również tematyką gamedevu oraz nowymi trendami technologicznymi. Poza pracą aktywnie uprawiam sport, w szczególności boks, który uczy mnie systematyczności, dyscypliny i konsekwencji w dążeniu do celu."
   }
 }
