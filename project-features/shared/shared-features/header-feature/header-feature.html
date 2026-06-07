@@ -1,12 +1,12 @@
 <header class="header-wrapper">
   <div class="d-flex align-items-center me-4">
     @if (_themeService.currentTheme() === ThemeType.Dark) {
-      <img loading="lazy" class="lang-icon me-1" width="24"
-           height="24" alt="Switcher icons" src="/icons/moon.png">
+      <img loading="lazy" class="lang-icon me-1" width="48"
+           height="48" alt="Switcher icons" src="/icons/moon.png">
     }
     @if (_themeService.currentTheme() === ThemeType.Light) {
-      <img loading="lazy" class="lang-icon me-1" width="24"
-           height="24" alt="Switcher icons" src="/icons/sun.png">
+      <img loading="lazy" class="lang-icon me-1" width="48"
+           height="48" alt="Switcher icons" src="/icons/sun.png">
     }
     <app-theme-switcher></app-theme-switcher>
   </div>
@@ -30,6 +30,8 @@
           class="d-flex align-items-center lang-button mt-1 mb-1"
           (click)="_langChangeService.onChangeLang(item.id)">
           <img
+            width="24"
+            height="24"
             loading="lazy"
             class="lang-icon me-3"
             [alt]="item.alt"
@@ -51,13 +53,14 @@
     <div
       class="header-list-wrapper animated-dropdown"
       [class.open]="isHeaderListOpen()">
-
       @for (item of menuOptionList; track $index) {
         <button
           type="button"
           class="d-flex align-items-center menu-buttons mt-2 mb-2"
           (click)="routeToSelectedPage(item.route)">
           <img
+            width="24"
+            height="24"
             loading="lazy"
             class="lang-icon me-3"
             alt="Menu options"

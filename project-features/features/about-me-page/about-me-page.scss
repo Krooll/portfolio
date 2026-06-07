@@ -10,8 +10,9 @@
 
 .image {
   height: 26rem;
-  width: 24rem;
+  width: auto;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .hr-about {
@@ -19,7 +20,7 @@
   margin-bottom: 1.5rem;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1300px) {
   .text-wrapper {
     width: 100%;
   }
@@ -30,7 +31,9 @@
     align-items: center;
     justify-content: center;
   }
+}
 
+@media (max-width: 900px) {
   .image {
     margin-top: 2rem;
     height: auto;
