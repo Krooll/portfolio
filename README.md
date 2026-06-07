@@ -1,59 +1,133 @@
 # Portfolio
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.11.
+Personal portfolio website built with Angular. The application presents profile information, work experience, projects, technologies, education, and contact options in a multilingual, responsive single-page experience.
 
-## Development server
+## Tech Stack
 
-To start a local development server, run:
+- Angular 21 with standalone components and lazy-loaded routes
+- TypeScript 5.9
+- Angular Router
+- Angular Material snack bars
+- Angular reactive forms
+- `@ngx-translate/core` for runtime translations
+- Bootstrap 5
+- SCSS global and feature-level styles
+- Vitest / Angular test builder
+- ESLint and Prettier
 
-```bash
-ng serve
+## Features
+
+- Main portfolio sections: home, about me, experience, projects, technologies, education, and contact.
+- Lazy-loaded shells and pages for most routes to keep the initial bundle focused.
+- Multilingual UI with Polish fallback and translation files for `pl`, `en`, `de`, and `it`.
+- Custom `translateFallback` pipe that returns local fallback text when a translation key is missing.
+- Theme switching with persisted `dark` / `light` mode in `localStorage`.
+- Experience page with career entries and language-aware resume download.
+- Projects page with project descriptions, external links, and screenshot previews.
+- Contact form using Angular reactive forms and Web3Forms submission.
+- Static assets served from `public`, including icons, screenshots, SEO files, and resume PDFs.
+
+## Application Routes
+
+| Path          | Description                        |
+| ------------- | ---------------------------------- |
+| `/main-page`  | Landing page                       |
+| `/about-me`   | Profile and personal information   |
+| `/experience` | Career history and resume download |
+| `/projects`   | Portfolio projects and screenshots |
+| `/technology` | Technologies, tools, and AI tools  |
+| `/education`  | Education section                  |
+| `/contact`    | Contact form and social links      |
+
+Unknown routes redirect to `/main-page`.
+
+## Project Structure
+
+```text
+src/
+  app/
+    app.config.ts       Angular providers, router, HTTP, translations
+    app.routes.ts       Application route definitions
+    translate-loader.ts ngx-translate HTTP loader
+  global-styles/        Global SCSS entry point
+
+project-features/
+  features/             Page-level feature components
+  shells/               Route shell components
+  shared/
+    pipes/              Shared standalone pipes
+    services/           Language and theme services
+    shared-assets/i18n/ Translation JSON files copied to /i18n
+    shared-features/    Header, footer, theme switcher, typewriter, WIP UI
+
+public/
+  icons/                UI and technology icons
+  screenshots/          Project screenshots
+  resume/               Resume PDFs
+  robots.txt
+  sitemap.xml
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Requirements
 
-## Code scaffolding
+- Node.js 22
+- npm 9.4.0
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+The CI pipeline also runs on Node.js 22 and uses `npm ci`.
 
-```bash
-ng generate component component-name
-```
+## Getting Started
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+Install dependencies:
 
 ```bash
-ng build
+npm ci
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Start the local development server:
 
 ```bash
-ng test
+npm start
 ```
 
-## Running end-to-end tests
+Open `http://localhost:4200/`. The dev server redirects the root route to `/main-page`.
 
-For end-to-end (e2e) testing, run:
+## Available Scripts
 
 ```bash
-ng e2e
+npm start          # Run the Angular development server
+npm run build      # Create a production build
+npm run watch      # Build in development watch mode
+npm run lint       # Run ESLint
+npm run format     # Format files with Prettier
+npm run format:check
+npm test           # Run unit tests
+npm run test:ci    # Run tests once for CI
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## Internationalization
 
-## Additional Resources
+Translations live in:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+```text
+project-features/shared/shared-assets/i18n/
+```
+
+During build, Angular copies them to `/i18n`. The app initializes the language from `localStorage.currentLang` and falls back to Polish when no language is stored. Supported language IDs are:
+
+- `pl`
+- `en`
+- `de`
+- `it`
+
+The experience page uses the selected language to choose the resume file. Polish downloads `Pawel_Krol_CV_PL.pdf`; English, German, and Italian download `Pawel_Krol_CV_EN.pdf`.
+
+## CI
+
+GitHub Actions runs on pull requests and performs:
+
+```bash
+npm ci
+npm run lint
+npm run test:ci
+npm run build
+```
