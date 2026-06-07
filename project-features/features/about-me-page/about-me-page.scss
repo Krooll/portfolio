@@ -10,7 +10,7 @@
 
 .image {
   height: 26rem;
-  width: auto;
+  width: 23rem;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -36,7 +36,7 @@
 @media (max-width: 900px) {
   .image {
     margin-top: 2rem;
-    height: auto;
+    height: 13rem;
     max-width: 10rem;
   }
 }
