@@ -1,7 +1,7 @@
 .typing-wrapper {
   font-size: clamp(3rem, 9vw, 5rem);
   font-weight: 600;
-  height: 25rem;
+  height: 20rem;
   display: flex;
   align-items: center;
   padding: 0 0.5rem;
@@ -25,5 +25,6 @@
 
 @media (min-width: 900px) {
   .typing-wrapper {
-    font-size: clamp(4rem, 10vw, 14rem);  }
+    font-size: clamp(4rem, 10vw, 14rem);
+  }
 }
