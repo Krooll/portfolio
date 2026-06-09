@@ -2,6 +2,11 @@
   height: 100%;
 }
 
+.type-wrapper {
+  min-height: 20rem;
+  margin: 0;
+}
+
 .text-wrapper {
   width: 30%;
   height: 100%;
@@ -16,31 +21,17 @@
   white-space: pre-line;
 }
 
-p.p-1 {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-}
-
 .biggest-letter {
-  float: none;
+  float: left;
   font-size: 5rem;
   line-height: 0.9;
   font-weight: 700;
+  margin-right: 0.5rem;
+  margin-top: 0.4rem;
 }
-
-//.biggest-letter {
-//  float: left;
-//  font-size: 5rem;
-//  line-height: 0.9;
-//  font-weight: 700;
-//  margin-right: 0.5rem;
-//  margin-top: 0.4rem;
-//}
 
 @media(width < 900px) {
   .main-page-wrapper {
-    height: 80%;
     flex-direction: column;
   }
 
