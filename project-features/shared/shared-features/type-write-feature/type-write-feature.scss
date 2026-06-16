@@ -1,4 +1,7 @@
 .typing-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: clamp(3rem, 9vw, 5rem);
   font-weight: 600;
   padding: 0 0.5rem;
