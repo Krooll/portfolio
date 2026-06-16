@@ -3,13 +3,12 @@
 }
 
 .type-wrapper {
-  min-height: 12rem;
+  height: 100%;
   margin: 0;
 }
 
 .text-wrapper {
-  width: 30%;
-  height: 100%;
+  flex: 0 0 30%;
   min-height: 20rem;
   font-size: 0.9rem;
   padding: 2rem;
