@@ -1,12 +1,15 @@
 .typing-wrapper {
-  display: flex;
-  align-items: center;
+  display: inline-flex;
   justify-content: center;
+  align-items: center;
+  min-height: 10rem;
+  width: 11ch;
+  overflow: hidden;
+  white-space: nowrap;
   font-size: clamp(3rem, 9vw, 5rem);
   font-weight: 600;
   padding: 0 0.5rem;
   line-height: 1;
-  width: 11ch;
 }
 
 .typing-wrapper p {
