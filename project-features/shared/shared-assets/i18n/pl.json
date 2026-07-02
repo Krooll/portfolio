@@ -77,6 +77,11 @@
       "url": "Strona www:",
       "screenshots": "Zrzuty ekranu:"
     },
+    "newFamiliaMedSite": {
+      "projectName": "Nowa strona Familia med + strona Admin panel",
+      "companyName": "Familiamed",
+      "description": "Projekt będzie budowany w frameworku Angular \n\n - Plan realizacji strony internetowej w Figma\n\n - Przygotowanie wstępnego projektu UI (draft) w Figma – wersja mobilna (mobile-first) oraz desktopowa. \n\n - Opracowanie modelu danych (encje + DTO)"
+    },
     "muddyCodeWorkspace": {
       "projectName": "Monorepo NX",
       "companyName": "Muddy Code",

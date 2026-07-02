@@ -34,7 +34,21 @@ export class ProjectsPage {
 
   projectList: ProjectsObject[] = [
     {
-      id: 1,
+      id: 5,
+      projectName: 'projectList.newFamiliaMedSite.projectName',
+      projectNameFallback: 'Nowa strona Familia med',
+      projectIcon: '/icons/code2.png',
+      companyName: 'projectList.newFamiliaMedSite.companyName',
+      companyFallback: 'Familiamed',
+      companyIcon: '/icons/company.png',
+      description: 'projectList.newFamiliaMedSite.description',
+      descriptionIcon: '/icons/text.png',
+      descriptionFallback: 'Projekt będzie budowany w frameworku Angular \n\n- Plan realizacji strony internetowej w Figma\n\n - Przygotowanie wstępnego projektu UI (draft) w Figma – wersja mobilna (mobile-first) oraz desktopowa. \n\n - Opracowanie modelu danych (encje + DTO)',
+      url: 'https://www.figma.com/design/iZ3iFbCFNepu22PJByc6os/Roadmap---familiamed?node-id=0-1&t=uegOQjwdDdRPl6tG-1',
+      urlIcon: '/icons/url.png'
+    },
+    {
+      id: 4,
       projectName: 'projectList.muddyCodeWorkspace.projectName',
       projectNameFallback: 'Strona www Muddy code',
       projectIcon: '/icons/code2.png',
@@ -63,7 +77,7 @@ export class ProjectsPage {
       imgIcon: '/icons/images.png',
     },
     {
-      id: 2,
+      id: 3,
       projectName: 'projectList.muddyCodeSite.projectName',
       projectNameFallback: 'Strona www Muddy code',
       projectIcon: '/icons/code2.png',
@@ -79,7 +93,7 @@ export class ProjectsPage {
       urlIcon: '/icons/url.png'
     },
     {
-      id: 3,
+      id: 2,
       projectName: 'projectList.familiaMedSite.projectName',
       projectNameFallback: 'Strona www Familiamed',
       projectIcon: '/icons/code2.png',
@@ -95,7 +109,7 @@ export class ProjectsPage {
       urlIcon: '/icons/url.png'
     },
     {
-      id: 4,
+      id: 1,
       projectName: 'projectList.quickAtest.projectName',
       projectNameFallback: 'Quick atest',
       projectIcon: '/icons/code2.png',

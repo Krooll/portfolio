@@ -1,6 +1,3 @@
-@use '../../../../src/global-styles/styles.scss' as global;
-@use 'sass:map';
-
 .header-wrapper {
   height: 4rem;
   color: var(--text-color);
@@ -14,7 +11,7 @@
 .burger-button {
   height: 2.75rem;
   width: 2.75rem;
-  border: var(--border);
+  border: 1px solid var(--border);
   border-radius: 0.25rem;
   background: var(--contrast-background);
 }
@@ -79,7 +76,7 @@
 
 .lang-button {
   text-align: center;
-  background: var(--background);
+  background: transparent;
   color: var(--contrast-text-color);
   height: 2.75rem;
   width: 8rem;
