@@ -71,12 +71,25 @@ export class TypeWriteFeature implements OnInit, OnDestroy {
   private deleteSpeed = signal<number>(60);
   private pauseTime = signal<number>(1200);
 
+  private translateWords = signal<string[]>([]);
+
+  private refreshTranslatedWords(): void {
+    this.translateWords.set(
+      this.exampleWords.map((word => this._translatePipe.transform(word.label, word.fallback)))
+    )
+  }
+
   private intervalId?: any;
 
   ngOnInit() {
-    this.startTyping();
+    this.refreshTranslatedWords();
+
+    setTimeout(() => {
+      this.startTyping();
+    }, 1000)
 
     this._translate.onLangChange.subscribe(() => {
+      this.refreshTranslatedWords();
       this.resetAfterLangChange();
     });
   }
@@ -91,8 +104,7 @@ export class TypeWriteFeature implements OnInit, OnDestroy {
 
   tick(): void {
     const currentWord = this.exampleWords[this.wordIndex()];
-    const fullText =
-      this._translatePipe.transform(currentWord.label, currentWord.fallback);
+    const fullText = this.translateWords()[this.wordIndex()];
 
     if (!this.isDeleting()) {
       const nextIndex = this.charIndex() + 1;
