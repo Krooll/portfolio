@@ -1,3 +1,20 @@
 :host {
   width: 100%;
 }
+
+.education-img {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.img-wrapper-education {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  background: var(--contrast-background);
+  border: 2px solid var(--contrast-background);
+}
+
+.bold {
+  font-weight: 600;
+}

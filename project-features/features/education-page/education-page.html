@@ -6,10 +6,22 @@
     <p>{{ 'education' | translateFallback: 'Wykształcenie' }}</p>
   </div>
   <hr>
-  <div class="body-scroll">
-    <div class="d-flex align-items-center justify-content-center">
-      <app-work-in-progress-feature></app-work-in-progress-feature>
-    </div>
+  <div class="body-scroll d-flex flex-column">
+    @for (item of educationItems; track $index) {
+      <div class="d-flex align-items-start mt-1 mb-1">
+        <div class="img-wrapper-education d-flex align-items-center justify-content-center">
+          <img loading="lazy" src="/icons/education-2-small.png" class="education-img" alt="education-icon">
+        </div>
+        <div class="d-flex flex-column ms-3 p-1">
+          <p class="mt-1 bold">{{"educationItemsList.universityName" | translateFallback: "Uniwersytet:"}} {{ item.universityName | translateFallback: item.universityNameFallback }}</p>
+          <p class="mt-1 bold">{{"educationItemsList.degree" | translateFallback: "Kierunek:"}} {{ item.degreeCourse | translateFallback: item.degreeCourseFallback }}</p>
+          <p class="mt-1 bold">{{"educationItemsList.specialization" | translateFallback: "Specjalność:"}} {{ item.specialization | translateFallback: item.specializationFallback }}</p>
+          <p class="mt-1">{{"educationItemsList.status" | translateFallback: "Status:"}} {{ item.status | translateFallback: item.statusFallback }}</p>
+          <p class="mt-1">{{"educationItemsList.startDate" | translateFallback: "Rozpoczęcie:"}} {{ item.startDate | translateFallback: item.startDateFallback }}</p>
+        </div>
+      </div>
+      <hr style="width: 90%">
+    }
   </div>
 </div>
 

@@ -68,6 +68,12 @@ a {
   border: 1px solid var(--contrast-background);
   border-radius: 0.5rem;
   color: var(--contrast-card-text);
+  max-width: 15rem;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
 }
 
 
