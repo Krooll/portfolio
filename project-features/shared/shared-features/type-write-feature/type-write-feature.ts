@@ -1,4 +1,4 @@
-import {Component, inject, OnDestroy, OnInit, signal} from '@angular/core';
+import {Component, inject, NgZone, OnDestroy, OnInit, signal} from '@angular/core';
 import {TranslateFallbackPipe} from '../../pipes/translate-pipe';
 import {TranslateService} from '@ngx-translate/core';
 
@@ -18,6 +18,7 @@ export interface TypeWordsInterface {
 export class TypeWriteFeature implements OnInit, OnDestroy {
   private readonly _translatePipe = inject(TranslateFallbackPipe);
   private readonly _translate = inject(TranslateService);
+  private readonly _ngZone = inject(NgZone);
 
   exampleWords: TypeWordsInterface[] = [
     {
@@ -31,6 +32,18 @@ export class TypeWriteFeature implements OnInit, OnDestroy {
     {
       label: 'typeWriteComponent.exampleWords.javaScript',
       fallback: 'JavaScript...',
+    },
+    {
+      label: 'typeWriteComponent.exampleWords.java',
+      fallback: 'Java...',
+    },
+    {
+      label: 'typeWriteComponent.exampleWords.spring',
+      fallback: 'SpringBoot...',
+    },
+    {
+      label: 'typeWriteComponent.exampleWords.hibernate',
+      fallback: 'Hibernate...',
     },
     {
       label: 'typeWriteComponent.exampleWords.rxjs',
@@ -63,30 +76,33 @@ export class TypeWriteFeature implements OnInit, OnDestroy {
   ];
 
   displayText = signal<string>('');
-  private wordIndex = signal<number>(0);
-  private charIndex = signal<number>(0);
-  private isDeleting = signal<boolean>(false);
 
-  private typingSpeed = signal<number>(120);
-  private deleteSpeed = signal<number>(60);
-  private pauseTime = signal<number>(1200);
+  private translateWords: string[] = [];
+  private timeoutId?: any;
 
-  private translateWords = signal<string[]>([]);
+  private wordIndex = 0;
+  private charIndex = 0;
+  private isDeleting = false;
+
+  private typingSpeed = 160;
+  private deleteSpeed = 60;
+  private pauseTime = 1200;
 
   private refreshTranslatedWords(): void {
-    this.translateWords.set(
-      this.exampleWords.map((word => this._translatePipe.transform(word.label, word.fallback)))
-    )
+    this.translateWords = this.exampleWords.map((word) =>
+      this._translatePipe.transform(word.label, word.fallback)
+    );
   }
-
-  private intervalId?: any;
 
   ngOnInit() {
     this.refreshTranslatedWords();
 
-    setTimeout(() => {
-      this.startTyping();
-    }, 1000)
+    if (this.translateWords.length > 0) {
+      this.displayText.set(this.translateWords[0].substring(0, 1));
+      this.charIndex = 1;
+    }
+
+    this.scheduleNextTick(1000);
 
     this._translate.onLangChange.subscribe(() => {
       this.refreshTranslatedWords();
@@ -95,58 +111,52 @@ export class TypeWriteFeature implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    clearInterval(this.intervalId);
+    clearTimeout(this.timeoutId);
   }
 
-  startTyping() {
-    this.intervalId = setInterval(() => this.tick(), this.typingSpeed());
-  }
+  private tick(): void {
+    const fullText = this.translateWords[this.wordIndex] || '';
 
-  tick(): void {
-    const currentWord = this.exampleWords[this.wordIndex()];
-    const fullText = this.translateWords()[this.wordIndex()];
+    if (!this.isDeleting) {
+      this.charIndex++;
+      const currentText = fullText.substring(0, this.charIndex);
 
-    if (!this.isDeleting()) {
-      const nextIndex = this.charIndex() + 1;
-      this.charIndex.set(nextIndex);
+      this._ngZone.run(() => this.displayText.set(currentText));
 
-      this.displayText.set(fullText.substring(0, nextIndex));
-
-      if (this.charIndex() === currentWord.label.length) {
-        this.isDeleting.set(true);
-        clearInterval(this.intervalId);
-
-        setTimeout(() => {
-          this.intervalId = setInterval(() => this.tick(), this.deleteSpeed());
-        }, this.pauseTime());
+      if (this.charIndex >= fullText.length) {
+        this.isDeleting = true;
+        this.scheduleNextTick(this.pauseTime);
+        return;
       }
+      this.scheduleNextTick(this.typingSpeed);
     } else {
-      const nextIndex = this.charIndex() - 1;
-      this.charIndex.set(nextIndex);
+      this.charIndex--;
+      const currentText = fullText.substring(0, this.charIndex);
 
-      this.displayText.set(fullText.substring(0, nextIndex));
+      this._ngZone.run(() => this.displayText.set(currentText));
 
-      if (this.charIndex() === 0) {
-        this.isDeleting.set(false);
-        this.wordIndex.set(
-          (this.wordIndex() + 1) % this.exampleWords.length
-        );
-
-        clearInterval(this.intervalId);
-        setTimeout(() => {
-          this.intervalId = setInterval(() => this.tick(), this.typingSpeed());
-        }, 300);
-        }
+      if (this.charIndex <= 0) {
+        this.isDeleting = false;
+        this.wordIndex = (this.wordIndex + 1) % this.exampleWords.length;
+        this.scheduleNextTick(300);
+        return;
+      }
+      this.scheduleNextTick(this.deleteSpeed);
     }
   }
 
-  resetAfterLangChange() {
-    this.displayText.set('');
-    this.wordIndex.set(0);
-    this.charIndex.set(0);
-    this.isDeleting.set(false);
+  private scheduleNextTick(delay: number): void {
+    this._ngZone.runOutsideAngular(() => {
+      this.timeoutId = setTimeout(() => this.tick(), delay);
+    });
+  }
 
-    clearInterval(this.intervalId);
-    this.startTyping();
+  resetAfterLangChange() {
+    clearTimeout(this.timeoutId);
+    this.wordIndex = 0;
+    this.charIndex = 0;
+    this.isDeleting = false;
+    this.displayText.set('');
+    this.scheduleNextTick(100);
   }
 }

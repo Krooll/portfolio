@@ -1,18 +1,18 @@
 .main-page-wrapper {
   height: 100%;
+  box-sizing: border-box;
 }
 
 .text-wrapper {
-  height: 90%;
-  display: flex;
-  align-items: end;
-  padding: 2rem;
-}
-
-.text-wrapper p {
-  margin: 0;
+  height: 45%;
+  contain: layout;
+  text-align: left;
   line-height: 1.8;
   white-space: pre-line;
+}
+
+.text-container {
+  width: 50%;
 }
 
 .biggest-letter {
@@ -21,20 +21,35 @@
   line-height: 0.9;
   font-weight: 700;
   margin-right: 0.5rem;
-  margin-top: 0.4rem;
+  flex-shrink: 0
 }
 
-@media(width < 900px) {
-  .main-page-wrapper {
-    flex-direction: column;
+.type-writer-wrapper {
+  height: 50%;
+  display: flex;
+  align-items: end;
+}
+
+@media(width < 700px) {
+  .text-container {
+    width: 100%;
   }
 
-  .type-wrapper {
-    flex: 0 0 18rem;
+  .type-writer-wrapper {
+    height: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .text-wrapper {
-    font-size: 1rem;
+  .text-wrapper p {
+    display: block;
     text-align: center;
+  }
+
+  .biggest-letter {
+    margin: 0;
+    font-size: 3.2rem;
+    line-height: 1;
   }
 }
