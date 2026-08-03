@@ -1,6 +1,5 @@
 .typing-wrapper {
   display: inline-block;
-  width: 11ch;
   font-size: 3rem;
   font-weight: 600;
   line-height: 1;
@@ -17,22 +16,25 @@
   min-height: 1em;
 }
 
-
 .cursor {
   opacity: 1;
   animation: blink 1s infinite;
 }
 
-@keyframes blink {
-  50% {
-    opacity: 0;
+
+@media (min-width: 700px) {
+  .typing-wrapper {
+    justify-content: start;
+    width: 11ch;
+    font-size: 7.5rem;
+    text-align: left;
   }
 }
 
-@media (min-width: 900px) {
+@media (max-width: 700px) {
   .typing-wrapper {
     justify-content: start;
-    font-size: 10rem;
     text-align: left;
+    width: 100%;
   }
 }

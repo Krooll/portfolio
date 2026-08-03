@@ -36,6 +36,10 @@
       "angular": "Angular...",
       "typeScript": "TypeScript...",
       "javaScript": "JavaScript...",
+      "java": "Java...",
+      "spring": "SpringBoot...",
+      "springData": "SpringDataJPA...",
+      "hibernate": "Hibernate...",
       "rxjs": "RxJS...",
       "html": "HTML...",
       "css": "CSS...",
@@ -76,6 +80,11 @@
       "description": "Beschreibung der Arbeit:",
       "url": "Website:",
       "screenshots": "Screenshots:"
+    },
+    "newFamiliaMedSite": {
+      "projectName": "Neue Website Familia Med + Admin-Panel-Website",
+      "companyName": "Familiamed",
+      "description": "(Projekt in Realisierung) \n\n UI/UX-Design: \n\n - Umsetzungsplan der Website in Figma: Erstellung eines Zeitplans für die Arbeitsschritte \n\n - UI-Prototypen (Entwurf): Entwicklung des Erstentwurfs für die mobile Variante (Mobile-First-Ansatz) sowie für die Desktop-Variante \n\n \n\n Datenbankarchitektur und Datenmodellierung: \n\n - Entwicklung des Datenmodells (JPA-Entitäten + DTOs + Mapper): Entwurf der relationalen Datenbank und automatische Erstellung des Tabellenschemas/der Relationen mittels Spring Data JPA (Hibernate) \n\n \n\n REST-API-Implementierung & Logik: \n\n - CRUD-REST-API-Module: Ufmfassende Betreuung der API-Endpunkte für die Module: Specialization, Local, Office, Service, Price, Contacts, AboutUs, Feed \n\n - Medien-/Bilder-Modul: REST-API zum Hochladen von Dateien mit automatischer Konvertierung von Grafikformaten in das optimierte .webp-Format beim Upload \n\n - Zeitbasierte Validierung (validFrom / validTo): Implementierung der Geschäftslogik zur Überprüfung von Datumsbereichen für Dienstleistungen und Preise, was eine automatische und vorausschauende Planung ihrer Verfügbarkeit und ihres Lebenszyklus ermöglicht \n\n - Preisprioritätssystem: Einführung eines Mechanismus zur Preispriorisierung, der die Definition von Standard- sowie Aktions-/zeitlich begrenzten Preislisten ermöglicht (die Anwendung wählt im jeweiligen Zeitfenster automatisch den korrekten Preis basierend auf der festgelegten Priorität aus) \n\n \n\n Sicherheit und Performance: \n\n - Optimierung von SQL-Abfragen & Repositories: Dedizierte Abfragen (z. B. mit JOIN FETCH) in Spring Data JPA Repositories, die das Abrufen relationaler Daten (Dienstleistungen, Galerien, Standorte) in einer einzigen SQL-Abfrage ermöglichen und das N+1-Problem lösen \n\n - Authentifizierung und Autorisierung: Implementierung einer Sicherheitsarchitektur basierend auf JWT-Tokens (Access Token + Refresh Token) für das Admin-Panel \n\n - Schutz von Endpunkten: Zugriffsbeschränkung auf datenverändernde Endpunkte (POST, PUT, DELETE) ausschließlich für autorisierte Benutzer mit Admin-Rolle \n\n - Schutz vor Angriffen (Rate Limiting): Integration der Bucket4J-Bibliothek auf öffentlichen Endpunkten zur Begrenzung der Anzahl von Anfragen pro Sekunde/Minute \n\n \n\n Unit-Tests für Controller, Services, Repositories und Konfigurationsdateien \n\n \n\n Fehlerbehandlung"
     },
     "muddyCodeWorkspace": {
       "projectName": "Nx-Monorepo",

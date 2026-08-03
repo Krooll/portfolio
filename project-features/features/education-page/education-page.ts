@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {WorkInProgressFeature} from '../../shared/shared-features/work-in-progress-feature/work-in-progress-feature';
 import {TranslateFallbackPipe} from '../../shared/pipes/translate-pipe';
 
 export interface EducationItem {
@@ -18,7 +17,6 @@ export interface EducationItem {
 @Component({
   selector: 'app-education-page',
   imports: [
-    WorkInProgressFeature,
     TranslateFallbackPipe
   ],
   templateUrl: './education-page.html',
