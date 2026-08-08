@@ -5,6 +5,7 @@
   "experience": "Esperienza",
   "technology": "Tech stack",
   "education": "Formazione",
+  "resumeButton": "Scarica il CV",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Home",

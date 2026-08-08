@@ -119,7 +119,7 @@ During build, Angular copies them to `/i18n`. The app initializes the language f
 - `de`
 - `it`
 
-The experience page uses the selected language to choose the resume file. Polish downloads `Pawel_Krol_CV_PL.pdf`; English, German, and Italian download `Pawel_Krol_CV_EN.pdf`.
+The experience page uses the selected language to choose the resume file. Polish downloads `CV AN ATS.pdf`; English, German, and Italian download `CV PL ATS.pdf`.
 
 ## CI
 
