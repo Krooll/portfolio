@@ -5,6 +5,9 @@
 
 .text-wrapper {
   height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
   contain: layout;
   text-align: left;
   line-height: 1.8;
@@ -13,6 +16,8 @@
 
 .text-container {
   width: 50%;
+  display: flex;
+  align-items: end;
 }
 
 .biggest-letter {
@@ -51,5 +56,21 @@
     margin: 0;
     font-size: 3.2rem;
     line-height: 1;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px){
+  .text-wrapper {
+    height: 45%;
+    display: flex;
+    contain: layout;
+    text-align: left;
+    line-height: 1.4;
+    font-size: 0.9rem;
+    white-space: pre-line;
+  }
+
+  .text-container {
+    width: 100%;
   }
 }
