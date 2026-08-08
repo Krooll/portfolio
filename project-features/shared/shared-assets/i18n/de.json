@@ -5,6 +5,7 @@
   "experience": "Berufserfahrung",
   "technology": "Tech-Stack",
   "education": "Bildung",
+  "resumeButton": "CV herunterladen",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Startseite",

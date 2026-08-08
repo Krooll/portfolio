@@ -20,10 +20,11 @@
       </div>
       <hr style="width: 90%">
     }
-    <div class="d-flex align-items-center justify-content-center mt-3">
+    <div class="d-flex align-items-center justify-content-center flex-column mt-3">
       <button type="button" class="resume-img-wrapper d-flex align-items-center justify-content-center" aria-label="resume-download" (click)="downloadResume()">
         <img width="96" height="96" loading="lazy" src="/icons/resume.png" alt="resume-icon">
       </button>
+      <p class="mt-2 bold">{{ 'resumeButton' | translateFallback: 'Pobierz CV'}}</p>
     </div>
   </div>
 </div>

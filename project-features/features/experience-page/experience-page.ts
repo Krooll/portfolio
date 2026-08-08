@@ -48,18 +48,18 @@ export class ExperiencePage {
 
     switch (currentLang) {
       case 'pl':
-        return '/resume/Pawel_Krol_CV_PL.pdf';
+        return '/resume/CV PL ATS.pdf';
 
       case 'en':
-        return '/resume/Pawel_Krol_CV_EN.pdf';
+        return '/resume/CV AN ATS.pdf';
 
       case 'de':
-        return '/resume/Pawel_Krol_CV_EN.pdf';
+        return '/resume/CV AN ATS.pdf';
 
       case 'it':
-        return '/resume/Pawel_Krol_CV_EN.pdf';
+        return '/resume/CV AN ATS.pdf';
 
       default:
-        return '/resume/Pawel_Krol_CV_PL.pdf';    }
+        return '/resume/CV AN ATS.pdf';    }
   }
 }
