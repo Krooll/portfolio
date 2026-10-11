@@ -46,6 +46,11 @@ export class ExperiencePage {
   setResumeLang(): string {
     const currentLang = localStorage.getItem('currentLang');
 
+
+    if(!currentLang) {
+      return '/resume/CV PL ATS.pdf';
+    }
+
     switch (currentLang) {
       case 'pl':
         return '/resume/CV PL ATS.pdf';
