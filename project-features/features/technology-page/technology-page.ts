@@ -30,6 +30,12 @@ export class TechnologyPage {
       icon: '/icons/js.png',
     },
     {
+      icon: '/icons/java-96.png',
+    },
+    {
+      icon: '/icons/spring-boot-96.png',
+    },
+    {
       icon: '/icons/nx.svg',
     },
     {
