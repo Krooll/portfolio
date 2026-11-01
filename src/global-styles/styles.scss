@@ -70,20 +70,20 @@ p {
 }
 
 .img-wrapper {
-  height: 6rem;
-  width: 6rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 50%;
   background: var(--contrast-background);
   border: 2px solid var(--contrast-background);
 }
 
 .img {
-  height: 5.5rem;
-  width: 5.5rem;
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 .page-wrapper {
-  font-size: clamp(3rem, 11vw, 4rem);
+  font-size: clamp(2rem, 8vw, 2rem);
   font-weight: 600;
   flex: 1;
   display: flex;
