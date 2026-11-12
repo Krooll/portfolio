@@ -1,4 +1,5 @@
 @use 'sass:map';
+@import '@angular/material/prebuilt-themes/azure-blue.css';
 
 $colors: (
   'black100': #000000,
@@ -77,13 +78,20 @@ p {
   border: 2px solid var(--contrast-background);
 }
 
+@media(width > 900px) {
+  .img-wrapper {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
 .img {
   height: 2.5rem;
   width: 2.5rem;
 }
 
 .page-wrapper {
-  font-size: clamp(2rem, 8vw, 2rem);
+  font-size: clamp(2.5rem, 8vw, 2.5rem);
   font-weight: 600;
   flex: 1;
   display: flex;
@@ -152,6 +160,7 @@ textarea {
 
 hr {
   width: 100%;
+  margin: 1rem 0;
   background: var(--contrast-background);
 }
 

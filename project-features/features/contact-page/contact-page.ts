@@ -4,6 +4,8 @@ import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} fr
 import {HttpClient} from '@angular/common/http';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
+import {email, form, FormField, minLength, required} from '@angular/forms/signals';
+import {MatProgressSpinner} from '@angular/material/progress-spinner';
 
 export interface ContactButtonInterface {
   icon: string;
@@ -11,12 +13,19 @@ export interface ContactButtonInterface {
   url: string;
 }
 
+export interface ContactFormInterface {
+  emailAddress: string;
+  message: string;
+}
+
 @Component({
   selector: 'app-contact-page',
   imports: [
     TranslateFallbackPipe,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormField,
+    MatProgressSpinner
   ],
   providers: [TranslateFallbackPipe],
   templateUrl: './contact-page.html',
@@ -30,6 +39,19 @@ export class ContactPage {
   private readonly _translatePipe = inject(TranslateFallbackPipe);
 
   formGroup = signal<FormGroup | undefined>(undefined);
+
+  formModel = signal<ContactFormInterface>({
+    emailAddress: '',
+    message: '',
+  });
+
+  formGroupTest = form(this.formModel, (model) => {
+    required(model.emailAddress);
+    email(model.emailAddress);
+    required(model.message);
+    minLength(model.message, 5);
+  });
+
   protected submitted = signal(false);
 
   protected readonly mailServiceAccessKey: string = '450c9a8e-b411-4aab-8e50-5f8fe120086a';
@@ -42,6 +64,8 @@ export class ContactPage {
         message: ['', [Validators.required, Validators.minLength(5)]],
       })
     );
+
+    console.log(this.formGroupTest().value());
   }
 
   contactButtonsList: ContactButtonInterface[] = [
@@ -104,4 +128,6 @@ export class ContactPage {
   routeToSocialPage(url: string) {
     window.open(url, '_blank');
   }
+
+  protected readonly window = window;
 }
