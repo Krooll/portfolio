@@ -26,7 +26,7 @@
   line-height: 0.9;
   font-weight: 700;
   margin-right: 0.5rem;
-  flex-shrink: 0
+  flex-shrink: 0;
 }
 
 .type-writer-wrapper {
@@ -35,7 +35,7 @@
   align-items: end;
 }
 
-@media(width < 700px) {
+@media (width < 700px) {
   .text-container {
     width: 100%;
   }
@@ -59,7 +59,7 @@
   }
 }
 
-@media (orientation: landscape) and (max-height: 500px){
+@media (orientation: landscape) and (max-height: 500px) {
   .text-wrapper {
     height: 45%;
     display: flex;

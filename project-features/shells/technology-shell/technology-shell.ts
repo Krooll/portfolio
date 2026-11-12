@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import {RouterOutlet} from "@angular/router";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-technology-shell',
-    imports: [
-        RouterOutlet
-    ],
+  imports: [RouterOutlet],
   templateUrl: './technology-shell.html',
   styleUrl: './technology-shell.scss',
 })

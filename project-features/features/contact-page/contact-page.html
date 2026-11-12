@@ -1,69 +1,98 @@
 <div class="page-wrapper h-100 p-2">
   <div class="d-flex align-items-center">
     <div class="img-wrapper d-flex align-items-center justify-content-center me-2">
-      <img loading="lazy" class="img" src="/icons/paper-plane.png" alt="paper-plane">
+      <img loading="lazy" class="img" src="/icons/paper-plane.png" alt="paper-plane" />
     </div>
     <p>{{ 'contact' | translateFallback: 'Kontakt' }}</p>
   </div>
-  <hr>
-  <div class="body-scroll d-flex align-items-center justify-content-between flex-wrap">
-    <form class="contact-body-side side-a d-flex flex-column align-items-center p-1"
-          (ngSubmit)="onSubmit()">
-      <h2>{{ 'contactPage.formTitle' | translateFallback: 'Bądzmy w kontakcie' }}</h2>
-      <div class="d-flex flex-column mt-4 w-100">
-        <label>
-          {{ 'contactPage.form.labels.email' | translateFallback: 'Adres email' }}
-        </label>
-        <input class="mt-1" [formField]="formGroupTest.emailAddress" type="email"
-               [placeholder]="'contactPage.form.placeholders.email' | translateFallback: 'Wpisz swój adres email'">
-        @if (formGroupTest.emailAddress().getError('required')
-        && (formGroupTest.emailAddress().touched() || submitted())) {
-          <span
-            class="form-error">{{ 'contactPage.form.validators.email'| translateFallback: 'Adres email jest wymagany...' }}</span>
-        }
-        @if (formGroupTest.emailAddress().getError('email')
-        && (formGroupTest.emailAddress().touched() || submitted())) {
-          <span
-            class="form-error">{{ 'contactPage.form.validators.emailAddress'| translateFallback: 'Adres email jest nieprawidłowy...' }}</span>
-        }
-      </div>
-      <div class="d-flex flex-column mt-2 w-100">
-        <textarea [formField]="formGroupTest.message"
-                  [placeholder]="'contactPage.form.placeholders.message' | translateFallback: 'Wpisz swój adres email'"></textarea>
-        @if (formGroupTest.message().getError('required') && (formGroupTest.message().touched() || submitted())) {
-          <span
-            class="form-error">{{ 'contactPage.form.validators.message'| translateFallback: 'Wiadomość jest wymagana...' }}</span>
-        }
-      </div>
-      <button [disabled]="formGroupTest().invalid()" aria-label="Submit form" type="submit" class="mt-4 mb-4 p-1 submit-button">
-        {{ 'contactPage.formButton' | translateFallback: 'Wyślij' }}
-      </button>
-    </form>
-    <div class="contact-body-side side-b d-flex flex-column align-items-center justify-content-center">
-      <h2 class="desktop">{{ 'contactPage.mapTitle' | translateFallback: 'Znajdziesz mnie tutaj' }}</h2>
-      <div class="map-container d-flex justify-content-center align-items-center w-100 mb-4">
-      @defer () {
-          <iframe
-            title="Google map"
-            class="iframe-wrapper"
-            style="border:0; border-radius: 0.5rem"
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Bieruń%20Stary%2C%20Polska&output=embed">
-          </iframe>
-      } @placeholder (minimum 500ms) {
-        <mat-progress-spinner mode="indeterminate" diameter="60"></mat-progress-spinner>
-      }
-      </div>
-      <div class="d-flex">
-        @for (item of contactButtonsList; track $index) {
-          <button [aria-label]="item.alt" type="button"
-                  class="social-buttons d-flex align-items-center justify-content-center me-3 ms-3"
-                  (click)="routeToSocialPage(item.url)">
-            <img loading="lazy" class="social-img" [src]="item.icon" [alt]="item.alt">
-          </button>
-        }
+  <hr />
+  <div scrollReveal class="body-scroll reveal-anim">
+    <div class="d-flex align-items-center justify-content-between flex-wrap">
+      <form class="side d-flex flex-column align-items-center" (ngSubmit)="onSubmit()">
+        <h2>{{ 'contactPage.formTitle' | translateFallback: 'Bądzmy w kontakcie' }}</h2>
+        <div class="d-flex flex-column mt-4 mb-1 w-100">
+          <input
+            class="mt-1"
+            [formField]="formGroupTest.emailAddress"
+            type="email"
+            [placeholder]="
+              'contactPage.form.placeholders.email' | translateFallback: 'Wpisz swój adres email'
+            "
+          />
+          @if (
+            formGroupTest.emailAddress().getError('required') &&
+            (formGroupTest.emailAddress().touched() || submitted())
+          ) {
+            <span class="form-error">{{
+              'contactPage.form.validators.email'
+                | translateFallback: 'Adres email jest wymagany...'
+            }}</span>
+          }
+          @if (
+            formGroupTest.emailAddress().getError('email') &&
+            (formGroupTest.emailAddress().touched() || submitted())
+          ) {
+            <span class="form-error">{{
+              'contactPage.form.validators.emailAddress'
+                | translateFallback: 'Adres email jest nieprawidłowy...'
+            }}</span>
+          }
+        </div>
+        <div class="d-flex flex-column mt-4 w-100">
+          <textarea
+            [formField]="formGroupTest.message"
+            [placeholder]="
+              'contactPage.form.placeholders.message' | translateFallback: 'Wpisz swój adres email'
+            "
+          ></textarea>
+          @if (
+            formGroupTest.message().getError('required') &&
+            (formGroupTest.message().touched() || submitted())
+          ) {
+            <span class="form-error">{{
+              'contactPage.form.validators.message'
+                | translateFallback: 'Wiadomość jest wymagana...'
+            }}</span>
+          }
+        </div>
+        <button
+          [disabled]="formGroupTest().invalid()"
+          aria-label="Submit form"
+          type="submit"
+          class="mt-4 mb-4 p-1 submit-button"
+        >
+          {{ 'contactPage.formButton' | translateFallback: 'Wyślij' }}
+        </button>
+      </form>
+      <div class="side d-flex flex-column mb-3">
+        <div class="map-container d-flex align-items-center justify-content-center mt-4">
+          @defer {
+            <iframe
+              title="Google map"
+              class="iframe-wrapper"
+              style="border: 0; border-radius: 0.5rem"
+              loading="lazy"
+              allowfullscreen
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Bieruń%20Stary%2C%20Polska&output=embed"
+            >
+            </iframe>
+          } @placeholder (minimum 700ms) {
+            <mat-progress-spinner mode="indeterminate" diameter="60"></mat-progress-spinner>
+          }
+        </div>
+        <div class="d-flex align-items-center justify-content-center mt-4">
+          @for (item of contactButtonsList; track $index) {
+            <button
+              [aria-label]="item.alt"
+              type="button"
+              class="social-buttons d-flex align-items-center justify-content-center me-3 ms-3"
+              (click)="routeToSocialPage(item.url)"
+            >
+              <img loading="lazy" class="social-img" [src]="item.icon" [alt]="item.alt" />
+            </button>
+          }
+        </div>
       </div>
     </div>
   </div>

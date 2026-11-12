@@ -1,17 +1,23 @@
 <div class="page-wrapper h-100 p-2">
   <div class="d-flex align-items-center">
     <div class="img-wrapper d-flex align-items-center justify-content-center me-2">
-      <img loading="lazy" class="img" src="/icons/dev.png" alt="customer">
+      <img loading="lazy" class="img" src="/icons/dev.png" alt="customer" />
     </div>
     <p>{{ 'aboutMe' | translateFallback: 'O mnie' }}</p>
   </div>
-  <hr>
+  <hr />
   <div class="body-scroll d-flex align-items-center justify-content-between flex-wrap">
     <div class="text-wrapper">
-      <p>{{ 'aboutMePage.text' | translateFallback: 'Jestem Frontend Developerem z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników. Szybko przyswajam nowe technologie i chętnie podejmuję się nowych wyzwań. Programowanie i szeroko pojęta informatyka są moją pasją, dlatego stale rozwijam swoje kompetencje, interesuję się również tematyką gamedevu oraz nowymi trendami technologicznymi. Poza pracą aktywnie uprawiam sport, w szczególności boks, który uczy mnie systematyczności, dyscypliny i konsekwencji w dążeniu do celu.' }}</p>
+      <p>
+        {{
+          'aboutMePage.text'
+            | translateFallback
+              : 'Jestem Frontend Developerem z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników. Szybko przyswajam nowe technologie i chętnie podejmuję się nowych wyzwań. Programowanie i szeroko pojęta informatyka są moją pasją, dlatego stale rozwijam swoje kompetencje, interesuję się również tematyką gamedevu oraz nowymi trendami technologicznymi. Poza pracą aktywnie uprawiam sport, w szczególności boks, który uczy mnie systematyczności, dyscypliny i konsekwencji w dążeniu do celu.'
+        }}
+      </p>
     </div>
     <div class="image-wrapper">
-      <img class="image" src="/icons/photo.jpg" alt="photo" loading="lazy">
+      <img class="image" src="/icons/photo.jpg" alt="photo" loading="lazy" />
     </div>
   </div>
 </div>

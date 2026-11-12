@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
-import {RouterOutlet} from '@angular/router';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-education-shell',
-  imports: [
-    RouterOutlet
-  ],
+  imports: [RouterOutlet],
   templateUrl: './education-shell.html',
   styleUrl: './education-shell.scss',
 })

@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {TranslateFallbackPipe} from "../../shared/pipes/translate-pipe";
+import { Component } from '@angular/core';
+import { TranslateFallbackPipe } from '../../shared/pipes/translate-pipe';
 
 export interface TechnologyItem {
   icon: string;
@@ -11,14 +11,11 @@ export interface AiItem {
 
 @Component({
   selector: 'app-technology-shell-page',
-  imports: [
-    TranslateFallbackPipe
-  ],
+  imports: [TranslateFallbackPipe],
   templateUrl: './technology-page.html',
   styleUrl: './technology-page.scss',
 })
 export class TechnologyPage {
-
   technologyItems: TechnologyItem[] = [
     {
       icon: '/icons/angular.png',
@@ -79,6 +76,6 @@ export class TechnologyPage {
     },
     {
       icon: '/icons/gemini.png',
-    }
+    },
   ];
 }

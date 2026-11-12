@@ -1,16 +1,5 @@
-
 :host {
   width: 100%;
-}
-
-.contact-body-side.side-a {
-  min-width: 16rem;
-  width: 49%;
-}
-
-.contact-body-side.side-b {
-  min-width: 16rem;
-  width: 49%;
 }
 
 .social-buttons {
@@ -19,11 +8,12 @@
   border: none;
   border-radius: 50%;
   background: var(--contrast-background);
+  box-shadow: var(--light-shadow);
 }
 
 .social-buttons:hover {
   transform: scale(1.1);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .social-img {
@@ -37,42 +27,35 @@
   border: none;
   border-radius: 0.25rem;
   color: var(--contrast-text-color);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   background: var(--contrast-background);
+  box-shadow: var(--light-shadow);
 }
 
 .submit-button:hover {
   transform: scale(1.1);
-  transition: transform .2s;
+  transition: transform 0.3s;
 }
 
 .iframe-wrapper {
   height: 16rem;
-  width: 80%;
+  width: 100% !important;
+}
+
+.side {
+  width: 49%;
 }
 
 .map-container {
   min-height: 16rem;
 }
 
-@media(width < 900px) {
-  .contact-body-side.side-a {
-    width: 100%;
-  }
-
-  .desktop {
-    display: none;
-  }
-
-  .contact-body-side.side-b {
+@media (width < 900px) {
+  .side {
     width: 100%;
   }
 
   .iframe-wrapper {
     width: 100%;
-  }
-
-  .map-container {
-    margin-top: 1.75rem;
   }
 }
