@@ -132,11 +132,19 @@
     "specialization": "Specialność:",
     "status": "Status:",
     "startDate": "Rozpoczęcie:",
+    "semester" : "Semestr:",
     "wsbUniversity": {
       "universityName": "Akademia WSB w Dąbrowie Górniczej",
       "degree": "Informatyka - studia I stopnia",
       "specialization": "Inżynieria oprogramowania",
-      "accepted": "Przyjęty",
+      "passed": "Przyjęty",
+      "pending": "Trwa",
+      "waiting": "Oczekuje",
+      "first": "Pierwszy",
+      "second": "Drugi",
+      "third": "Trzeci",
+      "fourth": "Czwarty",
+      "none": "Oczekiwanie",
       "startDate": "Październik 2026"
     }
   }

@@ -26,10 +26,10 @@
   height: 2.2rem;
   border: none;
   border-radius: 0.25rem;
-  color: var(--contrast-text-color);
+  color: var(--text-color);
   font-size: 1.1rem;
-  background: var(--contrast-background);
-  box-shadow: var(--light-shadow);
+  background: var(--progress-card-background);
+  box-shadow: 0 0 10px var(--progress-card-background);
 }
 
 .submit-button:hover {
