@@ -43,18 +43,20 @@
 .element {
   width: 100%;
   margin: 1.5rem 0.25rem;
+  padding: 1rem 1.1rem;
   border-radius: 0.5rem;
-  background: var(--card-background);
-  box-shadow: var(--light-shadow);
+  background: var(--main-background);
+  border: 1px solid var(--contrast-background);
+  box-shadow: var(--light-shadow), inset 0 0 5px var(--inner-shadow);
 
   &.passed-color {
-    background: var(--snackbar-success-background);
-    box-shadow: 0 0 10px var(--snackbar-success-background);
+    border: 1px solid var(--snackbar-success-background);
+    box-shadow: 0 0 10px var(--snackbar-success-background), inset 0 0 5px var(--snackbar-success-background);
   }
 
   &.progress-color {
-    background: var(--progress-card-background);
-    box-shadow: 0 0 10px var(--progress-card-background);
+    border: 1px solid var(--progress-card-background);
+    box-shadow: 0 0 10px var(--progress-card-background), inset 0 0 5px var(--progress-card-background);
   }
 }
 

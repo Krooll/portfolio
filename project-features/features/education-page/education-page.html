@@ -6,7 +6,7 @@
     <p>{{ 'education' | translateFallback: 'Wykształcenie' }}</p>
   </div>
   <hr />
-  <div scrollReveal class="body-scroll reveal-anim d-flex flex-column align-items-center">
+  <div class="body-scroll d-flex flex-column align-items-center">
     <div class="timeline-container d-flex flex-column mt-4 p-1">
       @for (item of educationItems; track $index) {
         <div class="timeline-item d-flex">
@@ -17,7 +17,7 @@
           </div>
           <div scrollReveal [ngClass]="{
           'passed-color': item.statusFlag === 'passed',
-          'progress-color': item.statusFlag === 'progress'}" class="element reveal-anim p-2">
+          'progress-color': item.statusFlag === 'progress'}" class="element reveal-anim">
             <div class="d-flex flex-column m-1">
               <p class="mt-1">
                 {{ 'educationItemsList.universityName' | translateFallback: 'Uniwersytet:' }}

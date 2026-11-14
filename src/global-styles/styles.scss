@@ -58,11 +58,13 @@ p {
   --contrast-border: #{map.get($colors, 'black100')};
   --snackbar-success-background: #{map.get($colors, 'green600')};
   --snackbar-error-background: #{map.get($colors, 'red600')};
+  --inner-shadow: #{map.get($colors, 'gray600')};
   --card-background: #{map.get($colors, 'card-black')};
   --progress-card-background: #{map.get($colors, 'gold')};
   --light-shadow:
     0 0 10px 2px #{rgba(map.get($colors, 'gray600'), 0.4)},
     0 0 25px 5px #{rgba(map.get($colors, 'gray600'), 0.4)};
+
 }
 
 .light {

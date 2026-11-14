@@ -147,5 +147,26 @@
       "none": "Oczekiwanie",
       "startDate": "Październik 2026"
     }
+  },
+  "technologyPage": {
+    "levels": {
+      "level": "Poziom: ",
+      "junior": "Junior",
+      "regular": "Regular",
+      "mid": "Mid",
+      "senior": "Senior"
+    },
+    "sections": {
+      "front": "Technologie Frontend:",
+      "frontTxt": "Skupiam się na ekosystemie Angulara oraz TypeScript, dbając o czystą architekturę kodu (Nx) i nowoczesny design (HTML5, CSS3, Bootstrap).",
+      "back": "Technologie Backend:",
+      "backTxt": "Projektuję stabilne i bezpieczne API oraz logikę biznesową przy użyciu Javy i Spring Boot. Do zarządzania bazami danych i mapowania obiektowego wykorzystuję JPA/Hibernate oraz relacyjne bazy danych (PostgreSQL / pgAdmin)",
+      "test": "Testy, Narzędzia i DevOps:",
+      "testTxt": "Dbam o jakość i bezpieczeństwo aplikacji, wykorzystując testy jednostkowe i e2e (Jest, Cypress), zarządzanie pakietami (npm) oraz nowoczesne uwierzytelnianie (Keycloak). Do konteneryzacji i automatyzacji środowiska stosuję Dockera.",
+      "graphic": "Narzędzia Projektowe i Organizacja:",
+      "graphicTxt": "Wykorzystuję narzędzia do zarządzania projektami i śledzenia zadań (Jira) oraz projektuję intuicyjne interfejsy i makiety użytkownika (Figma).",
+      "ai": "Asystenci AI w Pracy:",
+      "aiTxt": "Korzystam z zaawansowanych modeli językowych (ChatGPT, Claude, Gemini) bezpośrednio przez przeglądarkę jako wsparcie w codziennym kodowaniu, projektowaniu architektury, optymalizacji kodu oraz rozwiązywaniu złożonych problemów technicznych."
+    }
   }
 }
