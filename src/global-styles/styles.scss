@@ -33,6 +33,9 @@ $colors: (
   'green300': #86efac,
   'gold': #F59E0B,
   'card-black': #0d0f12,
+  'neon-blue': #00d2ff,
+  'neon-green': #00ff88,
+  'neon-pink': #ff007f,
 );
 
 html,
@@ -56,6 +59,9 @@ p {
   --contrast-text-color: #{map.get($colors, 'black100')};
   --border: #{map.get($colors, 'light-gray100')};
   --contrast-border: #{map.get($colors, 'black100')};
+  --neon-blue: #{map.get($colors, 'neon-blue')};
+  --neon-green: #{map.get($colors, 'neon-green')};
+  --neon-pink: #{map.get($colors, 'neon-pink')};
   --snackbar-success-background: #{map.get($colors, 'green600')};
   --snackbar-error-background: #{map.get($colors, 'red600')};
   --inner-shadow: #{map.get($colors, 'gray600')};
