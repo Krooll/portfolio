@@ -2,19 +2,19 @@
   "contact": "Kontakt",
   "aboutMe": "Über mich",
   "projects": "Projekte",
-  "experience": "Berufserfahrung",
+  "experience": "Karriere",
   "technology": "Tech-Stack",
-  "education": "Bildung",
-  "resumeButton": "CV herunterladen",
+  "education": "Ausbildung",
+  "resumeButton": "Lebenslauf herunterladen",
   "headerComponent": {
     "headerMenuOptionList": {
       "mainPageButton": "Startseite",
-      "experiencePageButton": "Berufserfahrung",
+      "experiencePageButton": "Karriere",
       "projectPageButton": "Projekte",
       "aboutMePageButton": "Über mich",
       "contactPageButton": "Kontakt",
       "technologyPageButton": "Tech-Stack",
-      "educationPageButton": "Bildung"
+      "educationPageButton": "Ausbildung"
     },
     "headerLangButtonLabel": "Sprache",
     "headerThemeSwitcherLabel": "Design",
@@ -27,7 +27,7 @@
   },
   "mainPage": {
     "biggerLetter": "I",
-    "text": "ch entwickle moderne Webanwendungen, die Leistung, Ästhetik und intuitive Bedienbarkeit vereinen. Ich lege großen Wert auf hochwertigen Code, Detailgenauigkeit und Lösungen, die echte Bedürfnisse von Nutzern und Unternehmen erfüllen. \n Schauen Sie sich gerne meine Berufserfahrung, Projekte und die Technologien an, mit denen ich täglich arbeite."
+    "text": "ch entwickle moderne Webanwendungen, die Leistung, Ästhetik und intuitive Bedienung vereinen. Dabei lege ich großen Wert auf hohe Codequalität, Liebe zum Detail sowie Lösungen, die den realen Bedürfnissen von Nutzern und Unternehmen gerecht werden.\nIch lade Sie herzlich ein, meine berufliche Erfahrung, meine Projekte und die Technologien kennenzulernen, mit denen ich täglich arbeite."
   },
   "footerComponent": {
     "text": "Alle Rechte vorbehalten."
@@ -51,93 +51,125 @@
     }
   },
   "contactPage": {
-    "formTitle": "Lass uns in Kontakt treten!",
-    "mapTitle": "Hier findest du mich",
+    "formTitle": "Bleiben wir in Kontakt!",
+    "mapTitle": "Standort",
     "formButton": "Senden",
     "form": {
       "labels": {
-        "email": "Deine E-Mail-Adresse"
+        "email": "Ihre E-Mail-Adresse"
       },
       "placeholders": {
-        "email": "Gib deine E-Mail-Adresse ein...",
-        "message": "Schreibe deine Nachricht..."
+        "email": "Geben Sie Ihre E-Mail-Adresse ein...",
+        "message": "Schreiben Sie Ihre Nachricht..."
       },
       "validators": {
-        "email": "E-Mail-Adresse ist erforderlich...",
-        "emailAddress": "Ungültige E-Mail-Adresse...",
-        "message": "Nachricht ist erforderlich und sollte mindestens 5 Zeichen enthalten..."
+        "email": "Eine E-Mail-Adresse ist erforderlich...",
+        "emailAddress": "Die E-Mail-Adresse ist ungültig...",
+        "message": "Eine Nachricht ist erforderlich und muss mindestens 5 Zeichen lang sein..."
       }
     }
   },
   "snackbar": {
-    "success": "Hurra! \n Nachricht erfolgreich gesendet — danke für deine Kontaktaufnahme!",
-    "error": "Ups, etwas ist schiefgelaufen! \n Nachricht konnte nicht gesendet werden. Bitte versuche es später erneut."
+    "success": "Hurra! \n Geschafft — die Nachricht wurde erfolgreich gesendet, vielen Dank für Ihre Kontaktaufnahme!",
+    "error": "Ups, etwas ist schiefgelaufen! \n Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut."
   },
   "projectList": {
-    "noImg": "Klicke auf den Button daneben, um Screenshots anzuzeigen.",
+    "noImg": "Klicken Sie auf die Schaltfläche daneben, um Screenshots anzuzeigen.",
     "variables": {
       "projectName": "Projektname:",
       "companyName": "Unternehmen / Kunde:",
-      "description": "Beschreibung der Arbeit:",
-      "url": "Website:",
+      "description": "Beschreibung der durchgeführten Arbeiten:",
+      "url": "Webseite:",
       "screenshots": "Screenshots:"
     },
     "newFamiliaMedSite": {
-      "projectName": "Neue Website Familia Med + Admin-Panel-Website",
+      "projectName": "Neue Familiamed-Webseite + Admin-Panel",
       "companyName": "Familiamed",
-      "description": "(Projekt in Realisierung) \n\n UI/UX-Design: \n\n - Umsetzungsplan der Website in Figma: Erstellung eines Zeitplans für die Arbeitsschritte \n\n - UI-Prototypen (Entwurf): Entwicklung des Erstentwurfs für die mobile Variante (Mobile-First-Ansatz) sowie für die Desktop-Variante \n\n \n\n Datenbankarchitektur und Datenmodellierung: \n\n - Entwicklung des Datenmodells (JPA-Entitäten + DTOs + Mapper): Entwurf der relationalen Datenbank und automatische Erstellung des Tabellenschemas/der Relationen mittels Spring Data JPA (Hibernate) \n\n \n\n REST-API-Implementierung & Logik: \n\n - CRUD-REST-API-Module: Ufmfassende Betreuung der API-Endpunkte für die Module: Specialization, Local, Office, Service, Price, Contacts, AboutUs, Feed \n\n - Medien-/Bilder-Modul: REST-API zum Hochladen von Dateien mit automatischer Konvertierung von Grafikformaten in das optimierte .webp-Format beim Upload \n\n - Zeitbasierte Validierung (validFrom / validTo): Implementierung der Geschäftslogik zur Überprüfung von Datumsbereichen für Dienstleistungen und Preise, was eine automatische und vorausschauende Planung ihrer Verfügbarkeit und ihres Lebenszyklus ermöglicht \n\n - Preisprioritätssystem: Einführung eines Mechanismus zur Preispriorisierung, der die Definition von Standard- sowie Aktions-/zeitlich begrenzten Preislisten ermöglicht (die Anwendung wählt im jeweiligen Zeitfenster automatisch den korrekten Preis basierend auf der festgelegten Priorität aus) \n\n \n\n Sicherheit und Performance: \n\n - Optimierung von SQL-Abfragen & Repositories: Dedizierte Abfragen (z. B. mit JOIN FETCH) in Spring Data JPA Repositories, die das Abrufen relationaler Daten (Dienstleistungen, Galerien, Standorte) in einer einzigen SQL-Abfrage ermöglichen und das N+1-Problem lösen \n\n - Authentifizierung und Autorisierung: Implementierung einer Sicherheitsarchitektur basierend auf JWT-Tokens (Access Token + Refresh Token) für das Admin-Panel \n\n - Schutz von Endpunkten: Zugriffsbeschränkung auf datenverändernde Endpunkte (POST, PUT, DELETE) ausschließlich für autorisierte Benutzer mit Admin-Rolle \n\n - Schutz vor Angriffen (Rate Limiting): Integration der Bucket4J-Bibliothek auf öffentlichen Endpunkten zur Begrenzung der Anzahl von Anfragen pro Sekunde/Minute \n\n \n\n Unit-Tests für Controller, Services, Repositories und Konfigurationsdateien \n\n \n\n Fehlerbehandlung"
+      "description": "(Projekt in Bearbeitung) \n\n Interface-Design (UI/UX): \n\nUmsetzungsplan der Webseite in Figma: Erstellung der Projekt-Timeline \n\nUI-Prototypen (Draft): Ausarbeitung des Vorentwurfs für die mobile Variante (Mobile-First-Ansatz) sowie die Desktop-Version \n\n \n\n Datenbankarchitektur und Datenmodellierung: \n\nEntwicklung des Datenmodells (JPA-Entitäten + DTOs + Mapper): Entwurf einer relationalen Datenbank und automatische Erstellung des Tabellen-/Beziehungsschemas mittels Spring Data JPA (Hibernate) \n\n \n\n REST-API-Implementierung & Geschäftslogik: \n\nCRUD-REST-API-Module: Umfassende Bereitstellung von API-Endpunkten für die Module: Specialization, Local, Office, Service, Price, Contacts, AboutUs, Feed \n\nMedia- / Images-Modul: REST-API für den Datei-Upload mit automatischer Konvertierung von Grafikformaten in das optimierte .webp-Format beim Hochladen \n\nZeitvalidierung (validFrom / validTo): Implementierung einer Geschäftslogik zur Überprüfung von Datumsbereichen für Leistungen und Preise, was eine vollautomatische Planung ihrer Verfügbarkeit und ihres Lebenszyklus weit im Voraus ermöglicht \n\nPreisprioritätensystem: Einführung eines Preispriorisierungsmechanismus, der die Definition von Standard- sowie Aktions-/Zeitraumpreislisten ermöglicht (die Anwendung wählt basierend auf der festgelegten Priorität automatisch den richtigen Preis im jeweiligen Zeitfenster aus) \n\n \n\n Sicherheit und Performance: \n\nOptimierung von SQL-Abfragen & Repositories: Dedizierte Abfragen (z. B. unter Verwendung von JOIN FETCH) in Spring Data JPA-Repositories, die das Laden relationaler Daten (Leistungen, Galerien, Standorte) in einer einzigen SQL-Abfrage ermöglichen und das Performance-Problem der N+1-Queries eliminieren \n\nAuthentifizierung und Autorisierung: Implementierung einer Sicherheitsarchitektur auf Basis von JWT-Zugriffstoken (Access Token + Refresh Token) für das Administrationspanel \n\nAbsicherung der Endpunkte: Beschränkung des Zugriffs auf datenändernde Endpunkte (POST, PUT, DELETE) ausschließlich auf autorisierte Benutzer mit Administratorrolle \n\nSchutz vor Angriffen (Rate Limiting): Integration der Bibliothek Bucket4J auf öffentlichen Endpunkten zur Begrenzung der Anzahl von Anfragen pro Sekunde/Minute \n\n\n \n\n Unit-Tests für Controller, Services, Repositories und Konfigurationsdateien \n\n \n\n Fehlerbehandlung"
     },
     "muddyCodeWorkspace": {
-      "projectName": "Nx-Monorepo",
+      "projectName": "NX Monorepo",
       "companyName": "Muddy Code",
-      "description": "Arbeit in einem Nx-Monorepo innerhalb eines umfangreichen ERP-Multi-Application-Systems. Das Projekt umfasste die Entwicklung und Wartung mehrerer Geschäfts-Module sowie gemeinsamer Komponenten und Services.\n\nUmfang der Arbeit in den Geschäftsmodulen:\n\n• Vertriebsmodul:\nKundenstammdaten, Kundenaufträge, Preislisten und Leistungen.\n\n• PMS:\nTechnologische und produktionsbezogene Logik, Versionsverwaltung von Freigaben, Auftragskarten, Kalkulationen (Merkmale, Merkmalbeziehungen, Kalkulationsregister), umfangreiche Stammdaten (Werkzeuge, Werkzeugtypen, Operationen, Arbeitsplätze, Arbeitsplatzsätze, Qualifikationen, Modifikatoren).\n\n• Simulationen:\nSimulationsversionen und Simulationskarten.\n\n• WMS:\nIndexgruppen.\n\n• LOGS:\nSystem-Log-Modul (Überwachung und Anzeige von Anwendungslogs).\n\n• MES:\nProduktionssteuerungs- und Überwachungssystem – Bearbeitung von Produktionsprozessen, Erfassung der Mitarbeiterarbeit, Kontrolle der Produktionsaufträge, Erfassung des Materialverbrauchs sowie laufende Statusverfolgung von Produktionsoperationen.\n\nServices und Systemarchitektur\n\n• QBE Service:\nErstellung und Verarbeitung von Query-By-Example-Abfragen (QBE).\n\n• Attachment Service:\nUpload und Download von Anhängen mit Fortschrittsanzeige (XMLHttpRequest mit Progress-Events), Backend-Integration und Streaming-Downloads im Frontend.\n\n• User Settings – Verwaltung von Benutzereinstellungen im localStorage:\n- Tabellen- und View-Konfigurationen\n- Spracheinstellungen\n- Zugriffskontrolle\n\n• Authentifizierungs- und Sitzungsmechanismen\n- Login und Session-Wiederherstellung\n- Token-Ablaufbehandlung und Retry nach Refresh\n- Abbruch von Requests bei Benutzerwechsel\n- HTTP-Interceptor für Token- und Authentifizierungslogik\n- Idle-Timeout basierend auf Benutzeraktivität (Maus-Tracking)\n\nVerwaltung von Anwendungen und Zugriffen\n\n• ActiveApp Service:\nSteuerung der verfügbaren Anwendungen und Funktionen pro Benutzer (Berechtigungssystem).\n\n• Komponenten und UI-Schicht\nGemeinsame Komponenten:\n- Loader\n- Attachment-Komponente\n- Fehlerbehandlungssystem basierend auf Snackbar-Service\n- Erweiterte Tree-Komponente (Tree View, dynamisches Hinzufügen/Entfernen von Nodes, Hover-Details, Prozesspfad-Generierung und Visualisierung)\n- Entwicklung und Unterstützung von Komponenten:\n- Modal-System\n- Numerische Tastatur-Komponente\n\nÜber 1,5 Jahre Arbeit am Projekt war ich verantwortlich für die Entwicklung eines ERP-Systems – auf Frontend-Ebene, Systemarchitektur und gemeinsame Komponenten. Die Arbeit umfasste die Erweiterung bestehender Module, Implementierung neuer Funktionen sowie Stabilisierung und Weiterentwicklung des Systems im Enterprise-Umfeld."
+      "description": "Arbeit in einem Nx-Monorepo im Rahmen eines umfangreichen Multi-Application-ERP-Systems. Das Projekt umfasste die Entwicklung und Wartung zahlreicher Geschäftsmodule sowie gemeinsam genutzter Komponenten und Services.\n\nArbeitsumfang in den Geschäftsmodulen:\n\nHandelsmodul:\nGeschäftspartnerverzeichnisse, Kundenaufträge, Preislisten und Leistungen.\n\nPMS:\nTechnologische und produktionsbezogene Logik, Freigabeversionen, Auftragskartei, Kalkulationen (Merkmale, Merkmalsbeziehungen, Bewertungsregister), umfangreiche Stammdatenverzeichnisse (Werkzeuge, Werkzeugtypen, Arbeitsgänge, Arbeitsplätze, Arbeitsplatzsätze, Qualifikationen, Modifikatoren).\n\nSimulationen:\nSimulationsversionen und Simulationskartei.\n\nWMS:\nArtikelgruppen.\n\nLOGS:\nSystemprotokoll-Modul (Überwachung und Darstellung von Anwendungslogs).\n\nMES:\nProduktionssteuerungs- und Überwachungssystem – Abwicklung von Produktionsprozessen, Zeiterfassung der Mitarbeiter, Kontrolle der Fertigungsauftragsabwicklung, Erfassung des Materialverbrauchs sowie Echtzeit-Statusverfolgung von Produktionsvorgängen.\n\nServices und Systemarchitektur\n\nQBE Service:\nAufbau und Verarbeitung von Query-By-Example-Abfragen (QBE).\n\nAttachment Service:\nUpload und Download von Anhängen mit Fortschrittsanzeige der Datenübertragung (XMLHttpRequest mit Progress-Events), Backend-Integration sowie Streaming-Downloads im Frontend.\n\nUser Settings – Verwaltung von Benutzereinstellungen im localStorage:\nTabellen- und Ansichtskonfigurationen\nSpracheinstellungen\nZugriffskontrolle\n\nAutorisierungs- und Sitzungsmechanismen\nLogin sowie Mechanismus zur erneuten Anmeldung (Session Recovery)\nBehandlung ablaufender Token und Wiederholung von Anfragen (Retry) nach Token-Aktualisierung\nAbbruch laufender Anfragen bei Benutzerwechsel\nHTTP-Interceptoren für die Token- und Autorisierungsverwaltung\nIdle-Timeout-Mechanismus basierend auf der Benutzeraktivität (Tracking von Maus-Events)\n\nAnwendungs- und Zugriffsverwaltung\n\nActiveApp Service:\nSteuerung der verfügbaren Anwendungen und Funktionen pro Benutzer (Berechtigungssystem).\n\nKomponenten und UI-Schicht\nGemeinsam genutzte Komponenten:\nLoader\nAttachment-Komponente\nFehlerbehandlungssystem auf Basis eines Snackbar-Services\nErweiterung der Baumkomponente (Tree View, dynamisches Hinzufügen und Entfernen von Knoten, Detailvorschau beim Hovern, Generierung und Darstellung von Prozesspfaden)\nEntwicklung und Pflege von Komponenten:\nModalsystem\nNumerische Tastatur-Komponente\n\nÜber mehr als 1,5 Jahre Projektarbeit war ich für die Entwicklung des ERP-Systems verantwortlich – im Bereich der Frontend-Schicht, der Service-Architektur sowie der gemeinsam genutzten Komponenten. Die Aufgaben umfassten die Erweiterung bestehender Module, die Implementierung neuer Funktionalitäten sowie die Stabilisierung und Weiterentwicklung des Systems in einer Enterprise-Umgebung."
     },
     "muddyCodeSite": {
-      "projectName": "Muddy Code Website",
+      "projectName": "Muddy Code Webseite",
       "companyName": "Muddy Code",
-      "description": "Die Website „Muddy Code“ wurde mit der Wix-Plattform erstellt. Es handelt sich um eine einfache Website mit Informationen über das Unternehmen, angebotene Dienstleistungen und einen Kontaktbereich zur direkten Kommunikation mit Kunden."
+      "description": "Die Webseite „Muddy Code“ wurde mithilfe der Plattform Wix erstellt. Es handelt sich um eine übersichtliche Webseite mit Informationen über das Unternehmen, die angebotenen Dienstleistungen sowie einem Kontaktbereich, der eine direkte Kommunikation mit dem Kunden ermöglicht."
     },
     "familiaMedSite": {
-      "projectName": "Familiamed Website",
+      "projectName": "Familiamed Webseite",
       "companyName": "Familiamed",
-      "description": "Entwicklung und Wartung des Projekts, SEO-Arbeiten (Suchmaschinenoptimierung), Analyse und Behebung bestehender Fehler sowie Refactoring älterer Systemteile. Erweiterung der Startseite und Unterseiten (inkl. Familiamed Clinique – Augenlidchirurgie) sowie Verbesserung der Performance und Stabilität der Website. Weiterentwicklung des Projekts nach früheren Teams mit Fokus auf Codequalität und Benutzererfahrung."
+      "description": "Weiterentwicklung und Wartung des Projekts, Arbeiten im Bereich SEO (Suchmaschinenoptimierung), Analyse und Behebung bestehender Fehler sowie Refactoring älterer Systemelemente. Ausbau der Startseite und der Unterseiten (einschließlich Familiamed Clinique – Augenlidplastik) sowie Optimierung der Leistung und Stabilität des Dienstes. Fortführung und Weiterentwicklung des Projekts nach vorherigen Teams mit Schwerpunkt auf der Verbesserung der Codequalität und der Benutzererfahrung."
     },
     "quickAtest": {
       "projectName": "Quick Atest",
       "companyName": "Muddy Code",
-      "description": "Die Single-Page-Anwendung „Quick Atest“ wurde entwickelt, um den Prozess der Erstellung und Zusammenführung von Dokumenten für Aufträge zu optimieren. Sie ermöglicht das Filtern von Inhalten, das Generieren von Excel-Dateien sowie das Herunterladen ausgewählter Dokumente als eine zusammengeführte PDF-Datei."
+      "description": "Die Single-Page-Anwendung „Quick Atest“ wurde entwickelt, um den Prozess der Erstellung und Zusammenführung von Dokumenten zu optimieren, die für die Auftragsabwicklung erforderlich sind. Sie ermöglicht das Filtern von Inhalten, das Generieren von Daten in eine Excel-Datei sowie das Herunterladen ausgewählter Dokumente in Form einer einzigen, zusammengeführten PDF-Datei."
     }
   },
   "careerList": {
     "muddyCode": {
       "companyName": "Muddy Code sp. z o.o.",
       "jobPosition": "Frontend-Entwickler",
-      "description": "Seit Januar 2024 arbeite ich als Frontend-Entwickler und bin für die Entwicklung und Wartung von Webanwendungsoberflächen verantwortlich. Ich konzentriere mich auf Benutzerfreundlichkeit, Performance und visuelle Konsistenz der Produkte. Mit der Zeit übernahm ich zunehmend komplexere Komponenten und Systemmodule. Ich arbeite eng mit Backend- sowie UX/UI-Teams zusammen und beteilige mich an der Entwicklung und Umsetzung neuer Funktionen."
+      "description": "Seit Januar 2024 entwickle ich mich als Frontend-Entwickler weiter und bin für die Erstellung sowie Wartung von Benutzeroberflächen für Webanwendungen verantwortlich. Ich konzentriere mich auf die Verbesserung der Benutzerfreundlichkeit, der Geschwindigkeit und der visuellen Konsistenz der Produkte. Mit zunehmender Erfahrung übernahm ich die Arbeit an komplexeren Komponenten und Systemmodulen. Ich arbeite aktiv mit Backend- und UX/UI-Teams zusammen und bin an der Konzeption und Umsetzung neuer Funktionen beteiligt."
     },
     "montService": {
       "companyName": "Mont Service",
       "jobPosition": "Elektriker",
-      "description": "Ich war verantwortlich für die Diagnose, Reparatur und Wartung von Geräten in Kassensystemen wie Registrierkassen und Zahlungsterminals. Ich führte Installationen, Konfigurationen und Fehlerbehebungen an Hardware- und Elektronikkomponenten durch. Ich sorgte für die Zuverlässigkeit der Geräte und eine schnelle Wiederherstellung ihrer Funktion, um den unterbrechungsfreien Betrieb der Kassensysteme sicherzustellen."
+      "description": "Ich war verantwortlich für die Diagnose, Reparatur und technische Wartung von Geräten, die in Kassensystemen eingesetzt werden, wie Registrierkassen und Zahlungsterminals. Ich führte Installationen, Konfigurationen sowie die Behebung von Hardware- und Elektronikfehlern durch. Zudem sorgte ich für die Zuverlässigkeit der Geräte und deren schnelle Wiederinbetriebnahme, um einen unterbrechungsfreien Betrieb der Verkaufsstellen sicherzustellen."
     }
   },
   "workInProgressComponent": {
-    "title": "Dieser Bereich wird derzeit erweitert. Bitte schauen Sie bald wieder vorbei!"
+    "title": "Dieser Bereich wird derzeit ausgebaut. Schauen Sie bald wieder vorbei!"
   },
   "aboutMePage": {
-    "text": "Ich bin Frontend-Entwickler mit 3 Jahren Erfahrung in der Erstellung moderner und funktionaler Webanwendungen. Ich verbinde Programmierkenntnisse mit einem Sinn für Ästhetik und Liebe zum Detail, wodurch ich Lösungen entwickle, die nicht nur effizient, sondern auch benutzerfreundlich sind.\n\nMeine Reise in die Programmierung begann mit dem Full Stack Developer Bootcamp bei Kodilla. Es war für mich eine sehr wertvolle Entwicklungsphase – ich habe nicht nur solide Programmiergrundlagen erworben, sondern auch viele inspirierende Menschen kennengelernt, mit denen ich bis heute in Kontakt stehe. Damals wurde mir klar, dass Programmierung der Weg ist, den ich beruflich einschlagen möchte.\n\nIn den letzten Jahren habe ich mich vor allem auf die Frontend-Entwicklung konzentriert, in der ich die meiste Erfahrung gesammelt habe und in der ich mich derzeit am sichersten fühle. Gleichzeitig vergesse ich meine Fullstack-Wurzeln nicht und möchte in Zukunft auch meine Backend-Kompetenzen systematisch weiterentwickeln. Ich bin jedoch der Meinung, dass die besten Ergebnisse Schritt für Schritt erzielt werden.\n\nOffenheit für neue Herausforderungen und der Wunsch nach kontinuierlicher Weiterentwicklung begleiten mich seit Beginn meiner Karriere. Ich gehe gerne ehrgeizige Projekte an, lerne neue Technologien schnell und erweitere ständig meine Kompetenzen. Besonders interessieren mich Themen rund um die Architektur von Anwendungen und die User Experience.\n\nAußerhalb der Arbeit treibe ich aktiv Sport, was mir Regelmäßigkeit, Disziplin und Ausdauer bei der Verfolgung gesetzter Ziele vermittelt. Diese Werte versuche ich auch in meine Arbeit als Programmierer einzubringen."
+    "aboutMeTitle": "Über mich",
+    "aboutMeDescription": "Ich bin Frontend-Entwickler mit 3 Jahren Erfahrung in der Erstellung moderner und funktionaler Webanwendungen. Ich verbinde Programmierkenntnisse mit einem Gespür für Ästhetik und Liebe zum Detail, wodurch ich Lösungen schaffe, die nicht nur leistungsfähig, sondern auch benutzerfreundlich sind. Neue Technologien eigne ich mir schnell an und stelle mich gerne neuen Herausforderungen. Programmieren und Informatik im Allgemeinen sind meine Leidenschaft, weshalb ich meine Kompetenzen stetig erweitere und mich auch für Game Development sowie neue Technologietrends interessiere.",
+    "freeTimeTitle": "Abseits des Codes",
+    "freeTimeText": "In meiner Freizeit treibe ich aktiv Sport, insbesondere Boxen, was mich Systematik, Disziplin und Konsequenz bei der Zielverfolgung lehrt. Gerne greife ich auch zu guten Büchern, interessiere mich für Geschichte und nutze freie Momente zum Spielen von Videospielen."
   },
   "educationItemsList": {
     "universityName": "Universität:",
     "degree": "Studiengang:",
-    "specialization": "Spezialisierung:",
+    "specialization": "Fachrichtung:",
     "status": "Status:",
-    "startDate": "Beginn:",
+    "startDate": "Studienbeginn:",
+    "semester": "Semester:",
     "wsbUniversity": {
-      "universityName": "WSB Akademie in Dąbrowa Górnicza",
-      "degree": "Informatik - Bachelorstudium",
+      "universityName": "WSB-Akademie in Dąbrowa Górnicza",
+      "degree": "Informatik – Bachelorstudium",
       "specialization": "Software Engineering",
-      "status": "Zugelassen",
+      "passed": "Aufgenommen",
+      "pending": "Laufend",
+      "waiting": "Ausstehend",
+      "first": "Erstes",
+      "second": "Zweites",
+      "third": "Drittes",
+      "fourth": "Viertes",
+      "none": "Ausstehend",
       "startDate": "Oktober 2026"
+    }
+  },
+  "technologyPage": {
+    "levels": {
+      "level": "Niveau: ",
+      "junior": "Junior",
+      "regular": "Regular",
+      "mid": "Mid",
+      "senior": "Senior"
+    },
+    "sections": {
+      "front": "Frontend-Technologien:",
+      "frontTxt": "Ich konzentriere mich auf das Angular- und TypeScript-Ökosystem und achte dabei auf eine saubere Code-Architektur (Nx) sowie modernes Design (HTML5, CSS3, Bootstrap).",
+      "back": "Backend-Technologien:",
+      "backTxt": "Ich entwerfe stabile und sichere APIs sowie Geschäftslogik mit Java und Spring Boot. Für die Datenbankverwaltung und das objektrelationale Mapping nutze ich JPA/Hibernate sowie relationale Datenbanken (PostgreSQL / pgAdmin).",
+      "test": "Tests, Tools und DevOps:",
+      "testTxt": "Ich sorge für die Qualität und Sicherheit von Anwendungen durch Unit- und E2E-Tests (Jest, Cypress), Paketverwaltung (npm) sowie moderne Authentifizierung (Keycloak). Für Containerisierung und Umgebungautomatisierung setze ich Docker ein.",
+      "graphic": "Design- und Organisationstools:",
+      "graphicTxt": "Ich nutze Tools für Projektmanagement und Aufgabenverfolgung (Jira) und entwerfe intuitive Benutzeroberflächen sowie Mockups (Figma).",
+      "ai": "KI-Assistenten bei der Arbeit:",
+      "aiTxt": "Ich nutze fortschrittliche Sprachmodelle (ChatGPT, Claude, Gemini) direkt über den Browser als Unterstützung beim täglichen Programmieren, beim Entwerfen von Architekturen, bei der Code-Optimierung sowie beim Lösen komplexer technischer Probleme."
     }
   }
 }

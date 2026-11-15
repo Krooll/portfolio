@@ -1,9 +1,9 @@
 {
   "contact": "Contact",
-  "aboutMe": "About me",
+  "aboutMe": "About Me",
   "projects": "Projects",
   "experience": "Experience",
-  "technology": "Tech stack",
+  "technology": "Tech Stack",
   "education": "Education",
   "resumeButton": "Download CV",
   "headerComponent": {
@@ -11,9 +11,9 @@
       "mainPageButton": "Home",
       "experiencePageButton": "Experience",
       "projectPageButton": "Projects",
-      "aboutMePageButton": "About me",
+      "aboutMePageButton": "About Me",
       "contactPageButton": "Contact",
-      "technologyPageButton": "Tech stack",
+      "technologyPageButton": "Tech Stack",
       "educationPageButton": "Education"
     },
     "headerLangButtonLabel": "Language",
@@ -27,7 +27,7 @@
   },
   "mainPage": {
     "biggerLetter": "I",
-    "text": "create modern web applications that combine performance, aesthetics, and intuitive usability. I focus on high-quality code, attention to detail, and solutions that address real user and business needs. \n Feel free to explore my professional experience, projects, and the technologies I work with on a daily basis."
+    "text": " build modern web applications that combine performance, aesthetics, and intuitive usability. I focus on high code quality, attention to detail, and solutions tailored to real user and business needs.\nFeel free to explore my professional experience, projects, and the technologies I work with daily."
   },
   "footerComponent": {
     "text": "All rights reserved."
@@ -51,8 +51,8 @@
     }
   },
   "contactPage": {
-    "formTitle": "Let's get in touch!",
-    "mapTitle": "Find me here",
+    "formTitle": "Get in Touch!",
+    "mapTitle": "Location",
     "formButton": "Send",
     "form": {
       "labels": {
@@ -60,84 +60,116 @@
       },
       "placeholders": {
         "email": "Enter your email address...",
-        "message": "Enter your message..."
+        "message": "Write your message..."
       },
       "validators": {
         "email": "Email address is required...",
-        "emailAddress": "Invalid email address...",
-        "message": "Message is required and should contain at least 5 characters..."
+        "emailAddress": "Email address is invalid...",
+        "message": "Message is required and must be at least 5 characters long..."
       }
     }
   },
   "snackbar": {
-    "success": "Hooray! \n Message sent successfully — thank you for getting in touch!",
+    "success": "Hooray! \n Success — your message has been sent, thank you for reaching out!",
     "error": "Oops, something went wrong! \n Failed to send the message. Please try again later."
   },
   "projectList": {
-    "noImg": "Click the button next to view screenshots.",
+    "noImg": "Click the button next to it to view screenshots.",
     "variables": {
       "projectName": "Project name:",
       "companyName": "Company / client:",
-      "description": "Description of work:",
+      "description": "Description of work performed:",
       "url": "Website:",
       "screenshots": "Screenshots:"
     },
     "newFamiliaMedSite": {
-      "projectName": "New website Familia med + Admin panel website",
+      "projectName": "New Familiamed Website + Admin Panel",
       "companyName": "Familiamed",
-      "description": "(Project in progress) \n\n UI/UX Design: \n\n - Website execution plan in Figma: Timeline preparation for project stages \n\n - UI Prototypes (Draft): Initial layout development for mobile (mobile-first approach) and desktop variants \n\n \n\n Database Architecture & Data Modeling: \n\n - Data model design (JPA Entities + DTOs + Mappers): Relational database design and automatic schema/relation creation using Spring Data JPA (Hibernate) \n\n \n\n REST API Implementation & Business Logic: \n\n - CRUD REST API Modules: End-to-end API endpoint handling for modules: Specialization, Local, Office, Service, Price, Contacts, AboutUs, Feed \n\n - Media / Images Module: REST API for file uploads featuring automatic image format conversion to an optimized .webp format upon upload \n\n - Time-based validation (validFrom / validTo): Business logic implementation verifying date ranges for services and prices, enabling hands-free, long-term scheduling of availability and lifecycles \n\n - Price priority system: Pricing prioritization mechanism allowing definition of standard and promotional/periodical price lists (the application automatically applies the correct price within a given time window based on assigned priority) \n\n \n\n Security & Performance: \n\n - SQL Query & Repository Optimization: Dedicated queries (e.g., using JOIN FETCH) in Spring Data JPA repositories, fetching relational data (services, galleries, locations) in a single SQL query and eliminating the N+1 queries performance issue \n\n - Authentication & Authorization: Security architecture implementation based on JWT tokens (Access Token + Refresh Token) for the admin panel \n\n - Endpoint protection: Access restriction to data-modifying endpoints (POST, PUT, DELETE) exclusively for authorized users with the administrator role \n\n - Attack protection (Rate Limiting): Integration of the Bucket4J library on public endpoints to limit the number of requests per second/minute \n\n \n\n Unit tests for controllers, services, repositories, and configuration files \n\n \n\n Error handling"
+      "description": "(Project in progress) \n\n Interface Design (UI/UX): \n\nWebsite implementation plan in Figma: Preparing the project timeline \n\nUI Prototypes (Draft): Developing preliminary designs for mobile (mobile-first approach) and desktop variants \n\n \n\n Database Architecture & Data Modeling: \n\nData model design (JPA Entities + DTOs + Mappers): Relational database design and automatic generation of table/relationship schemas using Spring Data JPA (Hibernate) \n\n \n\n REST API Implementation & Business Logic: \n\nCRUD REST API Modules: Comprehensive API endpoint handling for the following modules: Specialization, Local, Office, Service, Price, Contacts, AboutUs, Feed \n\nMedia / Images Module: REST API for file uploads with automatic image conversion to the optimized .webp format upon upload \n\nTime Validation (validFrom / validTo): Implementation of business logic verifying date ranges for services and prices, enabling hands-free scheduling of their availability and lifecycle well in advance \n\nPrice Priority System: Introduction of a price prioritization mechanism allowing the definition of standard and promotional/periodic price lists (the application automatically selects the appropriate price within a given time window based on the assigned priority) \n\n \n\n Security & Performance: \n\nSQL Query & Repository Optimization: Dedicated queries (e.g., using JOIN FETCH) in Spring Data JPA repositories to fetch relational data (services, galleries, locations) in a single SQL query, eliminating the N+1 queries performance issue \n\nAuthentication & Authorization: Implementation of a security architecture based on JWT access tokens (Access Token + Refresh Token) for the admin panel \n\nEndpoint Protection: Restricting access to data-modifying endpoints (POST, PUT, DELETE) exclusively to authorized users with the administrator role \n\nAttack Protection (Rate Limiting): Integration of the Bucket4J library on public endpoints to limit the number of requests per second/minute \n\n\n \n\n Unit tests for controllers, services, repositories, and configuration files \n\n \n\n Error handling"
     },
     "muddyCodeWorkspace": {
-      "projectName": "Nx Monorepo",
+      "projectName": "NX Monorepo",
       "companyName": "Muddy Code",
-      "description": "Work in an Nx monorepo within a large-scale ERP multi-application system. The project involved development and maintenance of multiple business modules as well as shared components and services.\n\nScope of work in business modules:\n\n• Sales module:\nContractor dictionaries, customer orders, price lists, and services.\n\n• PMS:\nTechnological and production logic, release versions, job records, calculations (features, feature relations, quotation register), extensive dictionaries (tools, tool types, operations, workstations, workstation rates, qualifications, modifiers).\n\n• Simulations:\nSimulation versions and simulation records.\n\n• WMS:\nIndex groups.\n\n• LOGS:\nSystem logs module (monitoring and displaying application logs).\n\n• MES:\nProduction monitoring and control system – production process handling, employee work logging, production order tracking, material consumption records, and real-time operation status tracking.\n\nServices and system architecture\n\n• QBE Service:\nBuilding and handling Query By Example (QBE) queries.\n\n• Attachment Service:\nFile upload and download with progress tracking (XMLHttpRequest with progress events), backend integration, and streaming downloads on the frontend side.\n\n• User Settings – managing user settings stored in localStorage:\n- table and view configurations\n- language settings\n- access control\n\n• Authentication and session mechanisms\n- login and session recovery mechanism\n- token expiration handling and request retry after refresh\n- request cancellation on user change\n- HTTP interceptors responsible for token and authentication handling\n- idle timeout mechanism based on user activity (mouse event tracking)\n\nApplication and access management\n\n• ActiveApp Service:\nControl of available applications and features per user (permission system).\n\n• Components and UI layer\nShared components:\n- loader\n- attachment component\n- error handling system based on snackbar service\n- extended tree component (tree view, dynamic node add/remove, hover detail preview, process path generation and visualization)\n- development and support of components:\n- modal system\n- numeric keyboard component\n\nFor over 1.5 years of work on the project, I was responsible for the development of an ERP system – on the frontend layer, system architecture, and shared components. The work included expanding existing modules, implementing new features, and stabilizing and evolving the system in an enterprise environment."
+      "description": "Working in an Nx monorepo within an extensive multi-application ERP system. The project involved the development and maintenance of multiple business modules as well as shared components and services.\n\nScope of work in business modules:\n\nSales Module:\nContractor directories, customer orders, price lists, and services.\n\nPMS:\nTechnological and production logic, release versions, order register, calculations (features, feature relationships, valuation register), extensive dictionaries (tools, tool types, operations, workstations, work center rates, qualifications, modifiers).\n\nSimulations:\nSimulation versions and simulation register.\n\nWMS:\nIndex groups.\n\nLOGS:\nSystem logs module (monitoring and presenting application logs).\n\nMES:\nProduction control and monitoring system – handling production processes, recording employee work, monitoring production order execution, tracking material consumption, and real-time status tracking of production operations.\n\nServices and System Architecture\n\nQBE Service:\nBuilding and handling Query By Example (QBE) queries.\n\nAttachment Service:\nUploading and downloading attachments with transfer progress tracking (XMLHttpRequest with progress events), backend integration, and streaming downloads on the frontend.\n\nUser Settings – managing user settings stored in localStorage:\ntable and view configurations\nlanguage settings\naccess control\n\nAuthorization and Session Mechanisms\nlogin and re-login mechanism (session recovery)\ntoken expiration handling and request retries after token refresh\ncanceling pending requests upon user change\nHTTP interceptors responsible for token and authorization handling\nidle timeout mechanism based on user activity (mouse event tracking)\n\nApplication and Access Management\n\nActiveApp Service:\nControlling available applications and features per user (permissions system).\n\nComponents and UI Layer\nShared components:\nloader\nattachment component\nerror handling system based on a snackbar service\nextension of the tree component (tree view, dynamic adding and removing of nodes, detail preview on hover, generation and presentation of process paths)\ncomponent development and support:\nmodal system\nnumeric keyboard component\n\nOver more than 1.5 years on the project, I was responsible for developing the ERP system across the frontend layer, service architecture, and shared components. My work encompassed expanding existing modules, implementing new features, and stabilizing and scaling the system in an enterprise environment."
     },
     "muddyCodeSite": {
       "projectName": "Muddy Code Website",
       "companyName": "Muddy Code",
-      "description": "The “Muddy Code” website was built using the Wix platform. It is a simple website containing information about the company, its services, and a contact section enabling direct communication with clients."
+      "description": "The \"Muddy Code\" website was built using the Wix platform. It is a simple website featuring information about the company, offered services, and a contact section enabling direct communication with the client."
     },
     "familiaMedSite": {
       "projectName": "Familiamed Website",
       "companyName": "Familiamed",
-      "description": "Development and maintenance of the project, SEO work (search engine optimization), analysis and fixing of existing bugs, and refactoring of legacy parts of the system. Expansion of the homepage and subpages (including Familiamed Clinique – eyelid surgery), as well as improving performance and stability of the website. Continued development of the project after previous teams, with a focus on improving code quality and user experience."
+      "description": "Project development and maintenance, SEO work (search engine optimization), analyzing and fixing existing bugs, and refactoring legacy system elements. Expanding the homepage and subpages (including Familiamed Clinique – eyelid surgery), as well as improving service performance and stability. Continuing and developing the project after previous teams, with a strong focus on improving code quality and user experience."
     },
     "quickAtest": {
       "projectName": "Quick Atest",
       "companyName": "Muddy Code",
-      "description": "The single-page application “Quick Atest” was designed to streamline the process of creating and merging documents required for order execution. It enables content filtering, generating data into Excel files, and downloading selected documents as a single merged PDF file."
+      "description": "The \"Quick Atest\" single-page application was designed to streamline the process of creating and merging documents required for order fulfillment. It enables content filtering, generating data into an Excel file, and downloading selected documents as a single, merged PDF file."
     }
   },
   "careerList": {
     "muddyCode": {
       "companyName": "Muddy Code sp. z o.o.",
       "jobPosition": "Frontend Developer",
-      "description": "Since January 2024, I have been working as a frontend developer, responsible for building and maintaining web application interfaces. I focus on improving usability, performance, and visual consistency of products. Over time, I moved from simpler tasks to working on more complex components and system modules. I actively collaborate with backend and UX/UI teams, participating in designing and implementing new features."
+      "description": "Since January 2024, I have been growing as a Frontend Developer, responsible for building and maintaining web application interfaces. I focus on improving usability, performance, and visual consistency across products. As I gained experience, I transitioned to working on more complex system components and modules. I actively collaborate with backend and UX/UI teams, participating in designing and implementing new features."
     },
     "montService": {
       "companyName": "Mont Service",
       "jobPosition": "Electrician",
-      "description": "I was responsible for diagnosing, repairing, and maintaining devices used in sales systems, such as cash registers and payment terminals. I performed installation, configuration, and troubleshooting of hardware and electronic components. I ensured the reliability of devices and quick restoration of their functionality, guaranteeing uninterrupted operation of point-of-sale systems."
+      "description": "I was responsible for diagnostics, repair, and technical maintenance of equipment used in point-of-sale systems, such as cash registers and payment terminals. I performed installations, configurations, and troubleshooting of hardware and electronic faults. I ensured device reliability and rapid restoration of functionality, maintaining uninterrupted operations at retail points of sale."
     }
   },
   "workInProgressComponent": {
-    "title": "This section is currently being developed. Please check back soon!"
+    "title": "This section is currently under construction. Check back soon!"
   },
   "aboutMePage": {
-    "text": "I am a Frontend Developer with 3 years of experience in creating modern and functional web applications. I combine programming skills with a sense of aesthetics and attention to detail, which allows me to create solutions that are not only efficient but also user-friendly.\n\nMy journey into programming began with the Full Stack Developer bootcamp at Kodilla. It was a very valuable stage of my development – not only did I gain solid programming fundamentals, but I also met many inspiring people with whom I still keep in touch to this day. It was then that I became convinced that programming is the path I want to follow professionally.\n\nIn recent years, I have focused primarily on front-end development, where I have gained the most experience and where I currently feel most confident. At the same time, I do not forget my full-stack roots and in the future I would like to systematically develop my backend skills as well. However, I believe that the best results are achieved step by step.\n\nAn openness to new challenges and a desire for continuous growth are qualities that have accompanied me since the beginning of my career. I am eager to take on ambitious projects, quickly learn new technologies, and continuously expand my skills. I am particularly interested in topics related to application architecture and user experience.\n\nOutside of work, I actively practice sports, which teaches me regularity, discipline, and persistence in pursuing set goals. I try to bring those same values into my work as a programmer."
+    "aboutMeTitle": "About Me",
+    "aboutMeDescription": "I am a Frontend Developer with 3 years of experience in building modern and functional web applications. I combine programming skills with a keen eye for aesthetics and attention to detail, creating solutions that are not only efficient but also user-friendly. I quickly pick up new technologies and eagerly take on new challenges. Programming and computer science are my passion, which is why I continuously expand my skill set, also taking an interest in game development and emerging tech trends.",
+    "freeTimeTitle": "Beyond Code",
+    "freeTimeText": "Outside of work, I actively practice sports, particularly boxing, which teaches me consistency, discipline, and perseverance in pursuing goals. I also enjoy reading good books, have a keen interest in history, and spend my free time playing video games."
   },
   "educationItemsList": {
     "universityName": "University:",
-    "degree": "Field of study:",
+    "degree": "Degree:",
     "specialization": "Specialization:",
     "status": "Status:",
     "startDate": "Start date:",
+    "semester": "Semester:",
     "wsbUniversity": {
       "universityName": "WSB University in Dąbrowa Górnicza",
-      "degree": "Computer Science - Bachelor's degree",
+      "degree": "Computer Science - Bachelor's Degree",
       "specialization": "Software Engineering",
-      "status": "Admitted",
+      "passed": "Admitted",
+      "pending": "In progress",
+      "waiting": "Waiting",
+      "first": "First",
+      "second": "Second",
+      "third": "Third",
+      "fourth": "Fourth",
+      "none": "Pending",
       "startDate": "October 2026"
+    }
+  },
+  "technologyPage": {
+    "levels": {
+      "level": "Level: ",
+      "junior": "Junior",
+      "regular": "Regular",
+      "mid": "Mid",
+      "senior": "Senior"
+    },
+    "sections": {
+      "front": "Frontend Technologies:",
+      "frontTxt": "I focus on the Angular and TypeScript ecosystem, maintaining clean code architecture (Nx) and modern design (HTML5, CSS3, Bootstrap).",
+      "back": "Backend Technologies:",
+      "backTxt": "I design stable and secure APIs and business logic using Java and Spring Boot. For database management and object-relational mapping, I use JPA/Hibernate and relational databases (PostgreSQL / pgAdmin).",
+      "test": "Testing, Tools & DevOps:",
+      "testTxt": "I ensure application quality and security using unit and e2e tests (Jest, Cypress), package management (npm), and modern authentication (Keycloak). For containerization and environment automation, I use Docker.",
+      "graphic": "Design & Organization Tools:",
+      "graphicTxt": "I use project management and issue-tracking tools (Jira) and design intuitive user interfaces and mockups (Figma).",
+      "ai": "AI Assistants at Work:",
+      "aiTxt": "I leverage advanced language models (ChatGPT, Claude, Gemini) directly in the browser to support daily coding, architecture design, code optimization, and solving complex technical problems."
     }
   }
 }
