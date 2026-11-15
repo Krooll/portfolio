@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateFallbackPipe } from '../../shared/pipes/translate-pipe';
-import {ScrollRevealDirective} from '../../shared/directives/scroll-reveal-directive';
-import {MatProgressBar} from '@angular/material/progress-bar';
+import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal-directive';
+import { MatProgressBar } from '@angular/material/progress-bar';
 
 export interface TechnologyItem {
   icon: string;
@@ -18,7 +18,6 @@ export interface AiItem {
   styleUrl: './technology-page.scss',
 })
 export class TechnologyPage {
-
   protected frontEndItems: TechnologyItem[] = [
     {
       icon: '/icons/angular.png',

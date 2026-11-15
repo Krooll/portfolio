@@ -13,7 +13,9 @@
   padding: 1rem 1.2rem;
   border: 1px solid var(--inner-shadow);
   border-radius: 0.5rem;
-  box-shadow: var(--light-shadow), inset 0 0 5px var(--inner-shadow);
+  box-shadow:
+    var(--light-shadow),
+    inset 0 0 5px var(--inner-shadow);
 }
 
 .title {
@@ -28,6 +30,3 @@
   background: var(--contrast-background);
   box-shadow: var(--light-shadow);
 }
-
-
-

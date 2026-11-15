@@ -17,10 +17,6 @@
   box-shadow: var(--light-shadow);
 }
 
-.burger-icon {
-  color: var(--contrast-text-color);
-}
-
 .burger-button:hover {
   transition: 0.2s ease-in-out;
   transform: scale(1.08);
@@ -29,6 +25,10 @@
 .burger-button:hover.list-icon {
   transition: 0.2s ease-in-out;
   transform: scale(1.08);
+  color: var(--contrast-text-color);
+}
+
+.burger-icon {
   color: var(--contrast-text-color);
 }
 

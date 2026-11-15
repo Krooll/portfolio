@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateFallbackPipe } from '../../shared/pipes/translate-pipe';
 import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal-directive';
-import {NgClass} from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-education-page',
@@ -18,11 +18,11 @@ export class EducationPage {
       degreeCourseFallback: 'Informatyka - studia I stopnia',
       specialization: 'educationItemsList.wsbUniversity.specialization',
       specializationFallback: 'Inżynieria oprogramowania',
-      status: 'educationItemsList.wsbUniversity.status',
+      status: 'educationItemsList.wsbUniversity.passed',
       statusFallback: 'Przyjęty',
       startDate: 'educationItemsList.wsbUniversity.startDate',
       startDateFallback: 'Rozpoczęcie Październik 2026',
-      statusFlag: 'passed'
+      statusFlag: 'passed',
     },
     {
       universityName: 'educationItemsList.wsbUniversity.universityName',
@@ -35,7 +35,7 @@ export class EducationPage {
       statusFallback: 'Trwa',
       semester: 'educationItemsList.wsbUniversity.semester',
       semesterFallback: 'Pierwszy',
-      statusFlag: 'progress'
+      statusFlag: 'progress',
     },
     {
       universityName: 'educationItemsList.wsbUniversity.universityName',

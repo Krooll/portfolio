@@ -8,10 +8,13 @@
   <hr />
   <div scrollReveal class="body-scroll reveal-anim d-flex flex-column p-1">
     @for (item of careerList; track $index) {
-      <div [ngClass]="{
-                  'neon-blue' : item.color === 'blue',
-                  'neon-pink' : item.color === 'pink'
-               }" class="description-wrapper d-flex align-items-start justify-content-between mt-2 mb-4">
+      <div
+        [ngClass]="{
+          'neon-blue': item.color === 'blue',
+          'neon-pink': item.color === 'pink',
+        }"
+        class="description-wrapper d-flex align-items-start justify-content-between mt-2 mb-4"
+      >
         <div class="d-flex flex-column">
           <h2 class="bold">{{ item.companyName | translateFallback: item.companyNameFallback }}</h2>
           <h3 class="bold">{{ item.jobPosition | translateFallback: item.jobPositionFallback }}</h3>

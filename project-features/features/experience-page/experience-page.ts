@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateFallbackPipe } from '../../shared/pipes/translate-pipe';
-import {ScrollRevealDirective} from '../../shared/directives/scroll-reveal-directive';
-import {NgClass} from '@angular/common';
+import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal-directive';
+import { NgClass } from '@angular/common';
 
 export interface CareerItem {
   companyName: string;

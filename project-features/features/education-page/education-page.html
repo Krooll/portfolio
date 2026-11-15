@@ -11,17 +11,28 @@
       @for (item of educationItems; track $index) {
         <div class="timeline-item d-flex">
           <div class="timeline-axis d-flex flex-column">
-            <div [ngClass]="{
-          'passed-color': item.statusFlag === 'passed',
-          'progress-color': item.statusFlag === 'progress'}" class="img-wrapper-education"></div>
+            <div
+              [ngClass]="{
+                'passed-color': item.statusFlag === 'passed',
+                'progress-color': item.statusFlag === 'progress',
+              }"
+              class="img-wrapper-education"
+            ></div>
           </div>
-          <div scrollReveal [ngClass]="{
-          'passed-color': item.statusFlag === 'passed',
-          'progress-color': item.statusFlag === 'progress'}" class="element reveal-anim">
+          <div
+            scrollReveal
+            [ngClass]="{
+              'passed-color': item.statusFlag === 'passed',
+              'progress-color': item.statusFlag === 'progress',
+            }"
+            class="element reveal-anim"
+          >
             <div class="d-flex flex-column m-1">
               <p class="mt-1">
                 {{ 'educationItemsList.universityName' | translateFallback: 'Uniwersytet:' }}
-                <span>{{ item.universityName | translateFallback: item.universityNameFallback }}</span>
+                <span>{{
+                  item.universityName | translateFallback: item.universityNameFallback
+                }}</span>
               </p>
               <p class="mt-1">
                 {{ 'educationItemsList.degree' | translateFallback: 'Kierunek:' }}
@@ -29,19 +40,21 @@
               </p>
               <p class="mt-1">
                 {{ 'educationItemsList.specialization' | translateFallback: 'Specjalność:' }}
-                <span>{{ item.specialization | translateFallback: item.specializationFallback }}</span>
+                <span>{{
+                  item.specialization | translateFallback: item.specializationFallback
+                }}</span>
               </p>
-              @if(item.semester) {
+              @if (item.semester) {
                 <p class="mt-1">
                   {{ 'educationItemsList.semester' | translateFallback: 'Semestr:' }}
                   <span>{{ item.semester | translateFallback: item.semesterFallback }}</span>
                 </p>
               }
-                <p class="mt-1">
-                  {{ 'educationItemsList.passed' | translateFallback: 'Status:' }}
-                  <span>{{ item.status | translateFallback: item.statusFallback }}</span>
-                </p>
-              @if(item.startDateFallback) {
+              <p class="mt-1">
+                {{ 'educationItemsList.passed' | translateFallback: 'Status:' }}
+                <span>{{ item.status | translateFallback: item.statusFallback }}</span>
+              </p>
+              @if (item.startDateFallback) {
                 <p class="mt-1">
                   {{ 'educationItemsList.startDate' | translateFallback: 'Rozpoczęcie:' }}
                   <span>{{ item.startDate | translateFallback: item.startDateFallback }}</span>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateFallbackPipe } from '../../shared/pipes/translate-pipe';
-import {NgClass} from '@angular/common';
-import {ScrollRevealDirective} from '../../shared/directives/scroll-reveal-directive';
+import { NgClass } from '@angular/common';
+import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal-directive';
 
 export interface AboutMeItem {
   title: string;
@@ -23,15 +23,16 @@ export class AboutMePage {
       title: 'aboutMePage.aboutMeTitle',
       titleFallback: 'O mnie',
       description: 'aboutMePage.aboutMeDescription',
-      descriptionFallback: 'Jestem Frontend Developerem z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników. Szybko przyswajam nowe technologie i chętnie podejmuję się nowych wyzwań. Programowanie i szeroko pojęta informatyka są moją pasją, dlatego stale rozwijam swoje kompetencje, interesując się również tematyką gamedevu oraz nowymi trendami technologicznymi.',
-      color: 'blue'
+      descriptionFallback:
+        'Jestem Frontend Developerem z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników. Szybko przyswajam nowe technologie i chętnie podejmuję się nowych wyzwań. Programowanie i szeroko pojęta informatyka są moją pasją, dlatego stale rozwijam swoje kompetencje, interesując się również tematyką gamedevu oraz nowymi trendami technologicznymi.',
+      color: 'blue',
     },
     {
       title: 'aboutMePage.freeTimeTitle',
       titleFallback: 'Poza kodem',
       description: 'aboutMePage.freeTimeText',
       descriptionFallback: '',
-      color: 'pink'
-    }
+      color: 'pink',
+    },
   ];
 }

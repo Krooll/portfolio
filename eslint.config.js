@@ -1,17 +1,10 @@
-
 const eslint = require('@eslint/js');
 const tseslint = require('typescript-eslint');
 const angular = require('angular-eslint');
 
 module.exports = tseslint.config(
   {
-    ignores: [
-      'dist/**',
-      'coverage/**',
-      '.angular/**',
-      'node_modules/**',
-      'out-tsc/**',
-    ],
+    ignores: ['dist/**', 'coverage/**', '.angular/**', 'node_modules/**', 'out-tsc/**'],
   },
 
   {
@@ -36,8 +29,6 @@ module.exports = tseslint.config(
 
   {
     files: ['**/*.html'],
-    extends: [
-      ...angular.configs.templateRecommended,
-    ],
+    extends: [...angular.configs.templateRecommended],
   },
 );
