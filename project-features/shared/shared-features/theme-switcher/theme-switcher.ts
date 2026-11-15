@@ -1,6 +1,6 @@
-import {Component, inject} from '@angular/core';
-import {ReactiveFormsModule} from '@angular/forms';
-import {ThemeService, ThemeType} from '../../services/theme-swticher.service';
+import { Component, inject } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ThemeService, ThemeType } from '../../services/theme-swticher.service';
 
 @Component({
   selector: 'app-theme-switcher',

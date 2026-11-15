@@ -2,9 +2,62 @@
   width: 100%;
 }
 
-.education-img {
-  height: 2.8rem;
-  width: 2.8rem;
+.timeline-container {
+  padding: 0 0.5rem;
+}
+
+.timeline-item {
+  align-items: stretch;
+
+  &:last-child .timeline-axis::before {
+    display: none !important;
+  }
+}
+
+.timeline-axis {
+  position: relative;
+  flex-shrink: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 3rem;
+    bottom: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.25rem;
+    background: var(--contrast-background);
+    z-index: 1;
+    box-shadow: none !important;
+  }
+
+  &:has(.passed-color)::before {
+    background: linear-gradient(to bottom, var(--snackbar-success-background) 70%, var(--progress-card-background) 100%);
+  }
+
+  &:has(.progress-color)::before {
+    background: linear-gradient(to bottom, var(--progress-card-background) 70%, var(--contrast-background) 100%);
+  }
+}
+
+.element {
+  width: 100%;
+  margin: 1.5rem 0.25rem;
+  padding: 1rem 1.1rem;
+  border-radius: 0.5rem;
+  background: var(--main-background);
+  border: 1px solid var(--contrast-background);
+  box-shadow: var(--light-shadow), inset 0 0 5px var(--inner-shadow);
+
+  &.passed-color {
+    border: 1px solid var(--snackbar-success-background);
+    box-shadow: 0 0 10px var(--snackbar-success-background), inset 0 0 5px var(--snackbar-success-background);
+  }
+
+  &.progress-color {
+    border: 1px solid var(--progress-card-background);
+    box-shadow: 0 0 10px var(--progress-card-background), inset 0 0 5px var(--progress-card-background);
+  }
 }
 
 .img-wrapper-education {
@@ -12,9 +65,35 @@
   width: 3rem;
   border-radius: 50%;
   background: var(--contrast-background);
-  border: 2px solid var(--contrast-background);
+  z-index: 2;
+  box-shadow: var(--light-shadow);
+
+  &.passed-color {
+    background: var(--snackbar-success-background);
+    box-shadow: 0 0 10px var(--snackbar-success-background);
+  }
+
+  &.progress-color {
+    background: var(--progress-card-background);
+    box-shadow: 0 0 10px var(--progress-card-background);
+  }
 }
 
-.bold {
+@media (width < 900px) {
+  .img-wrapper-education {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .timeline-axis::before {
+    top: 2.5rem;
+  }
+}
+
+p {
   font-weight: 600;
+}
+
+span {
+  font-weight: normal;
 }

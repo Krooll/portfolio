@@ -2,14 +2,14 @@ import {
   ApplicationConfig,
   inject,
   provideAppInitializer,
-  provideBrowserGlobalErrorListeners
+  provideBrowserGlobalErrorListeners,
 } from '@angular/core';
-import {provideRouter} from '@angular/router';
-import {routes} from './app.routes';
-import {provideTranslateService, TranslateLoader, TranslateService} from '@ngx-translate/core';
-import {HttpClient, provideHttpClient} from '@angular/common/http';
-import {HttpLoaderFactory} from './translate-loader';
-import {LangChangeService} from '../../project-features/shared/services/lang-change.service';
+import { provideRouter } from '@angular/router';
+import { routes } from './app.routes';
+import { provideTranslateService, TranslateLoader, TranslateService } from '@ngx-translate/core';
+import { HttpClient, provideHttpClient } from '@angular/common/http';
+import { HttpLoaderFactory } from './translate-loader';
+import { LangChangeService } from '../../project-features/shared/services/lang-change.service';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -33,7 +33,7 @@ export const appConfig: ApplicationConfig = {
       translate.addLangs(['pl', 'en', 'de', 'it']);
       translate.use(lang);
 
-      return ;
+      return;
     }),
   ],
 };

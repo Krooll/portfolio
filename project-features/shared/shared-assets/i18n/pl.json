@@ -52,7 +52,7 @@
   },
   "contactPage": {
     "formTitle": "Bądźmy w kontakcie!",
-    "mapTitle": "Znajdziesz mnie tutaj",
+    "mapTitle": "Lokalizacja",
     "formButton": "Wyślij",
     "form": {
       "labels": {
@@ -111,7 +111,7 @@
   "careerList": {
     "muddyCode": {
       "companyName": "Muddy Code sp. z o.o.",
-      "jobPosition": "Programista frontendowy",
+      "jobPosition": "Programista Frontend",
       "description": "Od stycznia 2024 roku rozwijam się jako programista frontendowy, odpowiadając za tworzenie oraz utrzymanie interfejsów aplikacji webowych. Skupiam się na poprawie użyteczności, szybkości działania oraz spójności wizualnej produktów. W miarę zdobywania doświadczenia przechodziłem do pracy nad bardziej rozbudowanymi komponentami i modułami systemu. Aktywnie współpracuję z zespołami backendu oraz UX/UI, uczestnicząc w projektowaniu i wdrażaniu nowych funkcjonalności."
     },
     "montService": {
@@ -124,7 +124,10 @@
     "title": "Ta sekcja jest właśnie rozbudowywana. Zajrzyj ponownie wkrótce!"
   },
   "aboutMePage": {
-    "text": "Jestem Fullstack/Frontend Developer z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników.\n\nMoja przygoda z programowaniem rozpoczęła się od bootcampu Full Stack Developer w Kodilla. Był to dla mnie bardzo wartościowy etap rozwoju – nie tylko zdobyłem solidne podstawy programowania, ale również poznałem wiele inspirujących osób, z którymi do dziś utrzymuję kontakt. To właśnie wtedy utwierdziłem się w przekonaniu, że programowanie jest ścieżką, którą chcę podążać zawodowo.\n\nW ostatnich latach skoncentrowałem się przede wszystkim na rozwoju w obszarze frontendu, gdzie zdobyłem najwięcej doświadczenia i w którym obecnie czuję się najlepiej. Jednocześnie nie zapominam o swoich fullstackowych korzeniach i w przyszłości chciałbym systematycznie rozwijać kompetencje również po stronie backendu. Wierzę jednak, że najlepsze efekty osiąga się krok po kroku.\n\nOtwartość na nowe wyzwania i chęć ciągłego rozwoju to cechy, które towarzyszą mi od początku kariery. Chętnie podejmuję się ambitnych projektów, szybko przyswajam nowe technologie i stale poszerzam swoje kompetencje. Szczególnie interesują mnie zagadnienia związane z architekturą aplikacji, doświadczeniem użytkownika.\n\nPoza pracą aktywnie uprawiam sport, który uczy mnie systematyczności, dyscypliny i konsekwencji w dążeniu do wyznaczonych celów. Te same wartości staram się przenosić do swojej pracy jako programista."
+    "aboutMeTitle": "O mnie",
+    "aboutMeDescription": "Jestem Frontend Developerem z 3-letnim doświadczeniem w tworzeniu nowoczesnych i funkcjonalnych aplikacji internetowych. Łączę umiejętności programistyczne z wyczuciem estetyki i dbałością o detale, dzięki czemu tworzę rozwiązania nie tylko wydajne, ale również przyjazne dla użytkowników. Szybko przyswajam nowe technologie i chętnie podejmuję się nowych wyzwań. Programowanie i szeroko pojęta informatyka są moją pasją, dlatego stale rozwijam swoje kompetencje, interesując się również tematyką gamedevu oraz nowymi trendami technologicznymi.",
+    "freeTimeTitle": "Poza kodem",
+    "freeTimeText": "Poza pracą aktywnie uprawiam sport, w szczególności boks, który uczy mnie systematyczności, dyscypliny i konsekwencji w dążeniu do celu. Chętnie sięgam także po dobre książki, interesuję się historią, a wolne chwile wykorzystuję, grając w gry."
   },
   "educationItemsList": {
     "universityName": "Uniwersytet:",
@@ -132,12 +135,41 @@
     "specialization": "Specialność:",
     "status": "Status:",
     "startDate": "Rozpoczęcie:",
+    "semester" : "Semestr:",
     "wsbUniversity": {
       "universityName": "Akademia WSB w Dąbrowie Górniczej",
       "degree": "Informatyka - studia I stopnia",
       "specialization": "Inżynieria oprogramowania",
-      "status": "Przyjęty",
+      "passed": "Przyjęty",
+      "pending": "Trwa",
+      "waiting": "Oczekuje",
+      "first": "Pierwszy",
+      "second": "Drugi",
+      "third": "Trzeci",
+      "fourth": "Czwarty",
+      "none": "Oczekiwanie",
       "startDate": "Październik 2026"
+    }
+  },
+  "technologyPage": {
+    "levels": {
+      "level": "Poziom: ",
+      "junior": "Junior",
+      "regular": "Regular",
+      "mid": "Mid",
+      "senior": "Senior"
+    },
+    "sections": {
+      "front": "Technologie Frontend:",
+      "frontTxt": "Skupiam się na ekosystemie Angulara oraz TypeScript, dbając o czystą architekturę kodu (Nx) i nowoczesny design (HTML5, CSS3, Bootstrap).",
+      "back": "Technologie Backend:",
+      "backTxt": "Projektuję stabilne i bezpieczne API oraz logikę biznesową przy użyciu Javy i Spring Boot. Do zarządzania bazami danych i mapowania obiektowego wykorzystuję JPA/Hibernate oraz relacyjne bazy danych (PostgreSQL / pgAdmin)",
+      "test": "Testy, Narzędzia i DevOps:",
+      "testTxt": "Dbam o jakość i bezpieczeństwo aplikacji, wykorzystując testy jednostkowe i e2e (Jest, Cypress), zarządzanie pakietami (npm) oraz nowoczesne uwierzytelnianie (Keycloak). Do konteneryzacji i automatyzacji środowiska stosuję Dockera.",
+      "graphic": "Narzędzia Projektowe i Organizacja:",
+      "graphicTxt": "Wykorzystuję narzędzia do zarządzania projektami i śledzenia zadań (Jira) oraz projektuję intuicyjne interfejsy i makiety użytkownika (Figma).",
+      "ai": "Asystenci AI w Pracy:",
+      "aiTxt": "Korzystam z zaawansowanych modeli językowych (ChatGPT, Claude, Gemini) bezpośrednio przez przeglądarkę jako wsparcie w codziennym kodowaniu, projektowaniu architektury, optymalizacji kodu oraz rozwiązywaniu złożonych problemów technicznych."
     }
   }
 }

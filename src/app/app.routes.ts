@@ -22,90 +22,102 @@ export const routes: Routes = [
   {
     path: 'about-me',
     loadComponent: () =>
-      import('../../project-features/shells/about-me-shell/about-me-shell')
-        .then(m => m.AboutMeShell),
+      import('../../project-features/shells/about-me-shell/about-me-shell').then(
+        (m) => m.AboutMeShell,
+      ),
     children: [
       {
         path: '',
         pathMatch: 'full',
         loadComponent: () =>
-          import('../../project-features/features/about-me-page/about-me-page')
-            .then(m => m.AboutMePage),
+          import('../../project-features/features/about-me-page/about-me-page').then(
+            (m) => m.AboutMePage,
+          ),
       },
     ],
   },
   {
     path: 'experience',
     loadComponent: () =>
-      import('../../project-features/shells/experience-shell/experience-shell')
-        .then(m => m.ExperienceShell),
+      import('../../project-features/shells/experience-shell/experience-shell').then(
+        (m) => m.ExperienceShell,
+      ),
     children: [
       {
         path: '',
         pathMatch: 'full',
         loadComponent: () =>
-          import('../../project-features/features/experience-page/experience-page')
-            .then(m => m.ExperiencePage)
+          import('../../project-features/features/experience-page/experience-page').then(
+            (m) => m.ExperiencePage,
+          ),
       },
     ],
   },
   {
     path: 'contact',
     loadComponent: () =>
-      import('../../project-features/shells/contact-shell/contact-shell')
-        .then(m => m.ContactShell),
+      import('../../project-features/shells/contact-shell/contact-shell').then(
+        (m) => m.ContactShell,
+      ),
     children: [
       {
         path: '',
         pathMatch: 'full',
         loadComponent: () =>
-        import('../../project-features/features/contact-page/contact-page')
-          .then(m => m.ContactPage)
+          import('../../project-features/features/contact-page/contact-page').then(
+            (m) => m.ContactPage,
+          ),
       },
     ],
   },
   {
     path: 'projects',
     loadComponent: () =>
-      import('../../project-features/shells/projects-shell/projects-shell')
-        .then(m => m.ProjectsShell),
+      import('../../project-features/shells/projects-shell/projects-shell').then(
+        (m) => m.ProjectsShell,
+      ),
     children: [
       {
         path: '',
         pathMatch: 'full',
         loadComponent: () =>
-          import('../../project-features/features/projects-page/projects-page')
-            .then(m => m.ProjectsPage)
+          import('../../project-features/features/projects-page/projects-page').then(
+            (m) => m.ProjectsPage,
+          ),
       },
     ],
   },
   {
     path: 'technology',
     loadComponent: () =>
-      import('../../project-features/shells/technology-shell/technology-shell')
-        .then(m => m.TechnologyShell),
+      import('../../project-features/shells/technology-shell/technology-shell').then(
+        (m) => m.TechnologyShell,
+      ),
     children: [
       {
         path: '',
         pathMatch: 'full',
         loadComponent: () =>
-          import('../../project-features/features/technology-page/technology-page')
-            .then(m => m.TechnologyPage)
+          import('../../project-features/features/technology-page/technology-page').then(
+            (m) => m.TechnologyPage,
+          ),
       },
     ],
   },
   {
     path: 'education',
     loadComponent: () =>
-      import('../../project-features/shells/education-shell/education-shell')
-        .then(m => m.EducationShell),
+      import('../../project-features/shells/education-shell/education-shell').then(
+        (m) => m.EducationShell,
+      ),
     children: [
       {
         path: '',
         pathMatch: 'full',
         loadComponent: () =>
-          import('../../project-features/features/education-page/education-page')
-            .then(m => m.EducationPage)
+          import('../../project-features/features/education-page/education-page').then(
+            (m) => m.EducationPage,
+          ),
       },
     ],
   },

@@ -1,4 +1,5 @@
 @use 'sass:map';
+@import '@angular/material/prebuilt-themes/azure-blue.css';
 
 $colors: (
   'black100': #000000,
@@ -30,8 +31,12 @@ $colors: (
   'green500': #22c55e,
   'green400': #4ade80,
   'green300': #86efac,
+  'gold': #F59E0B,
+  'card-black': #0d0f12,
+  'neon-blue': #00d2ff,
+  'neon-green': #00ff88,
+  'neon-pink': #ff007f,
 );
-
 
 html,
 body {
@@ -54,8 +59,17 @@ p {
   --contrast-text-color: #{map.get($colors, 'black100')};
   --border: #{map.get($colors, 'light-gray100')};
   --contrast-border: #{map.get($colors, 'black100')};
+  --neon-blue: #{map.get($colors, 'neon-blue')};
+  --neon-green: #{map.get($colors, 'neon-green')};
+  --neon-pink: #{map.get($colors, 'neon-pink')};
   --snackbar-success-background: #{map.get($colors, 'green600')};
   --snackbar-error-background: #{map.get($colors, 'red600')};
+  --inner-shadow: #{map.get($colors, 'gray600')};
+  --card-background: #{map.get($colors, 'card-black')};
+  --progress-card-background: #{map.get($colors, 'gold')};
+  --light-shadow:
+    0 0 10px 2px #{rgba(map.get($colors, 'gray600'), 0.4)},
+    0 0 25px 5px #{rgba(map.get($colors, 'gray600'), 0.4)};
 }
 
 .light {
@@ -65,6 +79,15 @@ p {
   --contrast-text-color: #{map.get($colors, 'light-gray100')};
   --border: #{map.get($colors, 'black100')};
   --contrast-border: #{map.get($colors, 'light-gray100')};
+  --neon-blue: #{map.get($colors, 'neon-blue')};
+  --neon-green: #{map.get($colors, 'neon-green')};
+  --neon-pink: #{map.get($colors, 'neon-pink')};
+  --inner-shadow: #{map.get($colors, 'gray600')};
+  --card-background: #{map.get($colors, 'card-black')};
+  --progress-card-background: #{map.get($colors, 'gold')};
+  --light-shadow:
+    0 0 10px 2px #{rgba(map.get($colors, 'gray600'), 0.4)},
+    0 0 25px 5px #{rgba(map.get($colors, 'gray600'), 0.4)};
   --snackbar-success-background: #{map.get($colors, 'green600')};
   --snackbar-error-background: #{map.get($colors, 'red600')};
 }
@@ -75,6 +98,14 @@ p {
   border-radius: 50%;
   background: var(--contrast-background);
   border: 2px solid var(--contrast-background);
+  box-shadow: var(--light-shadow);
+}
+
+@media (width > 900px) {
+  .img-wrapper {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
 }
 
 .img {
@@ -83,7 +114,7 @@ p {
 }
 
 .page-wrapper {
-  font-size: clamp(2rem, 8vw, 2rem);
+  font-size: clamp(2.5rem, 8vw, 2.5rem);
   font-weight: 600;
   flex: 1;
   display: flex;
@@ -138,6 +169,7 @@ input {
   border-radius: 8px;
   font-size: 1rem;
   box-sizing: border-box;
+  box-shadow: var(--light-shadow);
 }
 
 textarea {
@@ -148,11 +180,27 @@ textarea {
   min-height: 10rem;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  box-shadow: var(--light-shadow);
 }
 
 hr {
   width: 100%;
-  background: var(--contrast-background);
+  box-shadow: var(--light-shadow);
+  margin: 1rem 0;
+}
+
+.reveal-anim {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+  will-change: opacity, transform;
+
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 button {
@@ -162,6 +210,16 @@ button {
 button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+.neon-blue {
+  border: 1px solid var(--neon-blue);
+  box-shadow: 0 0 10px var(--neon-blue), inset 0 0 5px var(--neon-blue);
+}
+
+.neon-pink {
+  border: 1px solid var(--neon-pink);
+  box-shadow: 0 0 10px var(--neon-pink), inset 0 0 5px var(--neon-pink);
 }
 
 .d-flex {
@@ -279,7 +337,6 @@ button:disabled {
 .m-4 {
   margin: 1.5rem;
 }
-
 
 .me-1 {
   margin-right: 0.25rem;

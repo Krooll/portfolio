@@ -2,6 +2,15 @@
   width: 100%;
 }
 
+h2,h2 {
+  margin: 0;
+}
+
+.description-wrapper {
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.5rem;
+}
+
 .round {
   border: 2px solid;
   height: 5rem;
@@ -16,10 +25,11 @@
 }
 
 .resume-img-wrapper {
-  height: 8rem;
-  width: 8rem;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   background: var(--contrast-background);
+  box-shadow: var(--light-shadow), inset 0 0 5px var(--inner-shadow);
   border: none;
   transition: transform 0.5s ease-in-out;
 }

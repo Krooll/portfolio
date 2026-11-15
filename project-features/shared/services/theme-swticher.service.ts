@@ -1,4 +1,4 @@
-import {effect, Injectable, signal} from '@angular/core';
+import { effect, Injectable, signal } from '@angular/core';
 
 export enum ThemeType {
   Dark = 'dark',
@@ -6,17 +6,13 @@ export enum ThemeType {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemeService {
-
   constructor() {
     const savedTheme = localStorage.getItem('currentTheme');
 
-    if (
-      savedTheme === ThemeType.Dark ||
-      savedTheme === ThemeType.Light
-    ) {
+    if (savedTheme === ThemeType.Dark || savedTheme === ThemeType.Light) {
       this.currentTheme.set(savedTheme);
     }
 
@@ -33,8 +29,6 @@ export class ThemeService {
   currentTheme = signal<ThemeType>(ThemeType.Dark);
 
   onThemeChanged(value: boolean): void {
-    this.currentTheme.set(
-      value ? ThemeType.Light : ThemeType.Dark
-    );
+    this.currentTheme.set(value ? ThemeType.Light : ThemeType.Dark);
   }
 }

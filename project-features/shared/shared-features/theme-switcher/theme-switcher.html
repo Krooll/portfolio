@@ -1,12 +1,16 @@
 <div class="switcher-container">
-  <div class="ui-switcher-text-light">
-  </div>
+  <div class="ui-switcher-text-light"></div>
   <label class="switcher">
-    <input type="checkbox"
-           [attr.aria-label]="_themeSwitcherService.currentTheme() === ThemeType.Light ? 'Switch to dark mode' : 'Switch to light mode'"
-           [checked]="_themeSwitcherService.currentTheme() === ThemeType.Light"
-           (change)="onSwitcherCheck($event)"/>
+    <input
+      type="checkbox"
+      [attr.aria-label]="
+        _themeSwitcherService.currentTheme() === ThemeType.Light
+          ? 'Switch to dark mode'
+          : 'Switch to light mode'
+      "
+      [checked]="_themeSwitcherService.currentTheme() === ThemeType.Light"
+      (change)="onSwitcherCheck($event)"
+    />
     <span class="slider"></span>
   </label>
 </div>
-

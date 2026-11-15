@@ -1,9 +1,9 @@
-import {Component, ElementRef, HostListener, inject, signal, ViewChild} from '@angular/core';
-import {TranslateFallbackPipe} from '../../pipes/translate-pipe';
-import {Router} from '@angular/router';
-import {LangChangeService} from '../../services/lang-change.service';
-import {ThemeSwitcher} from '../theme-switcher/theme-switcher';
-import {ThemeService, ThemeType} from '../../services/theme-swticher.service';
+import { Component, ElementRef, HostListener, inject, signal, ViewChild } from '@angular/core';
+import { TranslateFallbackPipe } from '../../pipes/translate-pipe';
+import { Router } from '@angular/router';
+import { LangChangeService } from '../../services/lang-change.service';
+import { ThemeSwitcher } from '../theme-switcher/theme-switcher';
+import { ThemeService, ThemeType } from '../../services/theme-swticher.service';
 
 export interface MenuOptionsInterface {
   label: string;
@@ -22,10 +22,7 @@ export interface MenuLangOptionsInterface {
 
 @Component({
   selector: 'app-header-feature',
-  imports: [
-    TranslateFallbackPipe,
-    ThemeSwitcher
-  ],
+  imports: [TranslateFallbackPipe, ThemeSwitcher],
   templateUrl: './header-feature.html',
   styleUrl: './header-feature.scss',
 })
@@ -44,43 +41,43 @@ export class HeaderFeature {
       label: 'headerComponent.headerMenuOptionList.mainPageButton',
       fallback: 'Strona główna',
       route: '/main-page',
-      icon: '/icons/home.png'
+      icon: '/icons/home.png',
     },
     {
       label: 'headerComponent.headerMenuOptionList.aboutMePageButton',
       fallback: 'O mnie',
       route: '/about-me',
-      icon: '/icons/person.png'
+      icon: '/icons/person.png',
     },
     {
       label: 'headerComponent.headerMenuOptionList.experiencePageButton',
       fallback: 'Doświadczenie',
       route: '/experience',
-      icon: '/icons/brief-case.png'
+      icon: '/icons/brief-case.png',
     },
     {
       label: 'headerComponent.headerMenuOptionList.projectPageButton',
       fallback: 'Projekty',
       route: '/projects',
-      icon: '/icons/code.png'
+      icon: '/icons/code.png',
     },
     {
       label: 'headerComponent.headerMenuOptionList.technologyPageButton',
       fallback: 'Technologie',
       route: '/technology',
-      icon: '/icons/mail.png'
+      icon: '/icons/mail.png',
     },
     {
       label: 'headerComponent.headerMenuOptionList.educationPageButton',
       fallback: 'Edukacja',
       route: '/education',
-      icon: '/icons/education-small.png'
+      icon: '/icons/education-small.png',
     },
     {
       label: 'headerComponent.headerMenuOptionList.contactPageButton',
       fallback: 'Kontakt',
       route: '/contact',
-      icon: '/icons/mail.png'
+      icon: '/icons/mail.png',
     },
   ];
 
@@ -90,38 +87,36 @@ export class HeaderFeature {
       fallback: 'Polski',
       id: 'pl',
       img: '/icons/poland.png',
-      alt: 'Change language to Polish'
+      alt: 'Change language to Polish',
     },
     {
       label: 'headerComponent.headerLangOptionList.english',
       fallback: 'Angielski',
       id: 'en',
       img: '/icons/united-kingdom.png',
-      alt: 'Change language to English'
+      alt: 'Change language to English',
     },
     {
       label: 'headerComponent.headerLangOptionList.german',
       fallback: 'Niemiecki',
       id: 'de',
       img: '/icons/germany.png',
-      alt: 'Change language to German'
+      alt: 'Change language to German',
     },
     {
       label: 'headerComponent.headerLangOptionList.italy',
       fallback: 'Włoski',
       id: 'it',
       img: '/icons/italy.png',
-      alt: 'Change language to Italian'
-    }
+      alt: 'Change language to Italian',
+    },
   ];
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent): void {
-    const clickedInsideLang =
-      this.langDiv?.nativeElement.contains(event.target);
+    const clickedInsideLang = this.langDiv?.nativeElement.contains(event.target);
 
-    const clickedInsideMenu =
-      this.optionDiv?.nativeElement.contains(event.target);
+    const clickedInsideMenu = this.optionDiv?.nativeElement.contains(event.target);
 
     if (!clickedInsideLang) {
       this._langChangeService.isLangListOpen.set(false);
@@ -158,7 +153,7 @@ export class HeaderFeature {
   }
 
   setCurrentFlag(): string {
-    const currentLang =  this._langChangeService.currentLanguage();
+    const currentLang = this._langChangeService.currentLanguage();
 
     switch (currentLang) {
       case 'pl':

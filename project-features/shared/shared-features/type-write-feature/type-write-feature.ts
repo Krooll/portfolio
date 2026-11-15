@@ -1,6 +1,6 @@
-import {Component, inject, NgZone, OnDestroy, OnInit, signal} from '@angular/core';
-import {TranslateFallbackPipe} from '../../pipes/translate-pipe';
-import {TranslateService} from '@ngx-translate/core';
+import { Component, inject, NgZone, OnDestroy, OnInit, signal } from '@angular/core';
+import { TranslateFallbackPipe } from '../../pipes/translate-pipe';
+import { TranslateService } from '@ngx-translate/core';
 
 export interface TypeWordsInterface {
   label: string;
@@ -9,8 +9,7 @@ export interface TypeWordsInterface {
 
 @Component({
   selector: 'app-type-write-feature',
-  imports: [
-  ],
+  imports: [],
   providers: [TranslateFallbackPipe],
   templateUrl: './type-write-feature.html',
   styleUrl: './type-write-feature.scss',
@@ -90,7 +89,7 @@ export class TypeWriteFeature implements OnInit, OnDestroy {
 
   private refreshTranslatedWords(): void {
     this.translateWords = this.exampleWords.map((word) =>
-      this._translatePipe.transform(word.label, word.fallback)
+      this._translatePipe.transform(word.label, word.fallback),
     );
   }
 

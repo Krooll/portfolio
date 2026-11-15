@@ -1,27 +1,56 @@
 <div class="page-wrapper h-100 p-2">
   <div class="d-flex align-items-center">
     <div class="img-wrapper d-flex align-items-center justify-content-center me-2">
-      <img loading="lazy" class="img" src="/icons/education.png" alt="education">
+      <img loading="lazy" class="img" src="/icons/education.png" alt="education" />
     </div>
     <p>{{ 'education' | translateFallback: 'Wykształcenie' }}</p>
   </div>
-  <hr>
-  <div class="body-scroll d-flex flex-column">
-    @for (item of educationItems; track $index) {
-      <div class="d-flex align-items-start mt-1 mb-1">
-        <div class="img-wrapper-education d-flex align-items-center justify-content-center">
-          <img loading="lazy" src="/icons/education-2-small.png" class="education-img" alt="education-icon">
+  <hr />
+  <div class="body-scroll d-flex flex-column align-items-center p-1">
+    <div class="timeline-container d-flex flex-column">
+      @for (item of educationItems; track $index) {
+        <div class="timeline-item d-flex">
+          <div class="timeline-axis d-flex flex-column">
+            <div [ngClass]="{
+          'passed-color': item.statusFlag === 'passed',
+          'progress-color': item.statusFlag === 'progress'}" class="img-wrapper-education"></div>
+          </div>
+          <div scrollReveal [ngClass]="{
+          'passed-color': item.statusFlag === 'passed',
+          'progress-color': item.statusFlag === 'progress'}" class="element reveal-anim">
+            <div class="d-flex flex-column m-1">
+              <p class="mt-1">
+                {{ 'educationItemsList.universityName' | translateFallback: 'Uniwersytet:' }}
+                <span>{{ item.universityName | translateFallback: item.universityNameFallback }}</span>
+              </p>
+              <p class="mt-1">
+                {{ 'educationItemsList.degree' | translateFallback: 'Kierunek:' }}
+                <span>{{ item.degreeCourse | translateFallback: item.degreeCourseFallback }}</span>
+              </p>
+              <p class="mt-1">
+                {{ 'educationItemsList.specialization' | translateFallback: 'Specjalność:' }}
+                <span>{{ item.specialization | translateFallback: item.specializationFallback }}</span>
+              </p>
+              @if(item.semester) {
+                <p class="mt-1">
+                  {{ 'educationItemsList.semester' | translateFallback: 'Semestr:' }}
+                  <span>{{ item.semester | translateFallback: item.semesterFallback }}</span>
+                </p>
+              }
+                <p class="mt-1">
+                  {{ 'educationItemsList.passed' | translateFallback: 'Status:' }}
+                  <span>{{ item.status | translateFallback: item.statusFallback }}</span>
+                </p>
+              @if(item.startDateFallback) {
+                <p class="mt-1">
+                  {{ 'educationItemsList.startDate' | translateFallback: 'Rozpoczęcie:' }}
+                  <span>{{ item.startDate | translateFallback: item.startDateFallback }}</span>
+                </p>
+              }
+            </div>
+          </div>
         </div>
-        <div class="d-flex flex-column ms-3 p-1">
-          <p class="mt-1 bold">{{"educationItemsList.universityName" | translateFallback: "Uniwersytet:"}} {{ item.universityName | translateFallback: item.universityNameFallback }}</p>
-          <p class="mt-1 bold">{{"educationItemsList.degree" | translateFallback: "Kierunek:"}} {{ item.degreeCourse | translateFallback: item.degreeCourseFallback }}</p>
-          <p class="mt-1 bold">{{"educationItemsList.specialization" | translateFallback: "Specjalność:"}} {{ item.specialization | translateFallback: item.specializationFallback }}</p>
-          <p class="mt-1">{{"educationItemsList.status" | translateFallback: "Status:"}} {{ item.status | translateFallback: item.statusFallback }}</p>
-          <p class="mt-1">{{"educationItemsList.startDate" | translateFallback: "Rozpoczęcie:"}} {{ item.startDate | translateFallback: item.startDateFallback }}</p>
-        </div>
-      </div>
-      <hr style="width: 90%">
-    }
+      }
+    </div>
   </div>
 </div>
-
