@@ -57,8 +57,6 @@ export class ContactPage {
   protected readonly mailServiceAccessKey: string = '450c9a8e-b411-4aab-8e50-5f8fe120086a';
   protected readonly mailServiceUrl: string = 'https://api.web3forms.com/submit';
 
-  constructor() {}
-
   contactButtonsList: ContactButtonInterface[] = [
     {
       icon: '/icons/linkedin-big.png',
