@@ -6,18 +6,21 @@
     <p>{{ 'aboutMe' | translateFallback: 'O mnie' }}</p>
   </div>
   <hr />
-  <div class="body-scroll d-flex">
-      <div scrollReveal class="reveal-anim d-flex flex-wrap">
+  <div class="body-scroll d-flex flex-column">
+      <div scrollReveal class="reveal-anim d-flex justify-content-between flex-wrap">
         @for(item of aboutMeList; track $index ) {
-          <div class="text-wrapper" [ngClass]="{
-        'neon-blue' : item.color === 'blue',
-        'neon-pink' : item.color === 'pink'
-      }">
-            <h1>{{item.title | translateFallback: item.titleFallback }}</h1>
-            <p>{{item.description | translateFallback: item.description }}</p>
+          <div class="text-wrapper"
+               [ngClass]="{
+                  'neon-blue' : item.color === 'blue',
+                  'neon-pink' : item.color === 'pink'
+               }">
+                  <h1>{{item.title | translateFallback: item.titleFallback }}</h1>
+                  <p>{{item.description | translateFallback: item.description }}</p>
           </div>
         }
-
+        <div class="d-flex align-items-center justify-content-center mt-3 w-100">
+          <img class="image" src="/icons/photo.jpg" alt="photo" loading="lazy">
+        </div>
       </div>
   </div>
 </div>
