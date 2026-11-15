@@ -6,7 +6,7 @@
     <p>{{ 'aboutMe' | translateFallback: 'O mnie' }}</p>
   </div>
   <hr />
-  <div class="body-scroll d-flex flex-column">
+  <div class="body-scroll d-flex flex-column p-1">
       <div scrollReveal class="reveal-anim d-flex justify-content-between flex-wrap">
         @for(item of aboutMeList; track $index ) {
           <div class="text-wrapper"

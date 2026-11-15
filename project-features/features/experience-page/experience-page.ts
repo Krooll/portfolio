@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateFallbackPipe } from '../../shared/pipes/translate-pipe';
+import {ScrollRevealDirective} from '../../shared/directives/scroll-reveal-directive';
+import {NgClass} from '@angular/common';
 
 export interface CareerItem {
   companyName: string;
@@ -8,11 +10,12 @@ export interface CareerItem {
   jobPositionFallback: string;
   description: string;
   descriptionFallback: string;
+  color: string;
 }
 
 @Component({
   selector: 'app-experience-page',
-  imports: [TranslateFallbackPipe],
+  imports: [TranslateFallbackPipe, ScrollRevealDirective, NgClass],
   templateUrl: './experience-page.html',
   styleUrl: './experience-page.scss',
 })
@@ -24,6 +27,7 @@ export class ExperiencePage {
       jobPosition: 'careerList.muddyCode.jobPosition',
       jobPositionFallback: 'Programista Frontend',
       description: 'careerList.muddyCode.description',
+      color: 'blue',
       descriptionFallback:
         'Od stycznia 2024 roku rozwijam się jako programista frontendowy, odpowiadając za tworzenie oraz utrzymanie interfejsów aplikacji webowych. Skupiam się na poprawie użyteczności, szybkości działania oraz spójności wizualnej produktów. W miarę zdobywania doświadczenia przechodziłem do pracy nad bardziej rozbudowanymi komponentami i modułami systemu. Aktywnie współpracuję z zespołami backendu oraz UX/UI, uczestnicząc w projektowaniu i wdrażaniu nowych funkcjonalności.',
     },
@@ -33,6 +37,7 @@ export class ExperiencePage {
       jobPosition: 'careerList.montService.jobPosition',
       jobPositionFallback: 'Programista Frontend',
       description: 'careerList.montService.description',
+      color: 'pink',
       descriptionFallback:
         'Opowiadałem za diagnostykę, naprawę oraz obsługę techniczną urządzeń wykorzystywanych w systemach sprzedażowych, takich jak kasy fiskalne i terminale płatnicze. Wykonywałem instalacje, konfiguracje oraz usuwanie usterek sprzętowych i elektronicznych. Dbałem o niezawodność działania urządzeń oraz szybkie przywracanie ich sprawności, zapewniając ciągłość pracy punktów sprzedaży.',
     },

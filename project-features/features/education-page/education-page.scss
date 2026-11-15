@@ -3,7 +3,7 @@
 }
 
 .timeline-container {
-  width: 85%;
+  padding: 0 0.5rem;
 }
 
 .timeline-item {
@@ -87,10 +87,6 @@
 
   .timeline-axis::before {
     top: 2.5rem;
-  }
-
-  .timeline-container {
-    width: 100%;
   }
 }
 

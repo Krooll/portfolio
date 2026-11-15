@@ -6,13 +6,13 @@
     <p>{{ 'contact' | translateFallback: 'Kontakt' }}</p>
   </div>
   <hr />
-  <div scrollReveal class="body-scroll reveal-anim">
+  <div scrollReveal class="body-scroll reveal-anim p-1">
     <div class="d-flex align-items-center justify-content-between flex-wrap">
       <form class="side d-flex flex-column align-items-center" (ngSubmit)="onSubmit()">
         <h2>{{ 'contactPage.formTitle' | translateFallback: 'Bądzmy w kontakcie' }}</h2>
         <div class="d-flex flex-column mt-4 mb-1 w-100">
           <input
-            class="mt-1"
+            class="mt-1 mb-2"
             [formField]="formGroupTest.emailAddress"
             type="email"
             [placeholder]="
